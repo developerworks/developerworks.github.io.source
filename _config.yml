@@ -88,4 +88,3 @@ exclude_generator:
 deploy:
   type: github
   repo: git@github.com:developerworks/developerworks.github.io.git
-  branch: gh-pages
