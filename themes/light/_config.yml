@@ -1,0 +1,58 @@
+menu:
+  Home: /
+#About: /about
+  RSS: /atom.xml
+
+widgets:
+#- search
+#- about_me
+- calendar
+- category
+- tagcloud
+#- recent_posts
+#- links
+#- duoshuo_recent_comments
+
+highlightjs: monokai_sublime
+
+excerpt_link: 阅读全文
+
+#twitter_id: wileam
+#facebook_id: Joanna.Wu.0326
+github_id: developerworks
+
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: false
+
+#google_analytics: UA-41676519-1
+rss: /atom.xml
+
+#links:
+#- name: Life Blog
+#  link: http://blog.wileam.com
+#- name: popotang
+#  link: http://popotang.com/
+#- name: Jim-Liu's blog
+#  link: http://jimliu.net/
+#- name: icyleaf's blog
+#  link: http://icyleaf.com/
+#- name: twinsant
+#  link: http://twinsant.com/
+
+#duoshuo: wileamcode
+
+#about_me:
+#  title: ABOUT ME
+#  avatar: /uploads/avatar.jpg
+#  texts:
+#  - <a href="/about" target="_BLANK">Joanna Wu(wileam)</a>
+#  - Smile, breathe & go slowly. ^_^
+#  - <br>
+#  - <img src="/uploads/email.gif">
