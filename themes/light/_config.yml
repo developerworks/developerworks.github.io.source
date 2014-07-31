@@ -32,6 +32,8 @@ addthis:
 fancybox: false
 
 #google_analytics: UA-41676519-1
+baidu_stats: false
+
 rss: /atom.xml
 
 #links:
