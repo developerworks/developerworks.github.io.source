@@ -68,7 +68,7 @@ Clone 完 `swagger-codegen` 后, 修改 `build.sbt` 中的 `scalaVersion:="2.10.
 {% raw %}
 
 ```
-"parameters" : [{{#queryParams\}}
+"parameters" : [{{#queryParams}}
 ```
 {% endraw %}
 
