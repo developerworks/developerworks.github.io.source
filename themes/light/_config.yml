@@ -10,7 +10,7 @@ widgets:
 - calendar
 - category
 - tagcloud
-#- recent_posts
+- recent_posts
 #- links
 - duoshuo_recent_comments
 
