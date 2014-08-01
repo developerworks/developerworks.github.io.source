@@ -1,4 +1,6 @@
-<!doctype html>
+layout: false
+---
+<html>
 <head>
     <meta charset="utf-8">
     <style>
@@ -8,11 +10,21 @@
     </style>
 </head>
 <body>
-<script src="blockies.min.js"></script>
+<h1>Blockies 示例</h1>
+
+<p>刷新随机生成不同的头像</p>
+
+<div id="blockies-identicon"></div>
+<script src="/code/blockies/blockies.min.js"></script>
 <script>
+
+    var icons_container = document.getElementById("blockies-identicon")
     for (var i = 0; i < 10; i++) {
         var icon = blockies.create();
+        icon.style.margin = "10px";
         document.body.appendChild(icon);
+        icons_container.appendChild(icon);
     }
 </script>
 </body>
+</html>
