@@ -1,5 +1,9 @@
 title: 在AngularJS中创建异步Alert Prompts Confirms
 date: 2014-06-26
+categories:
+- javascript
+tags:
+- angularjs
 ---
 
 > 本文翻译自如下文章, 因为不是文学作品而是技术文章,因此不遵照`信达雅`的原则,让人容易理解即可, 没有逐句翻译原文的语言含义,而是根据其含义用更符合汉语的语言习惯来表达.

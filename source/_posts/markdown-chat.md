@@ -37,4 +37,4 @@ bower install
 
 安装方法可参考: [安装MongoDB][1]
 
-    http://docs.mongodb.org/manual/installation/
+    [1] http://docs.mongodb.org/manual/installation/

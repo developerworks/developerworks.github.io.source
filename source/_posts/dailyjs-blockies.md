@@ -4,9 +4,13 @@ categories:
 - javascript
 tags:
 - dailyjs
+- blockies
 ---
 
 `Blockies` 是一个随机生成头像的javascript库, 基于随机数和色彩
+
+
+<!-- more -->
 
 
 ## 项目地址
