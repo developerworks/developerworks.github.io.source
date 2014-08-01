@@ -6,12 +6,13 @@ menu:
 widgets:
 #- search
 #- about_me
+- octocard1
 - calendar
 - category
 - tagcloud
 #- recent_posts
 #- links
-#- duoshuo_recent_comments
+- duoshuo_recent_comments
 
 highlightjs: monokai_sublime
 
@@ -48,7 +49,7 @@ rss: /atom.xml
 #- name: twinsant
 #  link: http://twinsant.com/
 
-#duoshuo: wileamcode
+duoshuo: developerworks
 
 #about_me:
 #  title: ABOUT ME

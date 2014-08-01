@@ -1,5 +1,10 @@
 title: node-webkit 提取GPU信息
 date: 2014-06-16
+categories:
+- node.js
+- webkit
+tags:
+- node-webkit
 ---
 
 

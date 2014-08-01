@@ -1,5 +1,10 @@
 title: node-webkit 剪切板
 date: 2014-06-16
+categories:
+- node.js
+- webkit
+tags:
+- node-webkit
 ---
 
 
@@ -37,8 +42,9 @@ clipboard.clear();
 ## 参考
 
 **get()**
-:   返回系统剪切板
-:   不可能创建新的剪切板,只能从操作系统获取. 注意在X11中选择剪切板不支持.
+
+返回系统剪切板
+不可能创建新的剪切板,只能从操作系统获取. 注意在X11中选择剪切板不支持.
 
 **Clipboard.set(data, [type])**
 :   写入`data`到剪切板.`type`指定了数据的mine类型.当前仅支持`text`(纯文本数据)

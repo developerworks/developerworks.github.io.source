@@ -1,5 +1,7 @@
 title: Web性能测试
 date: 2014-05-02
+categories:
+- test
 ---
 
 

@@ -4,7 +4,7 @@ categories:
 - API
 tags:
 - API
-- restful
+- RESTFUL
 - swagger
 ---
 
