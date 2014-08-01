@@ -4,7 +4,7 @@ menu:
   RSS: /atom.xml
 
 widgets:
-#- search
+- search
 #- about_me
 - octocard1
 - calendar
@@ -32,7 +32,7 @@ addthis:
 
 fancybox: false
 
-#google_analytics: UA-41676519-1
+google_analytics: UA-53429135-1
 baidu_stats: false
 
 rss: /atom.xml
