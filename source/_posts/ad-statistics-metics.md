@@ -1,9 +1,9 @@
 title: 广告统计参数和指标
-date: 2014-07-30 23:45:12
-category:
-- AD
 tags:
-- AD
+  - AD
+categories:
+  - AD
+date: 2014-07-30 23:45:12
 ---
 
 

@@ -1,10 +1,9 @@
 title: node-webkit Manifest 文件格式
-date: 2014-06-16
-categories:
-- node.js
-- webkit
 tags:
 - node-webkit
+categories:
+- node.js
+date: 2014-06-16
 ---
 
 Every app package should contain a manifest file named `package.json`, it will tell `node-webkit` how to open the app and control how the browser behaves.

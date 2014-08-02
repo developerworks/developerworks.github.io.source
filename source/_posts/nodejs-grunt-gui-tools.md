@@ -1,10 +1,10 @@
 title: Grunt 图形管理工具
-date: 2014-05-13
-categories:
-- node.js
 tags:
 - node.js
 - grunt
+categories:
+- node.js
+date: 2014-05-13
 ---
 
 ## 1. grunt-peon-gui

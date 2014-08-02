@@ -1,10 +1,9 @@
 title: node-webkit 剪切板
-date: 2014-06-16
-categories:
-- node.js
-- webkit
 tags:
 - node-webkit
+categories:
+- node.js
+date: 2014-06-16
 ---
 
 
