@@ -1,17 +1,15 @@
 title: Angular 和 Polymer 数据绑定
 date: 2014-06-11
 categories:
-- javascript
+  - javascript
 tags:
-- angularjs
-- ploymer
+  - angularjs
+  - ploymer
 ---
 
 原文: http://blog.sethladd.com/2014/02/angular-and-polymer-data-binding.html
 
 <img height="454" src="/assets/posts/2014-06-11-angular-and-polymer-data-binding/sitting-in-a-tree.png" width="640">
-
-呵呵! Angular和Polymer在一起荡秋千.
 
 ## Angular 和Polymer
 

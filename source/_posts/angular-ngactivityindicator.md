@@ -1,9 +1,9 @@
 title: Angularjs 预载指示器
-date: 2014-06-12
-categories:
-- javascript
 tags:
-- angularjs
+  - angularjs
+categories:
+  - javascript
+date: 2014-06-12
 ---
 
 ## ngActivityIndicator

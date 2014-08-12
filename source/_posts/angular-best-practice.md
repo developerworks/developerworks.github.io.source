@@ -1,9 +1,9 @@
 title: Angular 最佳实践
-date: 2014-06-28
-categories:
-- javascript
 tags:
-- angularjs
+  - angularjs
+categories:
+  - javascript
+date: 2014-06-28
 ---
 
 1. 控制器和`Provider`(Service,Factory)用于修改数据模型,**而不是HTML**
