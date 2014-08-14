@@ -1,6 +1,6 @@
 title: Angular.js 基于JSON Token的认证
 tags:
-  - angularjs
+  - angular
 categories:
   - javascript
 date: 2014-06-22
