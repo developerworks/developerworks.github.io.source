@@ -3,7 +3,6 @@ date: 2014-08-01
 categories:
 - javascript
 tags:
-- dailyjs
 - blockies
 ---
 
