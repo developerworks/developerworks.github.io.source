@@ -6,25 +6,25 @@ tags:
 date: 2014-08-15
 ---
 
-## 执行纯SQL语句
 
-参数定义
+`sequelize.query()`方法以及参数
 
 
 ```
 sequelize.query('your query', [, callee], [, options], [, replacements])
 ```
 
+简单查询
 
 ```
-// 简单查询
 sequelize.query("SELECT * FROM users").success(function(users) {
   console.log(users)
 })
 ```
 
+映射到模型定义
+
 ```
-// 映射到模型定义
 sequelize
   .query('SELECT * FROM users', Users)
   .success(function(users){
@@ -66,9 +66,6 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true,
             comment: '邮件地址',
             defaultValue: '',
-//            validate: {
-//                isEmail: true
-//            },
             search: true
         },
         admin: {
