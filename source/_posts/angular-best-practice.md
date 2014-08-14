@@ -1,6 +1,6 @@
 title: Angular 最佳实践
 tags:
-  - angularjs
+  - angular
 categories:
   - javascript
 date: 2014-06-28

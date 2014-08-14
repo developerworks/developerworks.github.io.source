@@ -3,7 +3,7 @@ date: 2014-06-11
 categories:
   - javascript
 tags:
-  - angularjs
+  - angular
   - ploymer
 ---
 

@@ -1,19 +1,20 @@
-
-title: Sequelize: 执行SQL语句
-date: 2014-08-14
+title: Sequelize 查询
 categories:
-- node.js
+  - node.js
 tags:
-- sequelize
+  - sequelize
+date: 2014-08-15
 ---
 
 ## 执行纯SQL语句
 
 参数定义
 
+
 ```
 sequelize.query('your query', [, callee], [, options], [, replacements])
 ```
+
 
 ```
 // 简单查询
@@ -135,7 +136,7 @@ sequelize
   })
 ```
 
-第二个参数为空,当我们设置{raw:true},第二个参数将被忽略, 改查询任然返回一个原始对象
+第二个参数为空,当我们设置`{raw:true}`,第二个参数将被忽略, 改查询任然返回一个原始对象
 
 ```
 sequelize

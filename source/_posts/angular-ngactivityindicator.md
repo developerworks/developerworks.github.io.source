@@ -1,6 +1,6 @@
 title: Angularjs 预载指示器
 tags:
-  - angularjs
+  - angular
 categories:
   - javascript
 date: 2014-06-12
