@@ -5,7 +5,7 @@ categories:
 tags:
 - RESTFUL
 - API
-- Swagger
+- swagger
 ---
 
 swagger-codegen 项目地址

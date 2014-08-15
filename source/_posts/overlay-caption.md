@@ -2,7 +2,7 @@ title: 图片底部字幕效果
 tags:
   - html
 categories:
-  - 前端
+  - web
 date: 2014-08-02
 ---
 
