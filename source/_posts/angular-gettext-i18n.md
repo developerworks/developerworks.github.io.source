@@ -92,4 +92,4 @@ bower install angular-gettext --save
 [完整的示例代码][1]
 
 
-  [1]: /assets/code/gettext/gettext.html
+  [1]: /code/gettext/gettext.html
