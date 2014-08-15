@@ -91,5 +91,81 @@ bower install angular-gettext --save
 
 [完整的示例代码][1]
 
+## 提取HTML中的国际化字符串
+
+安装`grunt`插件
+
+```
+npm install grunt-angular-gettext --save-dev
+```
+
+在`Gruntfile.js`加载插件
+
+```
+grunt.loadNpmTasks('grunt-angular-gettext');
+```
+
+`grunt-angular-gettext`插件提供了两个任务:
+
+- `nggettext_extract`
+- `nggettext_compile`
+
+在`Gruntfile.js`中增加两个任务:
+
+```
+grunt.registerTask('i18n', ['nggettext_extract','nggettext_compile']);
+grunt.config.init({
+    pkg: grunt.file.readJSON('package.json'),
+    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
+        ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>;\n' +
+        ' * Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %>\n */\n',
+    // 定义变量
+    vars: {
+        build: './build',
+        release: './release',
+        bower: './components'
+    },
+    ...
+    ...
+    ...
+    // 提取阶段:定义要处理那些HTML文件, 把提取到的国际化字符串保存到 locales/template.pot文件中
+    nggettext_extract: {
+        pot: {
+            files: {
+                'locales/template.pot': ['views/locales/*.html']
+            }
+        }
+    },
+    // 编译阶段
+    nggettext_compile: {
+        all: {
+            files:{
+                'locales/translations.js': ['locales/*.po']
+            }
+        }
+    }
+});
+```
+
+
+要让angular-gettext最终能够使用国际化字符串, 还需要执行下面三个步骤:
+
+
+- 提取字符串:
+
+    ```
+    $ grunt nggettext_extract
+    ```
+
+- 使用`poedit`等工具翻译国际化文本,并生成`*.po`文件
+
+- 编译:
+
+    ```
+    $ grunt nggettext_compile
+    ```
 
   [1]: /code/gettext/gettext.html
+
+
