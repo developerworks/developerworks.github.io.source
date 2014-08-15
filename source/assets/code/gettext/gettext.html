@@ -1,0 +1,108 @@
+layout: false
+---
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Gettext Translation Example </title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap-theme.min.css"/>
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+
+        #wrap {
+            min-height: 100%;
+            height: auto;
+            /* Negative indent footer by its height */
+            margin: 0 auto -60px;
+            /* Pad bottom by footer height */
+            padding: 0 0 60px;
+        }
+
+        #footer {
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        #wrap > .container {
+            padding: 60px 15px 0;
+        }
+
+        .container .text-muted {
+            margin: 20px 0;
+        }
+
+        #footer > .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        code {
+            font-size: 80%;
+        }
+        .disable-select {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+    <!-- Scripts -->
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="angular-gettext.min.js"></script>
+    <script type="text/javascript" src="translations.js"></script>
+    <script type="text/javascript">
+        angular.module('GettextApp', ['gettext'])
+            .controller('GettextController', ['$scope', 'gettextCatalog', function ($scope, gettextCatalog) {
+                $scope.languages = ['en', 'zh_Hans_CN'];
+                $scope.language = 'zh_Hans_CN';
+                $scope.$watch('language', function () {
+                    console.log($scope.language);
+                    gettextCatalog.setCurrentLanguage($scope.language);
+                });
+            }])
+            .run(['gettextCatalog', function (gettextCatalog) {
+                gettextCatalog.setCurrentLanguage('zh_Hans_CN');
+                gettextCatalog.debug = true;
+            }]);
+    </script>
+</head>
+<body ng-app="GettextApp">
+<!--页面主容器-->
+<div class="container" ng-controller="GettextController" style="padding: 5px;">
+    <!--行-->
+    <div class="row">
+        <!--列-->
+        <div class="col-md-12">
+            <!--页头-->
+            <div class="page-header">
+                <!--面板-->
+                <div class="panel panel-success disable-select">
+                    <!--面板头-->
+                    <div class="panel-heading">Angular.js Gettext 组件</div>
+                    <!--面板主体-->
+                    <div class="panel-body">
+                        <select ng-model="language" ng-options="lang for lang in languages"></select>
+                        <div class="entry-content">
+                            <h1 translate>Introduction</h1>
+                            <p translate>Our application is a product used by many global companies and thus we support multiple languages like English, French, Spanish, German and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <p class="text-muted">Place sticky footer content here.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

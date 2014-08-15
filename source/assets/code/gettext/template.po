@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Project-Id-Version: Console Admin Server (0.1)\n"
+"POT-Creation-Date: 2014-05-03\n"
+"PO-Revision-Date: 2014-05-03 16:03+0800\n"
+"Last-Translator: ZhiQiang,He <hezhiqiang@cygftech.com>\n"
+"Language-Team: Gbox Web Team <webteam@cygftech.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: zh_Hans_CN\n"
+
+#: views/locales/gettext.html
+msgid "Introduction"
+msgstr "简介"
+
+#: views/locales/gettext.html
+msgid "Our application is a product used by many global companies and thus we support multiple languages like English, French, Spanish, German and more."
+msgstr "我们的应用程序是一个被全球的公司使用的产品,并且需要支持比如英语,法语,西班牙语,德语等多国语言."
