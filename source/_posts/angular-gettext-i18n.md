@@ -149,7 +149,7 @@ grunt.config.init({
 ```
 
 
-要让angular-gettext最终能够使用国际化字符串, 还需要执行下面三个步骤:
+要让`angular-gettext`最终能够使用国际化字符串, 还需要执行下面三个步骤:
 
 
 - 提取字符串:
