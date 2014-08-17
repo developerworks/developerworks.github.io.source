@@ -5,6 +5,17 @@ tags:
   - git-flow
 date: 2014-08-17 00:42:59
 ---
+
+## git-flow 是个什么东西?
+
+- `git-flow` 是一个管理`git`代码仓库的生产力工具
+- `git-flow` 是一种`git`代码管理的最佳实践
+- `git-flow` 是一种能够让你傻笑一整天的玩具
+
+<!-- more -->
+
+![git-flow][7]
+
 ## 在Mac OS X上安装
 
 本人的MBP最开始安装的`macports`, 虽说`macports`和`brew`可以共存, 但是还是不想给自己挖坑, 还是用单一的包管理工具比较好, 慢是慢了一点(我晓得,如果你的网络有啥子问题,这个不是一般的慢),但又不是天天都在装软件, 所以还是坚持使用`macports`好了.
@@ -17,8 +28,6 @@ date: 2014-08-17 00:42:59
 ```
 
 两行命令, `macports`轻松帮你搞定安装问题, 下面我会说一下怎么入门. 顺带一句, 你要先安装 `Xcode`, 否则`macports`是跑步起来的, 别怪我没有提醒你.
-
-<!-- more -->
 
 ## 入门
 
@@ -60,11 +69,17 @@ Version tag prefix? [] test
 这句话是神马意思呢? 产品发布(production releases) 顾名思义是用作产品发布的(或称为主干,类似SVN的`trunk`)分支, 和线上生产环境的代码是一样的.
 当你开发的代码经过测试,测试,再测试之后木有任何问题了, 你就可以把开发分支`develop`的经过测试的代码合并到`master`分支,并准备发布到生产环境了.
 
+
+## 新功能开发
+
 > - `feature`
 
 当我们需要为我们正在开发的App增加一个全新的功能时, 这个时候我们就需要使用到 `feature` 分支了, 增加新功能会有极大的可能会破坏之前已经比较稳定的代码, 为了隔离这种影响我们需要从`develop`切换到`feature`分支上开发. 当`feature`上的新功能开发完成, 再合并到`develop`分支上进行集成测试.
 
 测试完成稳定后,最终要合并到 `master` 分支作为 `release`的基础.
+
+
+## 创建一个新功能分支
 
 开始一个`feature`分支, 名称为 `acl`, 这会在 `feature`分支下创建一个 `acl`目录, 表示我们需要为我们的应用程序增加访问控制功能:
 
@@ -141,4 +156,99 @@ Summary of actions:
 
 `feature/acl`分支删除了, 当前分支又回到了`develop`, So Easy, 对吧!
 
-下一篇, 我回向大家陈述一下, 如何发布一个版本, 以及发布后出现问题, 怎么进行 `bugfix` 的流程
+## 共享你的新功能给其他人
+
+> TODO::
+
+```
+/test $ git flow feature publish acl
+/test $ git flow feature pull acl
+```
+
+## 版本发布
+
+我们来描述一下这个开发场景, 团队决定开发一个Web端的实时聊天工具, 以增强与客户的互动性, 为客户提供更好的服务, 更好的响应速度.这个时候我们使用`feature`分支来创建一个新功能分支,这个在前面说过了.
+
+现在的分支状态就只包括`master`, `develop`, 其中`develop`包含我们已经开发完成的实时聊天模块.
+
+```
+/test $ git flow release start 1.0.1
+Switched to a new branch 'release/1.0.1'
+Summary of actions:
+- A new branch 'release/1.0.1' was created, based on 'develop'
+- You are now on branch 'release/1.0.1'
+Follow-up actions:
+- Bump the version number now!
+- Start committing last-minute fixes in preparing your release
+- When done, run:
+     git flow release finish '1.0.1'
+```
+
+上面这个命令标识,创建一个`release`分支, 版本号为`1.0.1`, 下面我们执行`git branch`来看一下分支状态:
+
+```
+/test $ git branch
+  develop
+  master
+* release/1.0.1
+```
+
+你看到, 增加了一个`release/1.0.1`的分支
+
+
+
+## 修订BUG
+
+首先来看看版本情况:
+
+```
+/test $ git tag
+test1.0.1
+test1.0.2
+test1.0.3
+```
+
+我们的软件最新版本为`test1.0.3`, 目前和`master`分支的内容是一模一样的, 同时也是生产环境中正在运行着的版本. 某天当你半夜被你的BOSS叫起来的时候, 他给你说我们的生产环境发现了一个严重的BUG, 要马上修复. 这时候就是`hoxfix`的时候了.
+
+
+```
+/test $ git flow hotfix start 1.0.4
+```
+
+- 把当前`master`分支的内容完整拷贝到`hotfix/1.0.4`,
+- 切换分支到 `hotfix/1.0.4`
+- 在`hotfix/1.0.4` 修改BUG
+- `git add . && git commit -m 'bug fixed'`
+
+```
+/test $ git flow hotfix finish 1.0.4
+```
+
+- 结束`hoxfix/1.0.4`分支
+- 合并到`master`
+- 合并到`develop`
+- 删除`hotfix/1.0.4`分支
+- 切换回`develop`分支
+
+
+## 参考
+
+关于`git-flow`你还可以参考[`git-flow-cheatsheet`][1],[这里][2]是中文版. 它是一个分支管理流程图标,如果你完全理解了`git-flow`的工作方式,即使在大规模项目中,你同样能够很好的管理你的代码.
+
+> 提示: 请仔细看`git-flow-cheatsheet`中的 `红`,`青`,`橙`,`蓝`,`绿`的五线谱, 看看`git-flow`是怎么在这个五线谱弹奏优雅的旋律的.
+
+
+
+[一个成功的分支模型][3]
+[一个成功的分支模型-英文原文][5]
+[基于git的源代码管理模型——git flow][4]
+
+  [1]: http://danielkummer.github.io/git-flow-cheatsheet/
+  [2]: http://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
+  [3]: http://www.oschina.net/translate/a-successful-git-branching-model?from=20130303
+  [4]: http://www.ituring.com.cn/article/56870
+  [5]: http://nvie.com/posts/a-successful-git-branching-model/
+  [6]: http://www.jeffkit.info/2010/12/860/
+  [7]: /assets/images/60819835-3DF4-4249-B467-DDCBBB37216C.png
+
+
