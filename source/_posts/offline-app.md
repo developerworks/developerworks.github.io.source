@@ -1,9 +1,9 @@
 title: 检测离线应用的网络状态
-date: 2014-08-15
 categories:
 - angular
 tags:
 - html5
+date: 2014-08-16 11:43:00
 ---
 
 

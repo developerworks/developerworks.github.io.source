@@ -1,4 +1,4 @@
-title: AngularJS和Polymer元素的双向绑定支持
+title: AngularJS和Polymer双向绑定支持
 categories:
   - polymer
 tags:
@@ -10,7 +10,7 @@ date: 2014-08-16 10:59:00
 > 项目地址: https://github.com/GabiAxel/ng-polymer-elements
 
 
-Web组件使编写封装的视图片段和独立与任何框架的逻辑成为可能. 目前支持核心元素和`paper`元素.
+Web组件使`编写封装的视图片段`和`独立于任何框架的逻辑`成为可能. 目前支持核心元素(`core`)和`paper`元素.
 
 例如, 下面的代码把`<paper-input>`元素的`inputValue`属性和`Angular`作用域的`myText`属性进行双向绑定
 
