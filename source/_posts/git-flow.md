@@ -34,7 +34,7 @@ date: 2014-08-17 00:42:59
 安装完成后,从下面开始, 我会给大家演示`git-flow`的基本操作, 它为什么让我们可以如此`惬意`的管理我们的代码,`git-flow` 也是一个命令行, 下面我们来看一下 `git-flow`的命令行帮助, 大概的看一看它提供了那些功能,能为我们做哪些事情:
 
 
-我们从初始化一个全新的仓库开始, 创建一个目录, 然后在其中执行`git flow init`初始化当前目录:
+我们从初始化一个全新的仓库开始, 创建一个目录, 然后在其中执行`git flow init`初始化当前目录, 当然你也可以在现有的`git`项目下执行`git flow init`把`git`项目转换为`git-flow`项目:
 
 ```
 /test $ mkdir git-flow-get-started && cd git-flow-get-started
