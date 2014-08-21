@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    div {
+        color: blue;
+    }
+</style>
+<div class="">我是 Shadow DOM 外的 DIV</div>
+
+<div id="test"></div>
+
+<template id="temp">
+    <style>
+        div {
+            color: red;
+        }
+    </style>
+    <div>我是 Shadow DOM 内的 DIV</div>
+</template>
+<script>
+    var test = document.querySelector("#temp");
+    var root = test.webkitCreateShadowRoot();
+    root.appendChild(document.importNode(temp.content));
+</script>
+</body>
+</html>

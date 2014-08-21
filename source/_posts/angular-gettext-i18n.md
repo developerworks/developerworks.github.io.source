@@ -1,8 +1,8 @@
 title: 在Angular项目中提供国际化支持
 categories:
-  - node.js
+  - angular
 tags:
-  - npm
+  - gettext
 date: 2014-08-16
 ---
 
