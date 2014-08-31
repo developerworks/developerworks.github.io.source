@@ -126,7 +126,7 @@ RUN apt-get install -y python
 RUN wget http://nodejs.org/dist/v0.10.31/node-v0.10.31.tar.gz
 RUN tar zxf node-v0.10.31.tar.gz && cd node-v0.10.31 && ./configure && make && make install" > Dockerfile
 # 构建镜像
-$ docker build -t="developerworks/ubuntu-nodejs-runtime"
+$ docker build -t="developerworks/ubuntu-nodejs-runtime" .
 ```
 
 建议一个`RUN`只运行单条命令, 成功创建镜像后,`RUN`命令的结果实际上是缓存过的, 再次执行同一个`RUN`命令的时候`Docker`会直接使用缓存过的运行结果.
