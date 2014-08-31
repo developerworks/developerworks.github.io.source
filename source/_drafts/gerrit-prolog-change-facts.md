@@ -5,6 +5,7 @@ tags:
   - prolog
   - facts
 date: 2014-08-27 00:22:30
+toc: false
 ---
 
 
