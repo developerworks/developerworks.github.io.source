@@ -133,6 +133,62 @@ $ docker build -t="developerworks/ubuntu-nodejs-runtime" http://developerworks.g
 
 建议一个`RUN`只运行单条命令, 成功创建镜像后,`RUN`命令的结果实际上是缓存过的, 再次执行同一个`RUN`命令的时候`Docker`会直接使用缓存过的运行结果.
 
+然后,如果你需要更新这个Image, 增加一些npm包, 你只需要把 `FROM ubuntu:14.04` 改为 `FROM developerworks/ubuntu-nodejs-runtime`, 删除所有`RUN`指令, 并添加 `RUN npm install -g forever`, 新的`Dockerfile`如下:
+
+```
+FROM developerworks/ubuntu-nodejs-runtime
+MAINTAINER developerworks <developerworks@163.com>
+RUN npm install -g forever
+```
+
+执行:
+
+```
+root@localhost:~/images# docker build -t="developerworks/ubuntu-nodejs-runtime:add-forever" .
+Sending build context to Docker daemon  2.56 kB
+Sending build context to Docker daemon
+Step 0 : FROM developerworks/ubuntu-nodejs-runtime
+ ---> 2c01d3956f80
+Step 1 : MAINTAINER developerworks <developerworks@163.com>
+ ---> Running in 24f1d1115c7d
+ ---> 22218cb058df
+Removing intermediate container 24f1d1115c7d
+Step 2 : RUN npm install -g forever
+ ---> Running in 4278228003b9
+npm WARN engine hawk@0.10.2: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine hawk@0.10.2: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine hawk@0.10.2: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine hoek@0.7.6: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine boom@0.3.8: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine cryptiles@0.1.3: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine sntp@0.1.4: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine hoek@0.7.6: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine boom@0.3.8: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine cryptiles@0.1.3: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine sntp@0.1.4: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine hoek@0.7.6: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine boom@0.3.8: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine cryptiles@0.1.3: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+npm WARN engine sntp@0.1.4: wanted: {"node":"0.8.x"} (current: {"node":"0.10.31","npm":"1.4.23"})
+/usr/local/bin/forever -> /usr/local/lib/node_modules/forever/bin/forever
+/usr/local/bin/foreverd -> /usr/local/lib/node_modules/forever/bin/foreverd
+forever@0.11.1 /usr/local/lib/node_modules/forever
+├── watch@0.8.0
+├── colors@0.6.2
+├── pkginfo@0.3.0
+├── timespan@2.3.0
+├── nssocket@0.5.1 (eventemitter2@0.4.14, lazy@1.0.11)
+├── optimist@0.6.1 (wordwrap@0.0.2, minimist@0.0.10)
+├── utile@0.2.1 (deep-equal@0.2.1, rimraf@2.2.8, ncp@0.4.2, async@0.2.10, i@0.3.2, mkdirp@0.5.0)
+├── nconf@0.6.9 (ini@1.2.1, async@0.2.9, optimist@0.6.0)
+├── cliff@0.1.8 (eyes@0.1.8, winston@0.6.2)
+├── winston@0.7.3 (cycle@1.0.3, stack-trace@0.0.9, async@0.2.10, eyes@0.1.8, request@2.16.6)
+├── flatiron@0.3.11 (optimist@0.6.0, director@1.1.10, prompt@0.2.11, broadway@0.2.9)
+└── forever-monitor@1.2.3 (watch@0.5.1, minimatch@0.2.14, utile@0.1.7, ps-tree@0.0.3, broadway@0.2.9)
+ ---> f51d8fe3e51d
+Removing intermediate container 4278228003b9
+Successfully built f51d8fe3e51d
+```
 
 ## 删除镜像
 
@@ -141,6 +197,8 @@ docker rmi <IMAGE ID>
 ```
 
 ### 删除所有容器和镜像
+
+本文要做的实验全部完成,删除全部容器和镜像(建议保留官方的`ubuntu:14.04`镜像,200多MB, 下载需要时间, 由于我是在服务器上测试, 网速不是问题, 所以为了节约磁盘空间,全删除.
 
 ```
 #!/bin/bash
