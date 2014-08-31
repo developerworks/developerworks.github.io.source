@@ -40,6 +40,7 @@
   <link href="<%- config.root %>favicon.png" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/assets/css/toc.css"/>
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>-->
   <script type="text/javascript" src="//upcdn.b0.upaiyun.com/libs/jquery/jquery-1.8.3.min.js"></script>
@@ -54,11 +55,11 @@
   <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
   <meta name="msapplication-TileColor" content="#da532c" />
-  <!-- 
+  <!--
   <SCRIPT type=text/javascript src="<%- config.root %>js/scrolltop.js"></SCRIPT>
    -->
   <!--howiefh calendar begin-->
   <SCRIPT type=text/javascript src="<%- config.root %>js/calendar.js"></SCRIPT>
-  <!--howiefh calendar end-->  
+  <!--howiefh calendar end-->
   <%- partial('google_analytics') %>
 </head>

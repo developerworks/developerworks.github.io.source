@@ -4,6 +4,7 @@ tags:
 categories:
   - javascript
 date: 2014-06-28
+toc: false
 ---
 
 1. 控制器和`Provider`(Service,Factory)用于修改数据模型,**而不是HTML**

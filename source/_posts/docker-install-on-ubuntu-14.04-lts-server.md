@@ -4,6 +4,7 @@ categories:
 tags:
   - docker container
 date: 2014-08-27 15:33:35
+toc: true
 ---
 
 
@@ -94,7 +95,7 @@ Login Succeeded
 
 ## 如何检查,监控和管理容器
 
-- `docker ps` 显示当前运行的容器, 该命令和操作系统的`ps`命令类型, `ps`命令显示当前运行的进程, 而`docker ps`显示当前运行的容器, 为了帮助理解,你可以把容器当做一个正在运行的进程.
+- `docker ps` 显示当前运行的容器, 该命令和操作系统的`ps`命令类似, `ps`命令显示当前操作系统运行的进程, 而`docker ps`显示当前运行的容器, 为了帮助理解,你可以把容器当做一个正在运行的进程.
 - `docker logs` 显示一个容器的标准输出
 - `docker stop` 停止一个正在运行的容器
 

@@ -6,6 +6,8 @@
     "hexo-generator-feed": "*",
     "hexo-generator-sitemap": "*",
     "hexo-renderer-ejs": "*",
+    "hexo-renderer-jade": "^0.1.0",
+    "hexo-renderer-less": "^0.1.2",
     "hexo-renderer-marked": "*",
     "hexo-renderer-stylus": "*"
   }

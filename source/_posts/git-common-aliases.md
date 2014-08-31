@@ -4,21 +4,22 @@ categories:
 tags:
   - git alias
 date: 2014-08-22 16:33:47
+toc: false
 ---
 
-## 切换分支
+- 切换分支
 
 ```
 git config --global alias.co 'checkout'
 ```
 
-## 显示分支
+- 显示分支
 
 ```
 git config --global alias.br 'branche'
 ```
 
-## 日志格式化
+- 日志格式化
 
 ```
 git config --global alias.logp 'log --pretty=format:"%h - %an, %ar : %s"'
@@ -36,13 +37,13 @@ git log1    # 一行
 git log1g   # 一行,带Graph
 ```
 
-## 查看远程分支
+- 查看远程分支
 
 ```
 git config --global alias.rv 'remote -v'
 ```
 
-## 查看全局配置
+- 查看全局配置
 
 ```
 git config --global alias.cl 'config -l'

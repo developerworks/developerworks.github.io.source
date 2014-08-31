@@ -1,8 +1,8 @@
 title: 体验git-flow
-categories:
-  - git
-tags:
-  - git-flow
+categories: git
+tags: git-flow
+author: hezhiqiang
+toc: true
 date: 2014-08-17 00:42:59
 ---
 
@@ -20,7 +20,7 @@ date: 2014-08-17 00:42:59
 
 下面介绍三个主要平台的安装过程
 
-### 1. 在Mac OS X上安装
+### 在Mac OS X上安装
 
 本人的MBP最开始安装的`macports`, 虽说`macports`和`brew`可以共存, 但是还是不想给自己挖坑, 还是用单一的包管理工具比较好, 慢是慢了一点(我晓得,如果你的网络有啥子问题,这个不是一般的慢),但又不是天天都在装软件, 所以还是坚持使用`macports`好了.
 
@@ -33,7 +33,7 @@ date: 2014-08-17 00:42:59
 
 两行命令, `macports`轻松帮你搞定安装问题, 下面我会说一下怎么入门. 顺带一句, 你要先安装 `Xcode`, 否则`macports`是跑步起来的, 别怪我没有提醒你.
 
-### 2. Windows 安装
+### Windows 安装
 
 下载Cygwin, https://cygwin.com/install.html, 又32位和64位两个版本, 更具系统版本选择合适的安装程序, 下载完成,启动安装程序,一路选择默认即可, 要注意的是,要能够成功安装`git-flow`, 需要安装如下几个依赖包:
 
@@ -49,7 +49,7 @@ date: 2014-08-17 00:42:59
 wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash
 ```
 
-### 3. Linux 安装
+### Linux 安装
 
 开源软件的天然的平台就是Linux, 自然集成度是非常高的, 不需要特别的配置,只需要安装就可以了.
 

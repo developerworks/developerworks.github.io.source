@@ -168,7 +168,8 @@ A list of Chromium's command line arguments is available at [http://src.chromium
 ## Window 参数
 
 **title**
-:   (*string*) `node-webkit`默认窗口标题,当应用程序启动时你可以自定义要显示的标题
+
+(*string*) `node-webkit`默认窗口标题,当应用程序启动时你可以自定义要显示的标题
 
 **width/height**
 :   (*int*) 主窗口的初始宽度/高度.

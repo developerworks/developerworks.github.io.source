@@ -13,13 +13,12 @@ mkdir project1 && cd project1
 npm init
 ```
 
-
-![初始化一个全新的模块][1]
-
-
 命令执行完成,会在当前目录下生成`package.json`文件, 这是编写一个公共模块的基本步骤, 像普通项目一样,可以`npm install $package_name`安装依赖的其他模块
 
 
+<!-- more -->
+
+![初始化一个全新的模块][1]
 
 
 ## 1. 检查一个项目的依赖模块是否有新版本
@@ -34,7 +33,6 @@ npm http GET https://registry.npmjs.org/epilogue
 
 命令执行完毕后,会显示一个更新报告如下:
 
-<!-- more -->
 
 
 ![检查npm依赖模块新版本][2]

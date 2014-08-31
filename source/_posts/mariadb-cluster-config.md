@@ -4,6 +4,7 @@ categories:
 tags:
   - config
 date: 2014-08-16 11:36:40
+toc: false
 ---
 
 ## 三个节点的`mariadb`集群配置
