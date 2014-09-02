@@ -83,7 +83,7 @@ root@localhost:~$ sudo docker commit -m="Install git" -a="Developerworks Dev" 89
 终端输出一个64位长度的字符串, 表示成功提交, 我们执行`docker images`显示一下当前本机的镜像列表
 
 ```
-root@mecil:~# docker images
+root@localhost:~# docker images
 REPOSITORY              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 developerworks/ubuntu   dev                 1c34d9400142        12 seconds ago      321.9 MB
 ubuntu                  14.04               c4ff7513909d        2 weeks ago         213 MB
@@ -190,6 +190,8 @@ Removing intermediate container 4278228003b9
 Successfully built f51d8fe3e51d
 ```
 
+到此,通过`Docker`搭建一个`Node.js`的运行环境全部完成, 可以通过本文提供的基本过程进行扩展,满足你自己的需要.
+
 ## 删除镜像
 
 ```
@@ -207,6 +209,47 @@ docker rm $(docker ps -a -q)
 # Delete all images
 docker rmi $(docker images -q)
 ```
+
+## 设置镜像标记
+
+命令行帮助
+
+```
+root@mecil:~/images# docker tag
+Usage: docker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]
+Tag an image into a repository
+  -f, --force=false    Force
+```
+
+测试,查看两次`docker images`的输出差异
+
+```
+root@localhost:~/images# docker images
+REPOSITORY                                      TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+developerworks/ubuntu-nodejs-runtime            add-forever         f51d8fe3e51d        41 minutes ago      573.9 MB
+developerworks/ubuntu-trusy-build-essential-4   latest              2c01d3956f80        About an hour ago   562.3 MB
+developerworks/ubuntu-nodejs-runtime            latest              2c01d3956f80        About an hour ago   562.3 MB
+ubuntu                                          14.04               c4ff7513909d        2 weeks ago         213 MB
+root@localhost:~/images# docker tag f51d8fe3e51d developerworks/ubuntu-nodejs-runtime-v1
+root@localhost:~/images# docker images
+REPOSITORY                                      TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+developerworks/ubuntu-nodejs-runtime            add-forever         f51d8fe3e51d        42 minutes ago      573.9 MB
+# 下面一行是我们刚加的标记
+developerworks/ubuntu-nodejs-runtime-v1         latest              f51d8fe3e51d        42 minutes ago      573.9 MB
+developerworks/ubuntu-trusy-build-essential-4   latest              2c01d3956f80        About an hour ago   562.3 MB
+developerworks/ubuntu-nodejs-runtime            latest              2c01d3956f80        About an hour ago   562.3 MB
+ubuntu                                          14.04               c4ff7513909d        2 weeks ago         213 MB
+```
+
+
+## 发布一个镜像到Docker Hub
+
+```
+developerworks/ubuntu-nodejs-runtime-v1
+2014/08/31 13:52:00 Error: Status 403 trying to push repository developerworks/ubuntu-nodejs-runtime-v1: "Access denied, you don't have access to this repo"
+```
+
+这个错误是应为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.进入此链接, https://registry.hub.docker.com/builds/add, 会引导你完成`Github`或`Bitbucket`和Docker仓库的关联.按提示做就可以了.
 
 
 
