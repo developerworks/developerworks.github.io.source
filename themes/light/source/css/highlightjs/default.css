@@ -130,7 +130,7 @@ pre .status {
 
 pre .asciidoc .emphasis,
 pre .markdown .emphasis {
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .nginx .built_in {

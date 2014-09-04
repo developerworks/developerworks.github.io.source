@@ -19,7 +19,7 @@ pre .doctype,
 pre .lisp .string,
 pre .javadoc {
   color: #586e75;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .keyword,

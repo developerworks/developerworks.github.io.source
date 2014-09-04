@@ -16,7 +16,7 @@ pre .template_comment,
 pre .javadoc,
 pre .shebang {
   color: #BC9458;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .keyword,

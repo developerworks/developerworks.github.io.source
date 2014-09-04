@@ -21,7 +21,7 @@ pre .template_comment,
 pre .javadoc,
 pre .diff .header {
   color: #808080;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .annotation,
@@ -92,7 +92,7 @@ pre .char,
 pre .tex .formula {
   color: #000;
   background: #d0eded;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .phpdoc,

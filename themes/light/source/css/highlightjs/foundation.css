@@ -28,7 +28,7 @@ pre .scss .value .string {
 
 pre .comment {
   color: #998;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .function .title {

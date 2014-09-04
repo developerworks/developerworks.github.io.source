@@ -126,7 +126,7 @@ pre .preprocessor * {
 
 pre .tex .formula {
   background-color: #EEE;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .diff .header,
