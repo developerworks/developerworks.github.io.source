@@ -13,7 +13,7 @@ pre .comment,
 pre .template_comment,
 pre .javadoc {
   color: #aeaeae;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 pre .keyword,

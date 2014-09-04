@@ -76,7 +76,7 @@ root@89eb687c9446:/# exit
 执行
 
 ```
-root@localhost:~$ sudo docker commit -m="Install git" -a="Developerworks Dev" 89eb687c9446 developerworks/ubuntu:dev
+root@localhost:~$ sudo docker commit -m="Install git" -a="developerworks" 89eb687c9446 developerworks/ubuntu:dev
 1c34d940014238623d5b4bcc92684db4af8cf0d59d67e28597ec858984ce8ce4
 ```
 
@@ -215,7 +215,7 @@ docker rmi $(docker images -q)
 命令行帮助
 
 ```
-root@mecil:~/images# docker tag
+root@localhost:~/images# docker tag
 Usage: docker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]
 Tag an image into a repository
   -f, --force=false    Force
@@ -225,13 +225,22 @@ Tag an image into a repository
 
 ```
 root@localhost:~/images# docker images
+```
+
+```
 REPOSITORY                                      TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 developerworks/ubuntu-nodejs-runtime            add-forever         f51d8fe3e51d        41 minutes ago      573.9 MB
 developerworks/ubuntu-trusy-build-essential-4   latest              2c01d3956f80        About an hour ago   562.3 MB
 developerworks/ubuntu-nodejs-runtime            latest              2c01d3956f80        About an hour ago   562.3 MB
 ubuntu                                          14.04               c4ff7513909d        2 weeks ago         213 MB
+```
+
+```
 root@localhost:~/images# docker tag f51d8fe3e51d developerworks/ubuntu-nodejs-runtime-v1
 root@localhost:~/images# docker images
+```
+
+```
 REPOSITORY                                      TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 developerworks/ubuntu-nodejs-runtime            add-forever         f51d8fe3e51d        42 minutes ago      573.9 MB
 # 下面一行是我们刚加的标记
@@ -250,6 +259,8 @@ developerworks/ubuntu-nodejs-runtime-v1
 ```
 
 这个错误是应为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.进入此链接, https://registry.hub.docker.com/builds/add, 会引导你完成`Github`或`Bitbucket`和Docker仓库的关联.按提示做就可以了.
+
+## 导入和导出
 
 
 
