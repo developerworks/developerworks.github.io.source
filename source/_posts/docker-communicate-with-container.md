@@ -1,0 +1,118 @@
+title: Docker - 容器之间的通信
+categories:
+  - docker
+tags:
+  - port
+  - linking
+toc: true
+date: 2014-09-04 17:07:49
+---
+
+
+## 通过网络端口通信
+
+默认情况容器和主机之间的网络通信是封闭的, 如果要让容器能够被外部网络访问, 需要在启动容器的时候指定要开放的端口, 这样我们就能通过主机的网络访问容器内提供的的服务了.我们在容器中运行了一个Web服务器,用户需要访问这个容器内的资源, 这里为了方便,直接使用官方手册里的示例:
+
+```
+root@localhost:/# docker run -d -p 5000:5000 training/webapp python app.py
+```
+
+命令行分解:
+
+- `-p` 标志指定了端口映射,形式为: `<主机端口>:<容器端口>`, 注意不要弄反了.
+- `-d` 标志表示让容器在后台运行
+- `training/webapp` 表示镜像名称
+- `python app.py` 表示要在容器内运行的`SHELL`命令
+
+<!--more-->
+
+### 端口绑定模式
+
+本文把`docker`服务所在的操作系统成为`托管系统`, 通过`-p`标志绑定端口又如下几种方式:
+
+- 容器端口绑定到托管系统特定接口的特定端口上
+
+```
+-p 127.0.0.1:5000:5000
+```
+
+- 绑定到托管系统的随机端口上(49000~49900)
+
+```
+-p 127.0.0.1::5000
+```
+
+- 绑定到托管系统的所有接口上(0.0.0.0)
+
+```
+-p 5000:5000
+```
+
+- 还可以指定协议(TCP或UDP,等)
+
+```
+-p 127.0.0.1:5000:5000/udp
+```
+
+- `-p` 标记可以使用多次,同时绑定多个端口
+
+```
+-p 127.0.0.1:5000:5000 -p 127.0.0.1:5001:5001
+```
+
+## 容器链接
+
+网络端口不是容器之间相互链接的唯一方式, Docker 还有一个链接系统能够把多个容器链接到一起.通过`Linking`, 容器之间能够相互发现,并能够安全地传输信息. 当创建`Linking`时,实际上是在`源`容器和`目标`容器之间建立了一根管道(`Conduit`). 要创建`Linking`,需要使用`--link`标志, 首先创建一个新容器,其中包含我们要访问的数据库:
+
+从镜像`training/postgres`创建一个叫做`db`的容器, 其中包含PostgreSQL数据库.
+
+```
+docker run -d --name db training/postgres:latest
+```
+
+创建一个`web`容器,并链接到`db`容器
+
+```
+docker run -d -P --name web --link db:db training/webapp python app.py
+```
+
+要建立容器之间的链接,必须在启动时通过参数`--name $container_name`给容器命名,例如:
+
+```
+docker run -d -P --name web training/webapp python app.py
+```
+
+`--link` 标志的形式如下:
+
+```
+--link name:alias
+```
+
+其中 `name` 为被链接的容器名称 `alias` 为链接的别名
+
+我们启动`db`容器的时候并没有指定`-P`或`-p`参数,在这个例子中,`web`容器作为`接受者(recipient)`把自己的信息暴露给作为`source(源)`的`db`, Docker在两个容器之间创建了一个安全的隧道,这是链接的巨大优势, 通过连接,我们不需要向外部网络暴露端口.
+
+Docker通过两种方式把链接暴露给`recipient(接受者)`容器:
+
+- 环境变量
+- 更新`/etc/hosts`文件
+
+Docker设置了一堆环境变量, 可以使用`env`命令列出指定容器的环境变量:
+
+```
+root@localhost:~# sudo docker run --rm --name web2 --link db:db training/webapp env
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=7f3a2434b08a
+DB_PORT=tcp://172.17.0.21:5432
+DB_PORT_5432_TCP=tcp://172.17.0.21:5432
+DB_PORT_5432_TCP_ADDR=172.17.0.21
+DB_PORT_5432_TCP_PORT=5432
+DB_PORT_5432_TCP_PROTO=tcp
+DB_NAME=/web2/db
+DB_ENV_PG_VERSION=9.3
+HOME=/
+```
+
+
+
+

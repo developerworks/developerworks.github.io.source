@@ -87,9 +87,7 @@ git config --global i18n.commitencoding utf8
 
 ## 评审的中文问题
 
-使用`gerrit`评审代码,如果代码中有中文会出现服务器错误,这是查看`logs`中的`error_log`,
-看到如下错误日志,这时因为缺少解析中文的包,去http://code.google.com/p/juniversalchardet/downloads/list, 下载juniversalchardet的jar包,放在lib目录下,重新启动服务即可。
-
+使用`gerrit`评审代码,如果代码中有中文会出现服务器错误,这是查看`logs`中的`error_log`,看到如下错误日志,这时因为缺少解析中文的包,去http://code.google.com/p/juniversalchardet/downloads/list, 下载juniversalchardet的jar包,放在lib目录下,重新启动服务即可。
 
 ```
 wget https://juniversalchardet.googlecode.com/files/juniversalchardet-1.0.3.jar

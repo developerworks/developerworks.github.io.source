@@ -141,6 +141,22 @@ root@2da06a3b3b8a:/# ls
 bin  boot  dev	etc  home  lib	lib64  media  mnt  opt	proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
 
+## 显示详细信息
+
+```
+$ sudo docker ps -l
+```
+
+`-l` 标记用于输出容器的详细信息
+
+## 显示已经停止的容器
+
+```
+$ sudo docker ps -a
+```
+
+`-a`标记显示已经停止的容器
+
 
 
 

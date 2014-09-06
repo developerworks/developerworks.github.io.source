@@ -4,15 +4,15 @@ menu:
   RSS: /atom.xml
 
 widgets:
-- octocard1
-- search
+#- octocard1
+#- search
 #- about_me
 - recent_posts
 - category
 - calendar
 - tagcloud
 #- links
-- duoshuo_recent_comments
+#- duoshuo_recent_comments
 
 highlightjs: monokai_sublime
 

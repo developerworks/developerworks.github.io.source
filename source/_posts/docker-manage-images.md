@@ -13,18 +13,38 @@ date: 2014-08-31 11:29:07
 
 ## 列出本地已下载镜像
 
+线性列表
+
 ```
-root@localhost:~$ sudo docker images
+root@localhost:~# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 ubuntu              14.04               c4ff7513909d        2 weeks ago         213 MB
 ubuntu              latest              c4ff7513909d        2 weeks ago         213 MB
 training/webapp     latest              31fa814ba25a        3 months ago        278.6 MB
 ```
 
+树状列表
+
+```
+root@localhost:~# docker images --tree
+Warning: '--tree' is deprecated, it will be removed soon. See usage.
+├─8d9098e943e3 Virtual Size: 797.3 MB Tags: developerworks/buildserver:latest
+├─fb98151c15f0 Virtual Size: 595.4 MB Tags: developerworks/base:latest
+├─d4efe79a7adf Virtual Size: 595.4 MB
+│ └─dab0f78de735 Virtual Size: 596.7 MB Tags: developerworks/base:v1
+└─511136ea3c5a Virtual Size: 0 B
+  └─1c9383292a8f Virtual Size: 192.5 MB
+    └─9942dd43ff21 Virtual Size: 192.7 MB
+      └─d92c3c92fa73 Virtual Size: 192.7 MB
+        └─0ea0d582fd90 Virtual Size: 192.7 MB
+          └─cc58e55aa5a5 Virtual Size: 225.4 MB
+            └─c4ff7513909d Virtual Size: 225.4 MB Tags: ubuntu:14.04
+```
+
 ## 下载一个新的镜像
 
 ```
-root@localhost:~$ sudo docker pull centos
+root@localhost:~# docker pull centos
 Pulling repository centos
 b157b77b1a65: Download complete
 b1bd49907d55: Download complete
@@ -35,7 +55,7 @@ b1bd49907d55: Download complete
 ## 搜索镜像
 
 ```
-root@localhost:~$ sudo docker search gerrit
+root@localhost:~# docker search gerrit
 NAME                      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 edgester/gerrit           The Gerrit code review system. v2.7 using ...   3
 nikolas/gerrit            A Docker container for Gerrit code review....   2
@@ -60,7 +80,7 @@ jgeewax/gerrit            Gerrit + Apache 2. See https://github.com/...   0
 - 启动一个容器,并安装`git`工具
 
 ```
-root@localhost:~$ sudo docker run -i -t ubuntu /bin/bash
+root@localhost:~# docker run -i -t ubuntu /bin/bash
 root@89eb687c9446:/#
 root@89eb687c9446:/# apt-get install -y git
 ```
@@ -76,7 +96,7 @@ root@89eb687c9446:/# exit
 执行
 
 ```
-root@localhost:~$ sudo docker commit -m="Install git" -a="developerworks" 89eb687c9446 developerworks/ubuntu:dev
+root@localhost:~# docker commit -m="Install git" -a="developerworks" 89eb687c9446 developerworks/ubuntu:dev
 1c34d940014238623d5b4bcc92684db4af8cf0d59d67e28597ec858984ce8ce4
 ```
 
@@ -118,7 +138,7 @@ $ mkdir image && cd image
 # 创建Dockerfile
 $ echo "FROM ubuntu:14.04
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-MAINTAINER developerworks <developerworks@163.com>
+MAINTAINER developerworks 
 RUN apt-get update
 RUN apt-get install -y build-essential
 RUN apt-get install -y wget
@@ -137,7 +157,7 @@ $ docker build -t="developerworks/ubuntu-nodejs-runtime" http://developerworks.g
 
 ```
 FROM developerworks/ubuntu-nodejs-runtime
-MAINTAINER developerworks <developerworks@163.com>
+MAINTAINER developerworks 
 RUN npm install -g forever
 ```
 
@@ -149,7 +169,7 @@ Sending build context to Docker daemon  2.56 kB
 Sending build context to Docker daemon
 Step 0 : FROM developerworks/ubuntu-nodejs-runtime
  ---> 2c01d3956f80
-Step 1 : MAINTAINER developerworks <developerworks@163.com>
+Step 1 : MAINTAINER developerworks 
  ---> Running in 24f1d1115c7d
  ---> 22218cb058df
 Removing intermediate container 24f1d1115c7d
@@ -258,11 +278,17 @@ developerworks/ubuntu-nodejs-runtime-v1
 2014/08/31 13:52:00 Error: Status 403 trying to push repository developerworks/ubuntu-nodejs-runtime-v1: "Access denied, you don't have access to this repo"
 ```
 
-这个错误是应为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.进入此链接, https://registry.hub.docker.com/builds/add, 会引导你完成`Github`或`Bitbucket`和Docker仓库的关联.按提示做就可以了.
+这个错误是应为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.
 
-## 导入和导出
+进入此链接, https://registry.hub.docker.com/builds/add, 会引导你完成`Github`或`Bitbucket`和Docker仓库的关联.按提示做就可以了.
 
 
+## 创建自己的私有仓库
+
+
+```
+docker run -p 5000:5000 registry
+```
 
 
 
