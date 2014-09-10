@@ -2,7 +2,7 @@ title: Docker - 在Ubuntu 14.04 Server上的安装Docker
 categories:
   - docker
 tags:
-  - docker container
+  - docker
 date: 2014-08-27 15:33:35
 toc: true
 ---

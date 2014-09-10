@@ -4,6 +4,7 @@ categories:
 tags:
   - data management
   - data volume
+  - docker
 toc: true
 date: 2014-09-05 03:03:10
 ---
@@ -33,9 +34,9 @@ date: 2014-09-05 03:03:10
 docker run -d -P --name web -v /webapp training/webapp python app.py
 ```
 
-### 挂载托管系统目录作为数据卷
+### 挂载宿主系统目录作为数据卷
 
-除了通过`-v`选项创建数据卷之外, 还可以把托管系统目录挂载到容器中:
+除了通过`-v`选项创建数据卷之外, 还可以把宿主系统目录挂载到容器中:
 
 挂载本地文件系统目录 `/src/webapp` 到容器目录 `/opt/webapp` 中.
 
@@ -44,7 +45,7 @@ docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python ap
 ```
 
 - 目录必须是绝对路径
-- 托管系统中如果不存在该目录,Docker会自动创建
+- 宿主系统中如果不存在该目录,Docker会自动创建
 
 挂载的卷默认可以读写, 也可以用只读的方式挂载:
 
@@ -55,7 +56,7 @@ docker run -d -P --name web -v /src/webapp:/opt/webapp:ro training/webapp python
 `ro` 选项把挂载的卷 `/src/webapp` 设置为在容器中只读
 
 
-### 把托管系统中的单个文件挂载为卷
+### 把宿主系统中的单个文件挂载为卷
 
 `-v` 选项也可以用于挂载单个文件, 而不仅是目录.
 
@@ -75,7 +76,6 @@ This will drop you into a bash shell in a new container, you will have your bash
 docker run -d -v /dbdata --name dbdata training/postgres echo Data-only container for postgres
            ==    =======        ====== ================= =====================================
             |          |             |                 |                        |
-            v          v             v                 v                        v
            后台运行  目录路径     容器名称           镜像名称               SHELL命令行
 ```
 
@@ -96,7 +96,7 @@ docker run -d --volumes-from dbdata --name db2 training/postgres
 docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
 ```
 
-我们启动了一个新容器并从`dbdata`容器挂载数据卷. 同时我们还把当前目录挂载为容器内的`/backup`目录,最后我们使用`tar`命令来备份`dbdata`卷的内容到`/backup/backup.tar`,当命令完成,容器停止我们得到了一个托管系统当前目录下的一个`backup.tar`数据卷备份文件.
+我们启动了一个新容器并从`dbdata`容器挂载数据卷. 同时我们还把当前目录挂载为容器内的`/backup`目录,最后我们使用`tar`命令来备份`dbdata`卷的内容到`/backup/backup.tar`,当命令完成,容器停止我们得到了一个宿主系统当前目录下的一个`backup.tar`数据卷备份文件.
 
 之后,在你需要重新使用这个数据卷的时候,你可以使用如下命令把原先备份的数据卷恢复到创建的容器中继续使用.
 

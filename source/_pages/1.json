@@ -1,0 +1,71 @@
+[{
+    "Architecture": "amd64",
+    "Author": "developerworks",
+    "Comment": "build server update on 20140908",
+    "Config": {
+        "AttachStderr": false,
+        "AttachStdin": false,
+        "AttachStdout": false,
+        "Cmd": [
+            "/bin/bash"
+        ],
+        "CpuShares": 0,
+        "Cpuset": "",
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [],
+        "ExposedPorts": {
+            "8080/tcp": {}
+        },
+        "Hostname": "",
+        "Image": "",
+        "Memory": 0,
+        "MemorySwap": 0,
+        "NetworkDisabled": false,
+        "OnBuild": null,
+        "OpenStdin": false,
+        "PortSpecs": null,
+        "StdinOnce": false,
+        "Tty": false,
+        "User": "",
+        "Volumes": {},
+        "WorkingDir": "/root"
+    },
+    "Container": "0a9d64ee15ed7d9f36cbd7e63529ffff3eb78baa04ad57fdc2a32590b5b73889",
+    "ContainerConfig": {
+        "AttachStderr": true,
+        "AttachStdin": true,
+        "AttachStdout": true,
+        "Cmd": [
+            "/bin/bash"
+        ],
+        "CpuShares": 0,
+        "Cpuset": "",
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [],
+        "ExposedPorts": {
+            "8080/tcp": {}
+        },
+        "Hostname": "0a9d64ee15ed",
+        "Image": "developerworks/ci",
+        "Memory": 0,
+        "MemorySwap": 0,
+        "NetworkDisabled": false,
+        "OnBuild": null,
+        "OpenStdin": true,
+        "PortSpecs": null,
+        "StdinOnce": true,
+        "Tty": true,
+        "User": "",
+        "Volumes": {},
+        "WorkingDir": "/root"
+    },
+    "Created": "2014-09-09T05:20:19.873111455Z",
+    "DockerVersion": "1.2.0",
+    "Id": "3689159db61290d2970f3c1083c379f4ddcc9528da8924f45f94c504aa6a5bd1",
+    "Os": "linux",
+    "Parent": "b15db50acba5f942bead676ed221a5b2cc525956cbece426cf0e7cd1f0963bc2",
+    "Size": 528439773
+}
+]

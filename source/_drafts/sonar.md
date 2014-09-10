@@ -1,6 +1,6 @@
 title: sonar
 categories:
-  - sonar
+  - Quality Assurance
 tags:
   - sonar
 date: 2014-08-30 16:49:30

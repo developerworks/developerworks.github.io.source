@@ -3,6 +3,7 @@ categories:
   - docker
 tags:
   - manage images
+  - docker
 toc: true
 date: 2014-08-31 11:29:07
 ---

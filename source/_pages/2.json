@@ -1,0 +1,100 @@
+[{
+    "Args": [],
+    "Config": {
+        "AttachStderr": true,
+        "AttachStdin": true,
+        "AttachStdout": true,
+        "Cmd": [
+            "/bin/bash"
+        ],
+        "CpuShares": 0,
+        "Cpuset": "",
+        "Domainname": "",
+        "Entrypoint": null,
+        "Env": [],
+        "ExposedPorts": {
+            "8080/tcp": {}
+        },
+        "Hostname": "0a9d64ee15ed",
+        "Image": "developerworks/ci",
+        "Memory": 0,
+        "MemorySwap": 0,
+        "NetworkDisabled": false,
+        "OnBuild": null,
+        "OpenStdin": true,
+        "PortSpecs": null,
+        "StdinOnce": true,
+        "Tty": true,
+        "User": "",
+        "Volumes": {},
+        "WorkingDir": "/root"
+    },
+    "Created": "2014-09-09T03:53:46.674567291Z",
+    "Driver": "aufs",
+    "ExecDriver": "native-0.2",
+    "HostConfig": {
+        "Binds": [
+            "/opt/.gradle:/root/.gradle",
+            "/opt/android-sdk-linux:/opt/android-sdk-linux"
+        ],
+        "CapAdd": null,
+        "CapDrop": null,
+        "ContainerIDFile": "",
+        "Devices": [],
+        "Dns": null,
+        "DnsSearch": null,
+        "Links": null,
+        "LxcConf": [],
+        "NetworkMode": "bridge",
+        "PortBindings": {
+            "8080/tcp": [
+                {
+                    "HostIp": "0.0.0.0",
+                    "HostPort": "8080"
+                }
+            ]
+        },
+        "Privileged": false,
+        "PublishAllPorts": false,
+        "RestartPolicy": {
+            "MaximumRetryCount": 0,
+            "Name": ""
+        },
+        "VolumesFrom": null
+    },
+    "HostnamePath": "/var/lib/docker/containers/0a9d64ee15ed7d9f36cbd7e63529ffff3eb78baa04ad57fdc2a32590b5b73889/hostname",
+    "HostsPath": "/var/lib/docker/containers/0a9d64ee15ed7d9f36cbd7e63529ffff3eb78baa04ad57fdc2a32590b5b73889/hosts",
+    "Id": "0a9d64ee15ed7d9f36cbd7e63529ffff3eb78baa04ad57fdc2a32590b5b73889",
+    "Image": "b15db50acba5f942bead676ed221a5b2cc525956cbece426cf0e7cd1f0963bc2",
+    "MountLabel": "",
+    "Name": "/trusting_elion",
+    "NetworkSettings": {
+        "Bridge": "",
+        "Gateway": "",
+        "IPAddress": "",
+        "IPPrefixLen": 0,
+        "PortMapping": null,
+        "Ports": null
+    },
+    "Path": "/bin/bash",
+    "ProcessLabel": "",
+    "ResolvConfPath": "/var/lib/docker/containers/0a9d64ee15ed7d9f36cbd7e63529ffff3eb78baa04ad57fdc2a32590b5b73889/resolv.conf",
+    "State": {
+        "ExitCode": 0,
+        "FinishedAt": "2014-09-09T05:19:39.402139248Z",
+        "Paused": false,
+        "Pid": 0,
+        "Restarting": false,
+        "Running": false,
+        "StartedAt": "2014-09-09T03:53:46.790480944Z"
+    },
+    "Volumes": {
+        "/opt/android-sdk-linux": "/opt/android-sdk-linux",
+        "/root/.gradle": "/opt/.gradle"
+    },
+    "VolumesRW": {
+        "/opt/android-sdk-linux": true,
+        "/root/.gradle": true
+    }
+}
+]

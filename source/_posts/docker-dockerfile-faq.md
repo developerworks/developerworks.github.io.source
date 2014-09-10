@@ -3,6 +3,7 @@ categories:
   - docker
 tags:
   - faq
+  - docker
 toc: false
 date: 2014-09-04 23:55:05
 ---

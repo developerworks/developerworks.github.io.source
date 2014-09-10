@@ -3,6 +3,7 @@ categories:
   - docker
 tags:
   - container
+  - docker
 toc: false
 date: 2014-09-04 12:55:22
 ---
