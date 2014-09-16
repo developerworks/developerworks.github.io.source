@@ -76,7 +76,7 @@ docker run -i -t -p 0.0.0.0:8080:8080 -v /opt/android-sdk-linux:/opt/android-sdk
 # 备份 sources.list
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 # 替换下载源
-sed -i "s/archive.ubuntu.com/debian.ustc.edu.cn/g" /etc/apt/sources.list
+sed -i "s/cn.archive.ubuntu.com/debian.ustc.edu.cn/g" /etc/apt/sources.list
 # 更新
 apt-get update
 # 安装需要用到的软件

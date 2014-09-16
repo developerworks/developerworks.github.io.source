@@ -14,6 +14,8 @@ date: 2014-09-09 13:42:37
 root@localhost:~# apt-get install -y graphviz
 ```
 
+<!-- more -->
+
 生成
 
 ```

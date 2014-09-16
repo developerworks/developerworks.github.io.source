@@ -10,11 +10,13 @@ date: 2014-09-07 18:56:34
 
 遇到这个需求是因为由于长时间登陆到SSH服务器没有活动,超时自动断线. 重新登陆SSH后丢失了容器的SHELL,需要重新进入容器.
 
+<!-- more -->
+
 搜刮了各种引擎后,主要有`lxc-attach`,`nsenter`, `nsinit`几种方式, 其中`lxc-attach`官方已经不建议使用,`nsinit`是官官方基于`libcontainer`开发的一个容器管理工具,需要安装`Golang`运行环境,稍微麻烦, 为了方便选用`nsenter`
 
 `Ubuntu 14.04`的`util-linux`包是2.20版本的, `nsenter` 在`2.23`中才有, 所以需要编译`util-linux`包的源码
 
-<!-- more -->
+
 
 ## nsenter
 
@@ -62,6 +64,18 @@ root@localhost:~# alias nsenter='nsenter --mount --uts --ipc --net --pid --targe
 
 ```
 root@localhost:~# nsenter 27188
+```
+
+## nsenter 的快捷方法
+
+```
+root@localhost:~# wget -O /usr/local/bin/docker-enter https://github.com/jpetazzo/nsenter/raw/master/docker-enter
+root@localhost:~# chmod +x /usr/local/bin/docker-enter
+root@localhost:~# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                                                                    NAMES
+efb53d441c79        ffa21f762b09        "/bin/bash"         6 hours ago         Up 6 hours          0.0.0.0:3307->3306/tcp, 0.0.0.0:8080->8080/tcp, 0.0.0.0:9000->9000/tcp   sleepy_lalande
+root@localhost:~# docker-enter efb53d441c79
+root@efb53d441c79:~#
 ```
 
 ## lxc-attach

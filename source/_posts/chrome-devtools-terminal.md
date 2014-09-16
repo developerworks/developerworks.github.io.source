@@ -1,9 +1,9 @@
 title: DevTools Terminal,把终端功能带入到Chrome浏览器
-tags:
-  - devtools
-  - devtools-terminal
 categories:
-  - chrome
+  - Tools
+tags:
+- devtools
+- devtools-terminal
 date: 2014-08-02
 ---
 
