@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--tsung-1.0.dtd文件必须存在,否则tsung会报错-->
+<!DOCTYPE tsung SYSTEM "tsung-1.0.dtd">
+<tsung loglevel="notice" dumptraffic="false" version="1.0">
+    <clients>
+        <client host="localhost" use_controller_vm="true" maxusers="10000"/>
+    </clients>
+    <servers>
+        <server host='192.168.8.33' port='5222' type='tcp'/>
+    </servers>
+    <!-- register 200000 users in less than 15 minutes  -->
+    <load>
+        <arrivalphase phase="1" duration="15" unit="minute">
+            <users maxnumber="200000" interarrival="0.0025" unit="second"></users>
+        </arrivalphase>
+    </load>
+    <options>
+        <option type="ts_jabber" name="global_number" value="5"></option>
+        <!--用户最大ID-->
+        <option type="ts_jabber" name="userid_max" value="200000"></option>
+        <!--域名-->
+        <option type="ts_jabber" name="domain" value="xmpp.hezhiqiang.info"></option>
+        <!--用户名前缀-->
+        <option type="ts_jabber" name="username" value="tsung"></option>
+        <!--密码前缀-->
+        <option type="ts_jabber" name="passwd" value="tsung"></option>
+    </options>
+    <sessions>
+        <session probability="100" name="jabber-example" type="ts_jabber">
+            <!--连接测试-->
+            <request>
+                <jabber type="connect" ack="local"></jabber>
+            </request>
+            <!--注册测试-->
+            <request>
+                <match do="abort" when="match">error</match>
+                <jabber type="register" ack="local" id="new"></jabber>
+            </request>
+            <!--关闭测试-->
+            <request>
+                <jabber type="close" ack="local"></jabber>
+            </request>
+        </session>
+    </sessions>
+</tsung>
