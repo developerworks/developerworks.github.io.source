@@ -1,6 +1,6 @@
 title: Gerrit 工作流
 categories:
-  - git
+  - 软件配置管理
 tags:
   - gerrit
 date: 2014-08-22 15:30:55

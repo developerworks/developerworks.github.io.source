@@ -1,8 +1,8 @@
 title: Git init 命令参数
 categories:
-  - git
+  - 软件配置管理
 tags:
-  - git-init
+  - git
 date: 2014-08-21 23:21:52
 ---
 

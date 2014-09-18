@@ -1,6 +1,6 @@
 title: 搭建Android持续集成服务器
 categories:
-  - Quality Assurance
+  - 质量保证
 tags:
   - ci
   - docker

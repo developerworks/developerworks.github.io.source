@@ -16,6 +16,7 @@ date: 2014-09-14 22:29:37
 | Strophe.js          | http://strophe.im/strophejs/                                                |
 | Candy.js            | https://github.com/candy-chat/candy                                         |
 | Converse.js         | https://conversejs.org/                                                     |
+| stanza.io           | https://github.com/otalk/stanza.io                                          |
 
 ## Servers
 

@@ -1,8 +1,8 @@
 title: Git 常用别名
 categories:
-  - git
+  - 软件配置管理
 tags:
-  - git alias
+  - git
 date: 2014-08-22 16:33:47
 toc: false
 ---

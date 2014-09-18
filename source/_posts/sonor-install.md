@@ -1,6 +1,6 @@
 title: QA - Sonor 安装
 categories:
-  - Quality Assurance
+  - 质量保证
 tags:
   - sonor
 toc: false

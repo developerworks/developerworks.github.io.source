@@ -1,12 +1,13 @@
-title: 体验git-flow
-categories: git
-tags: git-flow
-author: hezhiqiang
+title: 体验 git-flow
+categories:
+  - 软件配置管理
+tags:
+  - git
 toc: true
 date: 2014-08-17 00:42:59
 ---
 
-## git-flow 是个什么东西?
+## git-flow 是个什么?
 
 - `git-flow` 是一个管理`git`代码仓库的生产力工具
 - `git-flow` 是一种`git`代码管理的最佳实践
