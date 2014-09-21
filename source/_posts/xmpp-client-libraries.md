@@ -1,6 +1,6 @@
 title: Jabber 服务器/客户端库
 categories:
-  - jabber
+  - Communication System
 tags:
   - jabber
 toc: true
@@ -35,7 +35,6 @@ date: 2014-09-14 22:29:37
 
 
 ## Articles
-
 
 1. https://www.linode.com/docs/applications/messaging/
 2. http://anders.conbere.org/2011/05/03/get_xmpp_-_bosh_working_with_ejabberd_firefox_and_strophe.html

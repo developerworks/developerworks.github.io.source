@@ -1,9 +1,9 @@
-title: XMPP 连接管理器
+title: XMPP连接管理器 node-xmpp-bosh
 categories:
-  ### XMPP
+  - Communication System
 tags:
-  ### ejabberd
-  ### nodejs
+  - ejabberd
+  - nodejs
 toc: false
 date: 2014-09-18 17:43:15
 ---

@@ -1,13 +1,11 @@
-title: docker-container-metadata
+title: Docker 容器/镜像元数据
 categories:
-  - null
+  - docker
 tags:
-  - null
+  - docker
 toc: false
 date: 2014-09-05 03:16:25
 ---
-## {{ title }}
-
 
 ```
 [{

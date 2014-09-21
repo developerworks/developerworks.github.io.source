@@ -9,10 +9,12 @@ date: 2014-09-16 13:04:56
 
 基本的jabber客户端必须实现以下标准协议（XEP-0211）
 
-1. RFC3920 Core http://tools.ietf.org/html/rfc3920
-2. RFC3921 Instant Messaging and Presence http://tools.ietf.org/html/rfc3921
+1. RFC6120 Core http://wiki.jabbercn.org/RFC6120
+2. RFC6121 Instant Messaging and Presence http://wiki.jabbercn.org/RFC6121
 3. XEP-030 Service Discovery http://www.xmpp.org/extensions/xep-0030.html
 4. XEP-0115 Entity Capabilities http://www.xmpp.org/extensions/xep-0115.html
+
+5. http://www.rfc-editor.org/rfc/rfc6121.txt
 
 基本的jabber服务器必须实现以下标准协议(XEP-0212)
 

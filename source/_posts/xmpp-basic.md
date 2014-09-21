@@ -1,7 +1,8 @@
 title: XMPP Stanza (节)
 categories:
-  - xmpp
+  - Communication System
 tags:
+  - xmpp
   - stanza
 toc: true
 date: 2014-09-15 02:17:25

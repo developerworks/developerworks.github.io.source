@@ -1,8 +1,10 @@
 title: XMPP 同步HTTP双向流
 categories:
-  - javascript
+  - Communication System
 tags:
   - xmpp
+  - bosh
+  - javascript
 toc: false
 date: 2014-09-13 20:313:13
 ---

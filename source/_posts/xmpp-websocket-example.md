@@ -1,8 +1,9 @@
 title: XMPP Websocket 示例
 categories:
-  - xmpp
+  - Communication System
 tags:
   - xmpp
+  - websocket
 toc: false
 date: 2014-09-17 00:08:43
 ---
