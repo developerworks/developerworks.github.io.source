@@ -21,4 +21,15 @@ registration_timeout: infinity
 
 
 
-##
+## 配置管理员账号
+
+```
+acl:
+  ##
+  ## The 'admin' ACL grants administrative privileges to XMPP accounts.
+  ## You can put here as many accounts as you want.
+  ##
+  admin:
+     user:
+       - "root": "xmpp.hezhiqiang.info"
+```

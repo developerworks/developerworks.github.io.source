@@ -52,7 +52,7 @@ date: 2014-09-21 16:00:48
 |------------ | -------------- | -------
 |Ubuntu 14.04 | Ejabberd 14.07 | Strophe.js
 
-使用`node-xmpp-bosh`作为Websocket代理连接到Ejabberd, 需要配置管理员账号
+使用`node-xmpp-bosh`作为Websocket代理连接到Ejabberd, `node-xmpp-bosh`的安装和配置请看[我写的这篇文章][1], 使用XEP-0133相关功能需要管理员账号, 在`/etc/ejabberd/ejabberd.yml` 的 `acl` 部分添加一个管理员账号 `root@xmpp.hezhiqiang.info`
 
 ```
 ...
@@ -74,18 +74,27 @@ acl:
 
 ## 获取用户注册数
 
-请求:
+- 请求:
 ```
 <iq to='xmpp.hezhiqiang.info' type='set' xml:lang='en' xmlns='jabber:client'>
-  <command xmlns='http://jabber.org/protocol/commands' node='http://jabber.org/protocol/admin#get-registered-users-num' action='execute'/>
+  <command xmlns='http://jabber.org/protocol/commands'
+           node='http://jabber.org/protocol/admin#get-registered-users-num'
+           action='execute'/>
 </iq>
 ```
 
-响应:
+- 响应:
 
 ```
-<iq from="xmpp.hezhiqiang.info" to="root@xmpp.hezhiqiang.info/40924564951411172979418239" type="result" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" version="1.0">
-  <command xmlns="http://jabber.org/protocol/commands" sessionid="2014-09-20T00:29:51.291298Z" node="http://jabber.org/protocol/admin#get-registered-users-num" status="completed">
+<iq from="xmpp.hezhiqiang.info"
+    to="root@xmpp.hezhiqiang.info/40924564951411172979418239"
+    type="result" xmlns="jabber:client"
+    xmlns:stream="http://etherx.jabber.org/streams"
+    version="1.0">
+  <command xmlns="http://jabber.org/protocol/commands"
+           sessionid="2014-09-20T00:29:51.291298Z"
+           node="http://jabber.org/protocol/admin#get-registered-users-num"
+           status="completed">
     <x xmlns="jabber:x:data">
       <field type="hidden" var="FORM_TYPE">
         <value>http://jabber.org/protocol/admin</value>
@@ -98,7 +107,7 @@ acl:
 </iq>
 ```
 
-Strophe.js代码:
+- Strophe.js代码:
 
 ```
 var admin = {
@@ -127,7 +136,7 @@ Ejabberd实现和XEP-0133扩展协议有差异, Ejabberd使用非标准的方式
 
 ### Ejabberd 实现
 
-请求
+- 请求
 
 ```
 <iq xmlns='jabber:client' type='get' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
@@ -135,11 +144,16 @@ Ejabberd实现和XEP-0133扩展协议有差异, Ejabberd使用非标准的方式
 </iq>
 ```
 
-响应
+- 响应
 
 ```
 # 响应IQ节
-<iq from="xmpp.hezhiqiang.info" to="root@xmpp.hezhiqiang.info/231005051114111783732339" type="result" xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" version="1.0">
+<iq
+    from="xmpp.hezhiqiang.info"
+    to="root@xmpp.hezhiqiang.info/231005051114111783732339"
+    type="result" xmlns="jabber:client"
+    xmlns:stream="http://etherx.jabber.org/streams"
+    version="1.0">
   <query xmlns="http://jabber.org/protocol/disco#items" node="all users">
     <item jid="hezhiqiang@xmpp.hezhiqiang.info" name="hezhiqiang@xmpp.hezhiqiang.info"/>
     <item jid="root@xmpp.hezhiqiang.info" name="root@xmpp.hezhiqiang.info"/>
@@ -158,7 +172,7 @@ Ejabberd实现和XEP-0133扩展协议有差异, Ejabberd使用非标准的方式
 </iq>
 ```
 
-Strophe.js代码:
+- Strophe.js代码:
 
 ```
 function ServiceAdministration(host) {
@@ -207,7 +221,11 @@ function ServiceAdministration(host) {
     return JSON.parse(JSON.stringify(this.base_iq));
   };
   this.getCommand = function (node) {
-    return Strophe.xmlElement('command', {xmlns: 'http://jabber.org/protocol/commands', action: 'execute', node: this.node_prefix + node});
+    return Strophe.xmlElement('command', {
+        xmlns: 'http://jabber.org/protocol/commands',
+        action: 'execute',
+        node: this.node_prefix + node
+    });
   };
   this.send = function (iq) {
     connection.send(iq.tree());
@@ -255,3 +273,189 @@ var client_session = {
 var serviceadmin = new ServiceAdministration(client_session.domain);
 serviceadmin.getRegisterUserList2();
 ```
+
+## 获取在线用户列表
+
+和上面获取注册用户列表一样,此功能点在Ejabberd中的实现同样是`非标准的`.
+
+
+### Ejabberd 实现
+
+- 请求
+
+```
+<iq xmlns='jabber:client' type='get' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
+  <query xmlns='http://jabber.org/protocol/disco#items' node='online users'/>
+</iq>
+```
+
+- 响应
+
+```
+<iq from="xmpp.hezhiqiang.info"
+    to="root@xmpp.hezhiqiang.info/23683713071411180214453150"
+    type="result"
+    xmlns="jabber:client"
+    xmlns:stream="http://etherx.jabber.org/streams"
+    version="1.0">
+  <query xmlns="http://jabber.org/protocol/disco#items" node="online users">
+    <item jid="hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2" name="hezhiqiang@xmpp.hezhiqiang.info"/>
+    <item jid="root@xmpp.hezhiqiang.info/23683713071411180214453150" name="root@xmpp.hezhiqiang.info"/>
+  </query>
+</iq>
+```
+
+- Strophe.js代码片段
+
+```
+this.getOnlineUserList2 = function(){
+    var iq_attributes = this.getCopyBaseIQ();
+    iq_attributes.from = jid;
+    iq_attributes.to = session.domain;
+    iq_attributes.type = 'get';
+    var iq = $iq(iq_attributes).c('query', {
+      xmlns: 'http://jabber.org/protocol/disco#items',
+      node: this.nodes.GET_ONLINE_USERS_LIST_EJABBERD
+    });
+    this.send(iq);
+};
+```
+
+### 标准实现
+
+
+待测试
+
+
+## 广播通知
+
+### Ejabberd 实现
+
+![作为系统通知显示在右上角的Adium客户端广播通知][2]
+
+- 请求
+
+```
+<message to='xmpp.hezhiqiang.info/announce/all' xmlns='jabber:client'>
+  <subject>Server Notification</subject>
+  <body>Server will be upgrade in 2014-09-21 00:00:00, sorry for inconveniences</body>
+  <nick xmlns='http://jabber.org/protocol/nick'>系统</nick>
+</message>
+```
+
+- 响应
+
+```
+<message
+    from="xmpp.hezhiqiang.info"
+    to="root@xmpp.hezhiqiang.info"
+    xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" version="1.0">
+  <subject>Server Notification</subject>
+  <body>Server will be upgrade in 2014-09-21 00:00:00, sorry for inconveniences</body>
+  <nick xmlns="http://jabber.org/protocol/nick">系统</nick>
+</message>
+```
+- Strophe.js 代码片段
+
+```
+  this.ejabberdAnnounce = function (range) {
+    var range = range || 'all';
+    var iq = $msg({to: session.domain + '/announce/'+range})
+      .cnode(Strophe.xmlElement('subject', {}, 'Server Notification')).up()
+      .cnode(Strophe.xmlElement(
+        'body', {}, 'Server will be upgrade in 2014-09-21 00:00:00, sorry for inconveniences')
+      ).up()
+      .cnode(Strophe.xmlElement('nick', {xmlns: 'http://jabber.org/protocol/nick'}, '系统'));
+    this.send(iq);
+  }
+```
+
+
+### XEP 标准实现
+
+- 请求
+
+```
+<iq xmlns='jabber:client' type='set' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
+  <command xmlns='http://jabber.org/protocol/commands' node='http://jabber.org/protocol/admin#announce'>
+    <x xmlns='jabber:x:data' type='submit'>
+      <field type='hidden' var='FROM_TYPE'>
+        <value>http://jabber.org/protocol/admin</value>
+      </field>
+      <field var='announcement'>
+        <value>Attention! This service will be going down for</value>
+        <value>maintenance in 2 minutes. Please log off now!</value>
+        <value>We apologize for the inconvenience.</value>
+      </field>
+    </x>
+  </command>
+</iq>
+
+```
+
+- Ejabberd 错误响应
+
+```
+<iq from="xmpp.hezhiqiang.info" to="root@xmpp.hezhiqiang.info/13819390371411184835813106"
+    type="error"
+    xmlns="jabber:client"
+    xmlns:stream="http://etherx.jabber.org/streams" version="1.0">
+  <command
+    xmlns="http://jabber.org/protocol/commands"
+    node="http://jabber.org/protocol/admin#announce">
+    <x xmlns="jabber:x:data" type="submit">
+      <field type="hidden" var="FROM_TYPE">
+        <value>http://jabber.org/protocol/admin</value>
+      </field>
+      <field var="announcement">
+        <value>Attention! This service will be going down for</value>
+        <value>maintenance in 2 minutes. Please log off now!</value>
+        <value>We apologize for the inconvenience.</value>
+      </field>
+    </x>
+  </command>
+  <error code="406" type="modify">
+    <not-acceptable xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+    <text xmlns="urn:ietf:params:xml:ns:xmpp-stanzas">No body provided for announce message</text>
+  </error>
+</iq>
+```
+
+> TODO::其他按标准实现的服务器暂时未测试,深入研究后在补全
+
+Strophe.js 代码片段
+
+```
+  this.announce = function () {
+    var iq_attributes = this.getCopyBaseIQ();
+    iq_attributes.from = jid;
+    iq_attributes.to = session.domain;
+    var iq = $iq(iq_attributes)
+      .c('command', {
+        xmlns: 'http://jabber.org/protocol/commands',
+        node: 'http://jabber.org/protocol/admin#announce'
+      })
+      .c('x', {xmlns: 'jabber:x:data', type: 'submit'})
+      .c('field', {type: 'hidden', var: 'FROM_TYPE'})
+      .cnode(Strophe.xmlElement('value', {}, 'http://jabber.org/protocol/admin'))
+      .up().up()
+      .c('field', {var: 'announcement'})
+      .cnode(Strophe.xmlElement('value', {}, 'Attention! This service will be going down for'))
+      .up()
+      .cnode(Strophe.xmlElement('value', {}, 'maintenance in 2 minutes. Please log off now!'))
+      .up()
+      .cnode(Strophe.xmlElement('value', {}, 'We apologize for the inconvenience.'));
+    this.send(iq);
+  };
+```
+
+## 参考资料
+
+1. XEP-0133 http://xmpp.org/extensions/xep-0133.html
+2. Strophe.js API Doc http://strophe.im/strophejs/doc/1.1.3/files/strophe-js.html
+3. Ejabberd Guide http://www.process-one.net/docs/ejabberd/guide_en.html
+
+  [1]: /2014/09/18/xmpp-connection-manager-node-xmpp-bos/
+  [2]: /assets/images/8CB030C0-779D-4253-9730-A7BAC7D9BEBE.png
+
+
