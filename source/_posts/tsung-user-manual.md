@@ -1,8 +1,8 @@
 title: Tsung 用户手册
 categories:
-  - 质量保证
+  - QA
 tags:
-  - 测试
+  - testing
   - erlang
   - tsung
 toc: true
@@ -10,6 +10,8 @@ date: 2014-09-15 13:29:37
 ---
 
 `Tsung`是用Erlang开发的一个大规模负载测试工具, 由于Erlang天生就是为大规模并发设计的, 因此`Tsung`可以模拟大规模的用户操作, 这是Erlang本身给Tsung带来的优势.
+
+<!-- more -->
 
 ## 服务器和客户端
 

@@ -1,6 +1,6 @@
 title: 安装Gerrit
 categories:
-  - 软件配置管理
+  - SCM
 tags:
   - gerrit
 date: 2014-08-21 22:43:12

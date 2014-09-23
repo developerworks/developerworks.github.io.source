@@ -1,6 +1,6 @@
 title: QA - Sonor 安装
 categories:
-  - 质量保证
+  - QA
 tags:
   - sonor
 toc: false
@@ -12,6 +12,8 @@ date: 2014-09-10 22:13:35
 安装需要满足如下条件:
 
 http://docs.codehaus.org/display/SONAR/Requirements
+
+<!--more-->
 
 
 ## 配置数据库

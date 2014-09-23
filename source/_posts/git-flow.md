@@ -1,6 +1,6 @@
 title: 体验 git-flow
 categories:
-  - 软件配置管理
+  - SCM
 tags:
   - git
 toc: true

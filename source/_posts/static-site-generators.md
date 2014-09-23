@@ -1,7 +1,7 @@
 title: 静态站点生成器
 date: 2014-06-16
 categories:
-- web
+- Web
 toc: false
 ---
 

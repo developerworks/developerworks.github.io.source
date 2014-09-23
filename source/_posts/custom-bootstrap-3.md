@@ -2,7 +2,7 @@ title: 定制Bootstrap3
 tags:
   - bootstrap3
 categories:
-  - web
+  - Web
 date: 2014-08-02
 ---
 

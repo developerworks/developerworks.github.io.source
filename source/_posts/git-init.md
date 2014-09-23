@@ -1,6 +1,6 @@
 title: Git init 命令参数
 categories:
-  - 软件配置管理
+  - SCM
 tags:
   - git
 date: 2014-08-21 23:21:52

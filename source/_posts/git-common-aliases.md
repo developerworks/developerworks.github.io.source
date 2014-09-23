@@ -1,6 +1,6 @@
 title: Git 常用别名
 categories:
-  - 软件配置管理
+  - SCM
 tags:
   - git
 date: 2014-08-22 16:33:47

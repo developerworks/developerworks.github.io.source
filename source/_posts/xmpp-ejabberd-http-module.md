@@ -1,15 +1,18 @@
 title: 开发一个Ejabberd HTTP模块
 categories:
-  - XMPP
+  - Communication System
 tags:
+  - xmpp
   - ejabberd
 toc: false
 date: 2014-09-18 21:17:42
 ---
 
-## 基本模块结构
+如何开发一个Ejabberd模块, 本位机遇一个实例演示了如何开发一个Ejabberd的模块, 以及模块的基本结构.
 
 <!-- more -->
+
+## 基本模块结构
 
 ```
 %% Module name (has to match with the filename)
