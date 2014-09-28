@@ -1,8 +1,8 @@
 title: docker-shipyard
 categories:
-  - null
+  - docker
 tags:
-  - null
+  - shipyard
 toc: false
 date: 2014-09-05 14:02:13
 ---

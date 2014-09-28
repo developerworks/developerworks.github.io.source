@@ -36,3 +36,5 @@ root@localhost:~# docker export dbbd685a6391418a24493f8a07df62b3be6e813fc217841a
 ## 参考资料
 
 1. http://www.hnwatcher.com/r/650964/Slimming-down-Docker-containers-Intercity-Blog
+
+./configure --enable-mysqlnd --with-pdo-mysql --prefix=/root/runtimes/php --enable-fpm --with-gettext --with-mcrypt --with-mysql

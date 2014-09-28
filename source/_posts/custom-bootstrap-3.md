@@ -50,7 +50,8 @@ cd custom
 - 首先,在`custom`目录中创建一个自定义主的文件`my-bootstrap.less`. 此文件用于包含原始的`bootstrap.less`文件, 以及`自定义的`less模块文件.
 - 其次,在`my-boostrap.less`文件中包含`bootstrap.less`文件
 
-举例, 如果我们自定义导航栏的外观, 那么首先把`navs.less`文件从`node_modules/bootstrap/less/navs.less`复制到`costom/navs.less`
+举例, 如果我们自定义导航栏的外观,那么首先把`navs.less`文件从
+`node_modules/bootstrap/less/navs.less`复制到`costom/navs.less`
 
 然后在`my-bootstrap.less`文件中导入`custom/navs.less`, 内容如下
 
