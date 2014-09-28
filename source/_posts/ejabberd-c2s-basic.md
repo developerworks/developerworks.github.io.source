@@ -1,6 +1,6 @@
 title: Ejabberd  C2S模块状态分析
 categories:
-  - Communication System
+  - Communication
 tags:
   - ejabberd
   - ejabberd_c2s

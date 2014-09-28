@@ -1,6 +1,6 @@
 title: 使用Jiffy输出JSON数据
 categories:
-  - Communication System
+  - Communication
 tags:
   - ejabberd
   - jiffy

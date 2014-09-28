@@ -1,6 +1,6 @@
 title: XMPP连接管理器 node-xmpp-bosh
 categories:
-  - Communication System
+  - Communication
 tags:
   - ejabberd
   - nodejs

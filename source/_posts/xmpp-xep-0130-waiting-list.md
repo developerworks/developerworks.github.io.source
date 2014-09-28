@@ -1,6 +1,6 @@
 title: XMPP XEP-0130 等待列表
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep

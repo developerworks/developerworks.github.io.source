@@ -1,6 +1,6 @@
 title: XMPP XEP-0096 流初始化文件传输
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep

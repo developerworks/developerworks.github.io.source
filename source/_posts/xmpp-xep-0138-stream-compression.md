@@ -1,6 +1,6 @@
 title: XMPP XEP-0138 流压缩
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep

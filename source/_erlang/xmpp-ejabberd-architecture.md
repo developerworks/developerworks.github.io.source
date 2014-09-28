@@ -1,6 +1,6 @@
 title: XMPP Ejabberd 架构
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - ejabberd

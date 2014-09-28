@@ -1,6 +1,6 @@
 title: XMPP Ejabberd 给Echo服务增加TLS和XML流支持
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - ejabberd

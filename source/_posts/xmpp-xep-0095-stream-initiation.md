@@ -1,6 +1,6 @@
 title: XMPP XEP-0095 流初始化协商过程
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - stream initiation
@@ -109,7 +109,7 @@ test1 收到消息后返回要使用的流方法
 </iq>
 ```
 
-接受者一旦悬着了一个地址, 那么就可以开始传输数据了.
+接受者一旦选择了一个地址, 那么就可以开始传输数据了.
 
 ```
 <!--接收者, 收到该消息即开始发送文件-->

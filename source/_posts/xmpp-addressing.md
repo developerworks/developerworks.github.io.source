@@ -1,6 +1,6 @@
 title: XMPP Addressing
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
 toc: false

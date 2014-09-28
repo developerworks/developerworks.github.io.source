@@ -1,6 +1,6 @@
 title: XMPP 设置BOSH连接管理器
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - bosh

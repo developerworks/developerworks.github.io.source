@@ -1,6 +1,6 @@
 title: Ejabberd 套接字基础架构
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - ejabberd

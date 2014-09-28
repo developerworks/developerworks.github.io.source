@@ -1,6 +1,6 @@
 title: XMPP XEP-0133 服务管理
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep-0133

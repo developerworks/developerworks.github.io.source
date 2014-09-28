@@ -1,6 +1,6 @@
 title: 编译Ejabberd遇到的问题
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - ejabberd

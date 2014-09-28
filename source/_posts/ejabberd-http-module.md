@@ -1,6 +1,6 @@
 title: 开发一个Ejabberd HTTP模块
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - ejabberd
@@ -8,7 +8,7 @@ toc: false
 date: 2014-09-18 21:17:42
 ---
 
-如何开发一个Ejabberd模块, 本位机遇一个实例演示了如何开发一个Ejabberd的模块, 以及模块的基本结构.
+如何开发一个Ejabberd模块, 本文基于一个实例演示了如何开发一个Ejabberd模块, 以及模块的基本结构.
 
 <!-- more -->
 

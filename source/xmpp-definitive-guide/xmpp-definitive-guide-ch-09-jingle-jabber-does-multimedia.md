@@ -1,6 +1,6 @@
 title: XMPP权威指南第09章-Jingle多媒体会话
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xmpp-definitive-guide

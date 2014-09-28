@@ -1,6 +1,6 @@
 title: 开发Ejabberd模块
 categories:
-  - Communication System
+  - Communication
 tags:
   - ejabberd
 toc: true

@@ -1,6 +1,6 @@
 title: Jabber 服务器/客户端库
 categories:
-  - Communication System
+  - Communication
 tags:
   - jabber
   - library

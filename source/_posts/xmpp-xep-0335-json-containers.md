@@ -1,6 +1,6 @@
 title: XMPP XEP-0335 JSON 容器
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep

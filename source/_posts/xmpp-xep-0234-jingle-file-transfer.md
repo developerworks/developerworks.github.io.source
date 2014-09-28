@@ -1,6 +1,6 @@
 title: XMPP Jingle 文件传输
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - jingle

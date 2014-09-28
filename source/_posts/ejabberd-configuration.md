@@ -1,6 +1,6 @@
 title: Ejabberd 配置
 categories:
-  - Communication System
+  - Communication
 tags:
   - ejabberd
   - xmpp

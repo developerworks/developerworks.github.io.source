@@ -1,6 +1,6 @@
 title: XMPP XEP-0170 流特性协商的推荐顺序
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep

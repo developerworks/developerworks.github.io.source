@@ -1,6 +1,6 @@
 title: XMPP 同步HTTP双向流
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - bosh

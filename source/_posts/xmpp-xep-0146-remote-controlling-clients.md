@@ -1,6 +1,6 @@
 title: XMPP XEP-0146 远程控制客户端
 categories:
-  - Communication System
+  - Communication
 tags:
   - xmpp
   - xep
