@@ -21,7 +21,8 @@ date: 2012-06-30 07:45:34
 %% Description: TODO: Add description to env
 %%
 -module(env).
-%% There are six entry points in the Windows registry, top level keys. They can be abbreviated in the win32reg module as:
+%% There are six entry points in the Windows registry,
+%% top level keys. They can be abbreviated in the win32reg module as:
 %% Abbrev.          Registry key
 %% =======          ============
 %% hkcr             HKEY_CLASSES_ROOT

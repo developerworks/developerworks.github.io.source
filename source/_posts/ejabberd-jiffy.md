@@ -21,6 +21,14 @@ make
 make install
 ```
 
+`jiffy.so`路径有个Bug, 请参考: https://github.com/processone/ejabberd/issues/309, 要解决此问题, 执行:
+
+```
+mv /lib/ejabberd/priv/lib/jiffy.so /lib/ejabberd/priv/jiffy.so
+```
+
+写作本文时,该BUG暂未解决.
+
 代码
 
 ```

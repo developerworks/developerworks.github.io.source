@@ -259,7 +259,7 @@ set_opts(#state{csock=CSock, opts=Opts}) ->
 
 ## 总结
 
-我们编写了一个非常建档的echo服务来学习如何使用ejabberd的套接字基础架构. 要编写一个简单的TCP服务, 我们仅需要实现`socket_type()`让它返回`raw`, 并在`Mod:start/2`中派生一个进程处理整个套接字. 要编写一个简单的UDP服务,我们仅需要提供一个`udp_recv/5`回调.
+我们编写了一个非常简单的echo服务来学习如何使用ejabberd的套接字基础架构. 要编写一个简单的TCP服务, 我们仅需要实现`socket_type()`让它返回`raw`, 并在`Mod:start/2`中派生一个进程处理整个套接字. 要编写一个简单的UDP服务,我们仅需要提供一个`udp_recv/5`回调.
 
 本文么有包括的事:
 

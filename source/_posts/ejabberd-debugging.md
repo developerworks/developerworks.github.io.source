@@ -32,7 +32,7 @@ tail -f /var/log/ejabberd/ejabberd.log
 心跳包用于保持客户端和服务器的持久连接, 下面是通过日志输出的一个示例
 
 ```
-# 受到客户的一个ping包
+# 收到客户的一个ping包
 2014-09-21 04:49:25.713 [debug] <0.2365.0>@ejabberd_receiver:process_data:343 Received XML on stream = <<"<iq type='get' id='purple3c1c1c76'><ping xmlns='urn:xmpp:ping'/></iq>">>
 # 内部状态更新
 2014-09-21 04:49:25.713 [debug] <0.2365.0>@shaper:update:117 State: {maxrate,1000,3.0968123357848385,1411274905955950}, Size=69 M=34.55350285694598, I=59757.352

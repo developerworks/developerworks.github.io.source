@@ -279,7 +279,7 @@ developerworks/ubuntu-nodejs-runtime-v1
 2014/08/31 13:52:00 Error: Status 403 trying to push repository developerworks/ubuntu-nodejs-runtime-v1: "Access denied, you don't have access to this repo"
 ```
 
-这个错误是应为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.
+这个错误是因为,这不是一个受信任的镜像, 意思就是官方不知道你在镜像里面加了什么东西, 为了防止有人加后门程序, 官方提供了`Automated Build`功能. 要使用`Automated Build`功能,需要有一个`Github`或`Bitbucket`账号,创建一个仓库, 仓库的根目录下保存`Dockerfile`文件.
 
 进入此链接, https://registry.hub.docker.com/builds/add, 会引导你完成`Github`或`Bitbucket`和Docker仓库的关联.按提示做就可以了.
 

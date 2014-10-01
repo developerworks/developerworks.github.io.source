@@ -24,9 +24,9 @@ date: 2014-09-14 22:29:37
 | Server       | Implementation Language | Official Website
 | -----------  | ----------------------- | --------------------
 | Prosody      | Lua                     | https://prosody.im/
-| Ejabberd     | Erlang                  |
-| Tigase       | Java                    |
-| MongooseIM   | Erlang                  |
+| Ejabberd     | Erlang                  | https://www.ejabberd.im/
+| Tigase       | Java                    | http://www.tigase.org/
+| MongooseIM   | Erlang                  | https://github.com/esl/MongooseIM
 
 ## Gateways
 

@@ -3,6 +3,7 @@ categories:
   - Erlang
 tags:
   - ejabberd
+  - xmpp
 toc: true
 date: 2014-09-26 09:15:57
 ---
@@ -42,14 +43,14 @@ sudo make install
 
 ## 编写一个内部模块
 
-所有内部模块以`mod_`作为模块名前缀, 并实现[gen_mod][2]行为,该行为包含两个必须实现的方法`start/2`和`stop/1`:
+所有内部模块以**mod_**作为模块名前缀, 并实现[gen_mod][2]行为,该行为包含两个必须实现的方法**start/2**和**stop/1**:
 
 ```
 start(Host,Opts) -> ok
 stop(Host) -> ok
 ```
 
-`Host`为运行该模块的虚拟主机名称. `Opts`为一组设置选项. 现在我们开发一个基本的模块,它在启动时打印一些信息:
+**Host**为运行该模块的虚拟主机名称. **Opts**为一组设置选项. 现在我们开发一个基本的模块,它在启动时打印一些信息:
 
 ```
 cd $EJABBERD/src
@@ -189,7 +190,7 @@ acl:
        - "root": "localhost"
 ```
 
-打开浏览器`http://localhost:5280/admin/server/localhost/users`增加用户, Web管理控制台需要管理权限, 如果你没有管理权限的用户可以创建一个.
+打开浏览器**http://localhost:5280/admin/server/localhost/users**增加用户, Web管理控制台需要管理权限, 如果你没有管理权限的用户可以创建一个.
 
 ```
 ejabberdctl register root localhost root
@@ -198,7 +199,7 @@ ejabberdctl register root localhost root
             注册    用户名  虚拟主机  密码
 ```
 
-然后用账户`root@localhost`和密码`root`登陆.
+然后用账户**root@localhost**和密码**root**登陆.
 
 ## 参考资料
 

@@ -3,6 +3,7 @@ categories:
   - Erlang
 tags:
   - ejabberd
+  - xmpp
 toc: false
 date: 2014-09-26 11:30:18
 ---
