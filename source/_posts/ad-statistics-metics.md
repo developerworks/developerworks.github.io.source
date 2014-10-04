@@ -114,7 +114,6 @@ $$
 http://wiki.mbalib.com/wiki/%E5%B9%BF%E5%91%8A%E6%88%98%E5%BD%B9
 
 
-<!-- mathjax config similar to math.stackexchange -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {

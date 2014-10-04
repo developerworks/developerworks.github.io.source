@@ -4,11 +4,11 @@ categories:
 tags:
   - ejabberd
   - jiffy
-toc: false
+toc: true
 date: 2014-09-28 13:05:43
 ---
 
-编译
+## 编译
 
 ```
 cd /tmp
@@ -29,7 +29,8 @@ mv /lib/ejabberd/priv/lib/jiffy.so /lib/ejabberd/priv/jiffy.so
 
 写作本文时,该BUG暂未解决.
 
-代码
+
+## 一个例子
 
 ```
 -module(mod_online_users).
@@ -89,4 +90,55 @@ http://192.168.8.132:5280/online/
 
 ![在线用户数模块][1]
 
+
+## 构造复杂JSON对象
+
+### Erlang和JSON格式对照表
+
+```
+Erlang                          JSON            Erlang
+==========================================================================
+null                       -> null           -> null
+true                       -> true           -> true
+false                      -> false          -> false
+"hi"                       -> [104, 105]     -> [104, 105]
+<<"hi">>                   -> "hi"           -> <<"hi">>
+hi                         -> "hi"           -> <<"hi">>
+1                          -> 1              -> 1
+1.25                       -> 1.25           -> 1.25
+[]                         -> []             -> []
+[true, 1.0]                -> [true, 1.0]    -> [true, 1.0]
+{[]}                       -> {}             -> {[]}
+{[{foo, bar}]}             -> {"foo": "bar"} -> {[{<<"foo">>, <<"bar">>}]}
+{[{<<"foo">>, <<"bar">>}]} -> {"foo": "bar"} -> {[{<<"foo">>, <<"bar">>}]}
+#{<<"foo">> => <<"bar">>}  -> {"foo": "bar"} -> #{<<"foo">> -> <<"bar">>}
+```
+
+### 示例代码
+
+```
+process(_LocalPath, _Request) ->
+    ConnectedUsersNumber = ejabberd_sm:connected_users_number(),
+    %% 获取在线用户列表
+    AllSessionList = ejabberd_sm:dirty_get_sessions_list(),
+    %% 构造JSON对象数组
+    AllSessions = lists:map(fun({User, Server, Resource}) ->
+        {[{user, User}, {server, Server}, {resource, Resource}]}
+    end, AllSessionList),
+    %% 编码JSON格式
+    Json = jiffy:encode({[
+        {connected_users_number, ConnectedUsersNumber},
+        {sessions, AllSessions}
+    ]}),
+    {200, [], Json}.
+```
+
+### 输出
+
+把上面的代码和下面的输出对照理解.
+
+![JSON输出][2]
+
+
   [1]: /assets/images/9058AA0F-5ECA-4FCD-84BB-9CFAD161991F.png
+  [2]: /assets/images/BB5D080B-5B6B-43EE-A8DF-0E7DEBE7BAF4.png

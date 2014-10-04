@@ -1,7 +1,8 @@
 title: Ejabberd 发布订阅实验
 categories:
-  - Ejabberd
+  - Communication
 tags:
+  - ejabberd
   - pubsub
   - strophe.js
 toc: false

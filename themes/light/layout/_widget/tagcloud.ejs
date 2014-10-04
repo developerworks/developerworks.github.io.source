@@ -2,7 +2,7 @@
 <div class="widget tagcloud">
   <h3 class="title"><%= __('tagcloud') %></h3>
   <div class="entry">
-    <%- tagcloud(site.tags, {}) %>
+    <%- tagcloud(site.tags, {amount: 1000}) %>
   </div>
 </div>
 <% } %>

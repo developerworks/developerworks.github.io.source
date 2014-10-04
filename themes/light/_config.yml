@@ -1,7 +1,8 @@
 menu:
-  Home: /
+  根: /
+  归档: /archives
 #About: /about
-  RSS: /atom.xml
+  粽子: /atom.xml
 
 widgets:
 #- octocard1
@@ -9,10 +10,10 @@ widgets:
 #- about_me
 - recent_posts
 - category
-- calendar
+#- calendar
+- duoshuo_recent_comments
 - tagcloud
 #- links
-#- duoshuo_recent_comments
 
 highlightjs: monokai_sublime
 

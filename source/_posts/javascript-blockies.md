@@ -1,4 +1,4 @@
-title: DailyJS - Blockies
+title: Blockies - Javascript生成随机头像
 date: 2014-08-01
 categories:
 - javascript
