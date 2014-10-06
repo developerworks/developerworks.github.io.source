@@ -3,9 +3,6 @@ categories:
   - Communication
 tags:
   - xmpp
-  - xep-0133
-  - ejabberd
-  - strophe.js
 toc: true
 date: 2014-09-21 16:00:48
 ---

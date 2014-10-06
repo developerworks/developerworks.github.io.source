@@ -97,7 +97,9 @@ XML节
     xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
   <pubsub xmlns="http://jabber.org/protocol/pubsub">
-    <subscription jid="root@xmpp.hezhiqiang.info" subscription="subscribed" subid="583EAABFD09CF" node="/home/test"/>
+    <subscription
+        jid="root@xmpp.hezhiqiang.info" subscription="subscribed" subid="583EAABFD09CF"
+        node="/home/test"/>
   </pubsub>
 </iq>
 ```

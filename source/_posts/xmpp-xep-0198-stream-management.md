@@ -2,9 +2,8 @@ title: XMPP XEP-0198流管理 - 协议
 categories:
   - Communication
 tags:
-  - xmpp
-  - stream management
-  - xep-0198
+  - XMPP
+  - XEP
 toc: true
 date: 2014-10-03 04:07:43
 ---

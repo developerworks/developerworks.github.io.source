@@ -2,8 +2,8 @@ title: XMPP XEP-0170 流特性协商的推荐顺序
 categories:
   - Communication
 tags:
-  - xmpp
-  - xep
+  - XMPP
+  - XEP
 toc: false
 date: 2014-09-24 15:27:08
 ---

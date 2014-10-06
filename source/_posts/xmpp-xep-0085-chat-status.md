@@ -2,10 +2,8 @@ title: XMPP XEP-0085 聊天状态通知
 categories:
   - Communication
 tags:
-  - xmpp
-  - xep-0085
-  - strophe.js
-  - ejabberd
+  - XMPP
+  - XEP
 toc: false
 date: 2014-09-20 13:53:27
 ---

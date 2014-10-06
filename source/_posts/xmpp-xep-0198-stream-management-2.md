@@ -2,9 +2,8 @@ title: XMPP XEP-0198流管理 - 实例分析
 categories:
   - Communication
 tags:
-  - xmpp
-  - stream management
-  - xep-0198
+  - XMPP
+  - XEP
 toc: false
 date: 2014-10-03 04:07:43
 ---

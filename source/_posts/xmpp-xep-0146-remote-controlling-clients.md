@@ -2,8 +2,8 @@ title: XMPP XEP-0146 远程控制客户端
 categories:
   - Communication
 tags:
-  - xmpp
-  - xep
+  - XMPP
+  - XEP
 toc: false
 date: 2014-09-24 18:04:59
 ---

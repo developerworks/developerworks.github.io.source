@@ -2,8 +2,8 @@ title: XMPP XEP-0047 带内字节流
 categories:
   - Communication
 tags:
-  - xmpp
-  - xep-0047
+  - XMPP
+  - XEP
 toc: false
 date: 2014-09-22 22:03:27
 ---

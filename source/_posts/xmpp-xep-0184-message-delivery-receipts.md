@@ -2,8 +2,8 @@ title: XMPP XEP-0184消息回执
 categories:
   - Communication
 tags:
-  - xmpp
-  - xep
+  - XMPP
+  - XEP
 toc: false
 date: 2014-10-01 22:47:12
 ---

@@ -11,28 +11,29 @@ date: 2014-09-14 22:29:37
 
 ## Clients
 
-| Name                | Official Site                                                               |
-| ------------------- | --------------------------------------------------------------------------- |
-| XMPPFramework       | https://github.com/robbiehanson/XMPPFramework                               |
-| Strophe.js          | http://strophe.im/strophejs/                                                |
-| Candy.js            | https://github.com/candy-chat/candy                                         |
-| Converse.js         | https://conversejs.org/                                                     |
-| stanza.io           | https://github.com/otalk/stanza.io                                          |
-
+| Name                | Language    | Official Site                                    |
+| ------------------- | ----------- | ------------------------------------------------ |
+| XMPPFramework       | Objective-C | https://github.com/robbiehanson/XMPPFramework    |
+| Strophe.js          | Javascript  | http://strophe.im/strophejs/                     |
+| Candy.js            | Javascript  | https://github.com/candy-chat/candy              |
+| Converse.js         | Javascript  | https://conversejs.org/                          |
+| stanza.io           | Javascript  | https://github.com/otalk/stanza.io               |
+| gloox               | C++         | http://camaya.net/                               |
 ## Servers
 
-| Server       | Implementation Language | Official Website
-| -----------  | ----------------------- | --------------------
-| Prosody      | Lua                     | https://prosody.im/
-| Ejabberd     | Erlang                  | https://www.ejabberd.im/
-| Tigase       | Java                    | http://www.tigase.org/
-| MongooseIM   | Erlang                  | https://github.com/esl/MongooseIM
+| Server       | Implementation Language | Official Website                    |
+| -----------  | ----------------------- | ------------------------------------|
+| Prosody      | Lua                     | https://prosody.im/                 |
+| Ejabberd     | Erlang                  | https://www.ejabberd.im/            |
+| Tigase       | Java                    | http://www.tigase.org/              |
+| MongooseIM   | Erlang                  | https://github.com/esl/MongooseIM   |
 
-## Gateways
+## Gateways/Connection Managers
 
 | Name                                   |
 | -------------------------------------- |
 | Kaazing WebSocket Gateway              |
+| node-xmpp-bosh                         |
 
 
 ## Articles

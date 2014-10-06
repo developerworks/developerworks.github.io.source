@@ -2,7 +2,8 @@ title: XMPP XEP-0065 SOCKS5 字节流
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
+  - XEP
 toc: false
 date: 2014-09-22 22:49:24
 ---
