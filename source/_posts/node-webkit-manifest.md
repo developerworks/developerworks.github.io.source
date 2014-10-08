@@ -1,8 +1,8 @@
 title: node-webkit Manifest 文件格式
-tags:
-- node-webkit
 categories:
-- node.js
+  - Node.js
+tags:
+  - node-webkit
 date: 2014-06-16
 ---
 

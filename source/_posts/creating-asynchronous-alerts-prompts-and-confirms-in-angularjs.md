@@ -2,7 +2,7 @@ title: 在AngularJS中创建异步Alert Prompts Confirms
 tags:
   - angular
 categories:
-  - javascript
+  - Javascript
 date: 2014-06-26
 ---
 

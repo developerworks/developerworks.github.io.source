@@ -1,8 +1,9 @@
 title: 在Angular项目中提供国际化支持
 categories:
-  - angular
+  - Javascript
 tags:
   - gettext
+  - angular
 date: 2014-08-16
 ---
 

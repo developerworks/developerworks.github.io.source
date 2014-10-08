@@ -1,10 +1,10 @@
 title: 使用node-reggie搭建超轻量级的私有npm仓库
 date: 2014-08-14
 categories:
-- node.js
+  - Node.js
 tags:
-- node-reggie
-- npm
+  - node-reggie
+  - npm
 ---
 
 

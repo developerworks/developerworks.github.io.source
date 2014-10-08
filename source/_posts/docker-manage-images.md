@@ -1,6 +1,6 @@
 title: Docker - 管理镜像
 categories:
-  - docker
+  - Docker
 tags:
   - manage images
   - docker

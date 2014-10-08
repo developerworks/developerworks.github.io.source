@@ -1,8 +1,8 @@
 title: 如何打包和分发node-webkit桌面应用程序
-tags:
-- node-webkit
 categories:
-- node.js
+  - Node.js
+tags:
+  - node-webkit
 date: 2014-06-16
 ---
 

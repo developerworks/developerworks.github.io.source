@@ -1,7 +1,7 @@
 title: 使用request模块做跨域代理
 date: 2014-06-18
 categories:
-- node.js
+- Node.js
 ---
 
 有时候跨域请求RESTFUL API做测试目的,使用`cors`模块又比较麻烦,下面的几行代码使用`request`模块作为Express的中间件实现Web代理的功能,简单,小巧.

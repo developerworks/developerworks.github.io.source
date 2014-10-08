@@ -1,9 +1,9 @@
 title: Linux Upstart, Node, 和 forever
 categories:
-  - node.js
+  - Linux
 tags:
   - upstart
-  - linux
+  - node.js
 date: 2014-08-25 13:57:57
 ---
 

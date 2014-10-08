@@ -1,11 +1,10 @@
 title: Angular.js 基于JSON Token的认证
+categories:
+  - Javascript
 tags:
   - angular
-categories:
-  - javascript
 date: 2014-06-22
 ---
-
 
 [https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/
 ][2]

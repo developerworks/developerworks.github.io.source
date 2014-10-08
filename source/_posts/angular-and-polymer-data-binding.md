@@ -1,7 +1,7 @@
 title: Angular 和 Polymer 数据绑定
 date: 2014-06-11
 categories:
-  - javascript
+  - Javascript
 tags:
   - angular
   - ploymer

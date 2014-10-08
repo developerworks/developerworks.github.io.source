@@ -1,6 +1,6 @@
 title: Docker -  Dockerfile 常见问题
 categories:
-  - docker
+  - Docker
 tags:
   - faq
   - docker

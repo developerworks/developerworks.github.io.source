@@ -1,9 +1,11 @@
 title: 把Hubspot messaging 库作为Angular服务使用
 date: 2014-08-15
 categories:
-- angular
+  - Javascript
 tags:
-- notification
+  - notification
+  - angular
+
 ---
 
 

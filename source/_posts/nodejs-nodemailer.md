@@ -1,8 +1,8 @@
 title: nodemailer
+categories:
+  - Node.js
 tags:
   - nodemailer
-categories:
-  - node.js
 date: 2014-08-02 00:00:00
 ---
 

@@ -1,8 +1,8 @@
 title: Angular 最佳实践
+categories:
+  - Javascript
 tags:
   - angular
-categories:
-  - javascript
 date: 2014-06-28
 toc: false
 ---

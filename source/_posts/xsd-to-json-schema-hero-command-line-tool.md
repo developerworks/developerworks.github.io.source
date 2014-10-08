@@ -1,8 +1,9 @@
 title: Hero,把XML模式转换为JSON模式
 categories:
-  - json schema
+  - Javascript
 tags:
   - xml schema
+  - hero
 date: 2014-08-23 16:06:45
 toc: false
 ---

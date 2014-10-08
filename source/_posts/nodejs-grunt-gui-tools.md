@@ -1,9 +1,8 @@
 title: Grunt 图形管理工具
-tags:
-- node.js
-- grunt
 categories:
-- node.js
+  - Node.js
+tags:
+  - grunt
 date: 2014-05-13
 ---
 

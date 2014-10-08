@@ -1,6 +1,6 @@
 title: Docker - 镜像依赖关系图
 categories:
-  - docker
+  - Docker
 tags:
   - graphviz
   - docker

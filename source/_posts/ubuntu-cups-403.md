@@ -1,9 +1,9 @@
 title: Ubuntu12.04打印系统(CUPS)Web管理界面403 Forbidden的问题
 date: 2014-08-12
 categories:
-- linux
+  - Linux
 tags:
-- CUPS
+  - CUPS
 ---
 
 

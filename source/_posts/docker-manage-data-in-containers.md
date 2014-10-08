@@ -1,6 +1,6 @@
 title: Docker - 管理容器中的数据
 categories:
-  - docker
+  - Docker
 tags:
   - data management
   - data volume

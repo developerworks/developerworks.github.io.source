@@ -1,6 +1,6 @@
 title: Sequelize 查询
 categories:
-  - node.js
+  - Node.js
 tags:
   - sequelize
 date: 2014-08-15

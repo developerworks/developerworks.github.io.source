@@ -1,6 +1,6 @@
 title: AngularJS和Polymer双向绑定支持
 categories:
-  - polymer
+  - Javascript
 tags:
   - angular
   - polymer

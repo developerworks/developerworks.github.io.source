@@ -1,6 +1,6 @@
 title: NPM常用命令
 categories:
-  - node.js
+  - Node.js
 tags:
   - npm
 date: 2014-08-16

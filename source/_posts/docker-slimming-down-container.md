@@ -1,6 +1,6 @@
 title: Docker - 给容器瘦身
 categories:
-  - docker
+  - Docker
 tags:
   - container
   - docker
