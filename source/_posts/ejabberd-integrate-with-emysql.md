@@ -159,6 +159,12 @@ process_local_iq(_From, _To, #iq{type = Type, sub_el = SubEl} = IQ) ->
     end.
 ```
 
+查询结果日志输出
+
+![查询结果日志输出][1]
+
 ## 参考资料
 
 1. http://dev.mysql.com/doc/employee/en/employees-installation.html
+
+  [1]: /assets/images/0D78C5EA-8892-437F-B6FE-1F3E19404AE6.png
