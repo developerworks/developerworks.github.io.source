@@ -3,7 +3,7 @@ categories:
   - Communication
 tags:
   - ejabberd
-  - xmpp
+  - XMPP
   - bosh
 toc: false
 date: 2014-09-16 17:07:26
@@ -35,7 +35,7 @@ acl:
   ##
   admin:
      user:
-       - "root": "xmpp.hezhiqiang.info"
+       - "root": "xmpp.myserver.info"
 ```
 
 ## 虚拟主机配置
@@ -56,7 +56,7 @@ language: "en"
 
 ```
 host_config:
-  "xmpp.hezhiqiang.info":
+  "xmpp.myserver.info":
     language: "zh"
 ```
 

@@ -2,7 +2,7 @@ title: Ejabberd 套接字基础架构
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
   - socket
 toc: false

@@ -3,7 +3,7 @@ categories:
   - Communication
 tags:
   - ejabberd
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-09-29 00:10:06
 ---

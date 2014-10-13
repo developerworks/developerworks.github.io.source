@@ -2,7 +2,7 @@ title: Ejabberd 编写一个简单的Echo服务模块
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
 toc: true
 date: 2014-09-25 00:51:59

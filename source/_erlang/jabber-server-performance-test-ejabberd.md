@@ -3,7 +3,7 @@ categories:
   - testing
 tags:
   - jabber
-  - xmpp
+  - XMPP
   - ejabberd
 toc: true
 date: 2014-09-15 22:29:37

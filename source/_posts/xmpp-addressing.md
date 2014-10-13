@@ -2,7 +2,7 @@ title: XMPP Addressing
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-09-15 01:46:30
 ---

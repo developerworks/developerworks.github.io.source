@@ -1,8 +1,8 @@
 title: Mariadb 集群配置备忘
 categories:
-  - mariadb
+  - MySQL
 tags:
-  - config
+  - mariadb
 date: 2014-08-16 11:36:40
 toc: false
 ---

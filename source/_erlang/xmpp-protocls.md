@@ -1,8 +1,8 @@
 title: XMPP协议及其扩展详解
 categories:
-  - xmpp
+  - XMPP
 tags:
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-09-16 13:04:56
 ---

@@ -49,8 +49,8 @@ XEP-0085 支持5中状态,分别是: `active`,`composing`,`inactive`,`gone`,`pau
 聊天状态通知的message节格式为:
 
 ```
-<message from="hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2"
-       to="root@xmpp.hezhiqiang.info"
+<message from="hezhiqiang@xmpp.myserver.info/hezhiqiang-2"
+       to="root@xmpp.myserver.info"
        type="chat"
        id="purple3811e7aa"
        xmlns="jabber:client"

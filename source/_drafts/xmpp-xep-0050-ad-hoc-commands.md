@@ -2,7 +2,7 @@ title: XMPP XEP-0050 Ad-Hoc Commands
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-10-04 23:20:37
 ---

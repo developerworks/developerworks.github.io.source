@@ -221,7 +221,7 @@ process(_LocalPath, _Request) ->
     %% Mnesia 表信息
     MnesiaSystemInfo = mnesia:system_info(all),
     ?DEBUG("Mnesia Information ~p~n", [MnesiaSystemInfo]),
-    %% [{<<"root">>,<<"xmpp.hezhiqiang.info">>,<<"3439698832141213525690305">>}]
+    %% [{<<"root">>,<<"xmpp.myserver.info">>,<<"3439698832141213525690305">>}]
     %% 构造一个JSON对象数组
     %% 对象: {[]}
     %% 数组: []
@@ -265,7 +265,7 @@ https://chrome.google.com/webstore/detail/hdmbdioamgdkppmocchpkjhbpfmpjiei
 
 ![Mnesia系统信息JSON数据][3]
 
-注意`lists:filtermap`返回的时元组列表, 列表中的每个元素是一个元组, 每个元组包含两个项, `lists:filtermap`函数是`lists:filter`(过滤)和`lists:map`(映射)两个函数功能上的合并:`过滤并映射`
+注意`lists:filtermap`返回的是元组列表, 列表中的每个元素是一个元组, 每个元组包含两个项, `lists:filtermap`函数是`lists:filter`(过滤)和`lists:map`(映射)两个函数功能上的合并:`过滤并映射`
 
 这里例子中有部分值为空`[]`, 比如`checkpoints`, 当包含值的时候`可能`需要按照Jiffy方式转换类型.
 

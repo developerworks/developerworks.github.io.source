@@ -2,7 +2,7 @@ title: Ejabberd模块 - 获取房间成员列表
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
   - muc
 toc: false
@@ -19,7 +19,7 @@ date: 2014-09-30 01:01:37
 
 ```
 [{muc_room,
-    {<<"test">>,<<"conference.xmpp.hezhiqiang.info">>},
+    {<<"test">>,<<"conference.xmpp.myserver.info">>},
     [
         1  {title,<<232,129,138,229,164,169,229,174,164,230,160,135,233,162,152>>},
         2  {description,<<232,129,138,229,164,169,229,174,164,230,143,143,232,191,176>>},
@@ -48,7 +48,7 @@ date: 2014-09-30 01:01:37
         25 {captcha_whitelist,[]},
         26 {affiliations,[
             {
-                {<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>},
+                {<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>},
                 {owner,<<>>}
             }
         ]},

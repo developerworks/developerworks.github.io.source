@@ -14,7 +14,7 @@ date: 2014-09-22 22:03:27
 
 <!--more-->
 
-要实现分块/组装的功能,下面又几个要求:
+要实现分块/组装的功能,下面有几个要求:
 
 1. XMPP限制了传输的数据类型, 所以二进制数据必须编码为BASE64格式的字符串.
 2. 我要把照片切分成等大的N个块(最后一个块可能小于这个大小)
@@ -26,9 +26,9 @@ date: 2014-09-22 22:03:27
 - 我首先发送一个`iq`初始化请求,告知我的兄弟我要开始发送照片`块`了.
 
 ```
-<iq from="he.zhiqiang@xmpp.hezhiqiang.info"
+<iq from="he.zhiqiang@xmpp.myserver.info"
     id="iy2s986q"
-    to="zhiqiang.he@xmpp.hezhiqiang.info"
+    to="zhiqiang.he@xmpp.myserver.info"
     type="set">
     <open sid="dv917fb4" block-size="4096" xmlns="http://jabber.org/protocol/ibb"/>
 </iq>
@@ -39,15 +39,15 @@ date: 2014-09-22 22:03:27
 - 我的兄弟接受了我的初始化请求
 
 ```
-<iq from="zhiqiang.he@xmpp.hezhiqiang.info" id="iy2s986q" to="he.zhiqiang@xmpp.hezhiqiang.info" type="result"/>
+<iq from="zhiqiang.he@xmpp.myserver.info" id="iy2s986q" to="he.zhiqiang@xmpp.myserver.info" type="result"/>
 ```
 
 - 现在我可以传输`块`了
 
 ```
 <!--这里为了代码的可读性,data中的base64数据是截断了的.-->
-<message from="he.zhiqiang@xmpp.hezhiqiang.info"
-         to="zhiqiang.he@xmpp.hezhiqiang.info" id="ck39fg47">
+<message from="he.zhiqiang@xmpp.myserver.info"
+         to="zhiqiang.he@xmpp.myserver.info" id="ck39fg47">
     <data xmlns="http://jabber.org/protocol/ibb"
           sid="dv917fb4"
           seq="0">qANQR1DBwU4DX7jmYZnncmUQB/9KuKBddzQH+tZ1ZywKK0yHKnq57kWq+RFtQdCJ...</data>
@@ -57,8 +57,8 @@ date: 2014-09-22 22:03:27
 - 对于每一个我发送的块, 为避免在传输过程中丢失某个`块`, 我添加了一个序列号属性`seq`
 
 ```
-<message from="he.zhiqiang@xmpp.hezhiqiang.info"
-         to="zhiqiang.he@xmpp.hezhiqiang.info" id="fh91f36s">
+<message from="he.zhiqiang@xmpp.myserver.info"
+         to="zhiqiang.he@xmpp.myserver.info" id="fh91f36s">
     <data xmlns="http://jabber.org/protocol/ibb"
           sid="dv917fb4"
           seq="1">dNADE1QOjH4QK7wzLMaapzHDO...</data>
@@ -68,8 +68,8 @@ date: 2014-09-22 22:03:27
 - 当我发送完最后一个块的时候,我告知我的兄弟, 我发送完了,你可以把这些`块`组装起来了.
 
 ```
-<iq from="he.zhiqiang@xmpp.hezhiqiang.info"
-    id="fr61g835" to="zhiqiang.he@xmpp.hezhiqiang.info" type="set">
+<iq from="he.zhiqiang@xmpp.myserver.info"
+    id="fr61g835" to="zhiqiang.he@xmpp.myserver.info" type="set">
     <close xmlns="http://jabber.org/protocol/ibb" sid="dv917fb4"/>
 </iq>
 ```

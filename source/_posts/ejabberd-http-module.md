@@ -2,7 +2,7 @@ title: 开发一个Ejabberd HTTP模块
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
 toc: false
 date: 2014-09-18 21:17:42

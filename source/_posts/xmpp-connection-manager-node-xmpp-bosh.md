@@ -48,7 +48,7 @@ exports.config = {
     ...
     firewall: {
         // allow: [ /* 'jabber.org', /(.*\.)?jappix.com$/ */ ],
-        allow: ['xmpp.hezhiqiang.info'],
+        allow: ['xmpp.myserver.info'],
         deny:  [ /* 'gmail.com' */ ]
     },
     ...

@@ -2,7 +2,7 @@ title: XMPP 同步HTTP双向流
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - bosh
   - javascript
 toc: false

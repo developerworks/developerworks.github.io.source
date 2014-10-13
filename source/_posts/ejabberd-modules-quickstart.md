@@ -3,7 +3,7 @@ categories:
   - Erlang
 tags:
   - ejabberd
-  - xmpp
+  - XMPP
 toc: true
 date: 2014-09-26 09:15:57
 ---
@@ -186,7 +186,7 @@ acl:
   ##
   admin:
      user:
-       - "root": "xmpp.hezhiqiang.info"
+       - "root": "xmpp.myserver.info"
        - "root": "localhost"
 ```
 

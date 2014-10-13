@@ -2,7 +2,7 @@ title: XMPP 设置BOSH连接管理器
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - bosh
 toc: false
 date: 2014-09-16 16:39:13

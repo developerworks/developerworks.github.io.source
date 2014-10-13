@@ -35,7 +35,7 @@ var enable = function () {
 
 ```
 2014-09-29 22:12:39.416 [info] <0.14329.0>@ejabberd_c2s:handle_enable:2676
-    Stream management with resumption enabled for root@xmpp.hezhiqiang.info/2619252428141228749171506
+    Stream management with resumption enabled for root@xmpp.myserver.info/2619252428141228749171506
 ```
 
 当启用流管理功能后,客户端在发送和接受每一个XML节的时候,会附带收到`<r/>`请求

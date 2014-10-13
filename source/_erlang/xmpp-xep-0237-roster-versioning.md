@@ -1,8 +1,8 @@
 title: XMPP 名册版本(联系人信息)
 categories:
-  - xmpp
+  - XMPP
 tags:
-  - xmpp
+  - XMPP
 toc: true
 date: 2014-09-15 22:29:37
 ---

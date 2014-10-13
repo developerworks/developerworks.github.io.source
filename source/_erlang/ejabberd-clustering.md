@@ -3,7 +3,7 @@ categories:
   - Server Technologies
 tags:
   - ejabberd
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-09-13 01:36:13
 ---

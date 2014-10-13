@@ -1,8 +1,8 @@
 title: XEP Table
 categories:
-  - xmpp
+  - XMPP
 tags:
-  - xmpp
+  - XMPP
 toc: true
 date: 2014-09-15 22:29:37
 ---

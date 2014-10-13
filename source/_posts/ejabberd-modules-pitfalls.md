@@ -3,7 +3,7 @@ categories:
   - Communication
 tags:
   - ejabberd
-  - xmpp
+  - XMPP
 toc: false
 date: 2014-09-29 21:18:49
 ---
@@ -106,7 +106,7 @@ modules:
 客户端发起一个`IQ-get`请求
 
 ```
-<iq type='get' to='xmpp.hezhiqiang.info' xmlns='jabber:client'>
+<iq type='get' to='xmpp.myserver.info' xmlns='jabber:client'>
   <query xmlns='http://jabber.org/protocol/disco#info'/>
 </iq>
 ```
@@ -121,7 +121,7 @@ modules:
 客户端发起`IQ-get`请求一个CPU时间
 
 ```
-<iq type='get' to='xmpp.hezhiqiang.info' xmlns='jabber:client'>
+<iq type='get' to='xmpp.myserver.info' xmlns='jabber:client'>
   <query xmlns='ejabberd:cputime'/>
 </iq>
 ```
@@ -129,8 +129,8 @@ modules:
 服务端`IQ-result`应答
 
 ```
-<iq from="xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/1507629570141186050149354"
+<iq from="xmpp.myserver.info"
+    to="root@xmpp.myserver.info/1507629570141186050149354"
     type="result"
     xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams"

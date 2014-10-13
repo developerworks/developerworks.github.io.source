@@ -27,16 +27,16 @@ Ejabberd的`ejabberd_c2s`核心模块,是处理XMPP协议的核心处理模块,�
 客户端发送打开流Stanza
 
 ```
-<stream:stream to='xmpp.hezhiqiang.info' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'>
+<stream:stream to='xmpp.myserver.info' xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'>
 ```
 
 服务器日志输出为
 
 ```
 # ejabberd_receiver 接收到客户端的流打开请求
-2014-09-26 05:22:31.527 [debug] <0.849.0>@ejabberd_receiver:process_data:343 Received XML on stream = <<"<stream:stream xmlns:stream="http://etherx.jabber.org/streams" xmlns="jabber:client" to="xmpp.hezhiqiang.info" version="1.0">">>
+2014-09-26 05:22:31.527 [debug] <0.849.0>@ejabberd_receiver:process_data:343 Received XML on stream = <<"<stream:stream xmlns:stream="http://etherx.jabber.org/streams" xmlns="jabber:client" to="xmpp.myserver.info" version="1.0">">>
 # 服务器确认客户的流打开请求,返回一个相应
-2014-09-26 05:22:31.528 [debug] <0.850.0>@ejabberd_c2s:send_text:1869 Send XML on stream = <<"<?xml version='1.0'?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' id='3177127870' from='xmpp.hezhiqiang.info' version='1.0' xml:lang='en'>">>
+2014-09-26 05:22:31.528 [debug] <0.850.0>@ejabberd_c2s:send_text:1869 Send XML on stream = <<"<?xml version='1.0'?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' id='3177127870' from='xmpp.myserver.info' version='1.0' xml:lang='en'>">>
 # 服务器返回功能相应
 2014-09-26 05:22:31.529 [debug] <0.850.0>@ejabberd_c2s:send_text:1869 Send XML on stream = <<"<stream:features><mechanisms xmlns='urn:ietf:params:xml:ns:xmpp-sasl'><mechanism>DIGEST-MD5</mechanism><mechanism>SCRAM-SHA-1</mechanism><mechanism>PLAIN</mechanism></mechanisms><c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://www.process-one.net/en/ejabberd/' ver='aIT+/ulfcbHXDKPkCA+iw9x5mU8='/><register xmlns='http://jabber.org/features/iq-register'/></stream:features>">>
 ```
@@ -99,7 +99,7 @@ Ejabberd的`ejabberd_c2s`核心模块,是处理XMPP协议的核心处理模块,�
 
 ```
 <stream:stream
-    to='xmpp.hezhiqiang.info'
+    to='xmpp.myserver.info'
     xmlns='jabber:client'
     xmlns:stream='http://etherx.jabber.org/streams'
     version='1.0'>
@@ -111,7 +111,7 @@ Ejabberd的`ejabberd_c2s`核心模块,是处理XMPP协议的核心处理模块,�
 <stream:stream xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams"
     id="111324954"
-    from="xmpp.hezhiqiang.info"
+    from="xmpp.myserver.info"
     version="1.0"
     xml:lang="en">
 ```
@@ -149,7 +149,7 @@ Ejabberd的`ejabberd_c2s`核心模块,是处理XMPP协议的核心处理模块,�
     xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
   <bind xmlns="urn:ietf:params:xml:ns:xmpp-bind">
-    <jid>root@xmpp.hezhiqiang.info/39189873701411708951913434</jid>
+    <jid>root@xmpp.myserver.info/39189873701411708951913434</jid>
   </bind>
 </iq>
 ```

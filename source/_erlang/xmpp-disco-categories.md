@@ -2,7 +2,7 @@ title: XMPP服务发现标识
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
 toc: true
 date: 2014-09-28 16:14:09
 ---

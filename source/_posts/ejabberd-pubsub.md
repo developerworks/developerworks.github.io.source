@@ -39,8 +39,8 @@ XML节
 ```
 <!--客户端IQ-set请求-->
 <iq type='set'
-    from='root@xmpp.hezhiqiang.info'
-    to='pubsub.xmpp.hezhiqiang.info'
+    from='root@xmpp.myserver.info'
+    to='pubsub.xmpp.myserver.info'
     id='id-1412188942892'
     xmlns='jabber:client'>
   <pubsub xmlns='http://jabber.org/protocol/pubsub'>
@@ -48,8 +48,8 @@ XML节
   </pubsub>
 </iq>
 <!--服务端应答IQ-result-->
-<iq from="pubsub.xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/17735350171411959891145164"
+<iq from="pubsub.xmpp.myserver.info"
+    to="root@xmpp.myserver.info/17735350171411959891145164"
     id="id-1412188942892"
     type="result"
     xmlns="jabber:client"
@@ -83,22 +83,22 @@ XML节
 
 ```
 <!--客户端IQ-set请求-->
-<iq type='set' from='root@xmpp.hezhiqiang.info'
-    to='pubsub.xmpp.hezhiqiang.info' id='id-1412189193003'
+<iq type='set' from='root@xmpp.myserver.info'
+    to='pubsub.xmpp.myserver.info' id='id-1412189193003'
     xmlns='jabber:client'>
   <pubsub xmlns='http://jabber.org/protocol/pubsub'>
-    <subscribe node='/home/test' jid='root@xmpp.hezhiqiang.info'/>
+    <subscribe node='/home/test' jid='root@xmpp.myserver.info'/>
   </pubsub>
 </iq>
 <!--服务端应答IQ-result-->
-<iq from="pubsub.xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/17735350171411959891145164"
+<iq from="pubsub.xmpp.myserver.info"
+    to="root@xmpp.myserver.info/17735350171411959891145164"
     id="id-1412189193003" type="result"
     xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
   <pubsub xmlns="http://jabber.org/protocol/pubsub">
     <subscription
-        jid="root@xmpp.hezhiqiang.info" subscription="subscribed" subid="583EAABFD09CF"
+        jid="root@xmpp.myserver.info" subscription="subscribed" subid="583EAABFD09CF"
         node="/home/test"/>
   </pubsub>
 </iq>

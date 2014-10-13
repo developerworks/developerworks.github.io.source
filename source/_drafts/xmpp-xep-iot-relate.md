@@ -35,6 +35,22 @@ http://xmpp.org/extensions/xep-0347.html XEP-0347: Internet of Things - Discover
 英语`Provisioning`,的原意是`供应`,`预备`,电信行业中一般将其翻译成中文`服务开通`.也有文档称其为`开通`,`服务提供`,`服务供应`等.
 
 
+- 0322: EXI
+- 0323: Sensor Data
+- 0324: Provisioning
+- 0325: Control
+- 0326: Concentrators
+- 0331: Color fields
+- 0332: HTTP over XMpp
+- 0336: Dynamic Forms
+- 0347: Discovery
+- ?: Interoperability
+- ?: Events
+- ?: Pubsub
+- ?: Multicast
+- ?: Chat
+- ?: Battery powered devices
+
 ##  OneM2M联盟规范文档
 
 `oneM2M`是7个国家的电信联盟组成的合作机构,定制物联网机器到机器(M2M)应用层通信标准.

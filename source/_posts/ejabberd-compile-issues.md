@@ -2,7 +2,7 @@ title: 编译Ejabberd遇到的问题
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
 toc: false
 date: 2014-09-25 01:45:29

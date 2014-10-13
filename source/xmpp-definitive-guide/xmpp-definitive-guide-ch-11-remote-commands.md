@@ -2,8 +2,8 @@ title: XMPP权威指南第11章-远程命令
 categories:
   - Communicatino System
 tags:
-  - xmpp
-  - xmpp-definitive-guide
+  - XMPP
+  - XMPP-definitive-guide
 toc: false
 date: 2014-09-28 01:03:56
 ---

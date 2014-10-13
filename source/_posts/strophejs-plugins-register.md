@@ -81,9 +81,9 @@ function formatXml(xml) {
   return formatted;
 }
 // Websocket端点
-var BOSH_SERVICE = 'ws://xmpp.hezhiqiang.info:5288';
+var BOSH_SERVICE = 'ws://xmpp.myserver.info:5288';
 // 域名
-var DOMAIN_NAME = 'xmpp.hezhiqiang.info';
+var DOMAIN_NAME = 'xmpp.myserver.info';
 // XMPP连接对象
 var connection = null;
 // 浏览器控制台日志

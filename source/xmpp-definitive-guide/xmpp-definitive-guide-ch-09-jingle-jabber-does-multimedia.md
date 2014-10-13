@@ -2,8 +2,8 @@ title: XMPP权威指南第09章-Jingle多媒体会话
 categories:
   - Communication
 tags:
-  - xmpp
-  - xmpp-definitive-guide
+  - XMPP
+  - XMPP-definitive-guide
 toc: false
 date: 2014-09-28 01:18:53
 ---

@@ -167,10 +167,10 @@ cp priv/*.msg /lib/ejabberd/priv/msgs
 ejabberdctl restart
 ```
 
-查询命令列表
+查询命令列表(注意属性`xml:lang='zh'`)
 
 ```
-<iq type='get' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info' xml:lang='zh' xmlns='jabber:client'>
+<iq type='get' to='xmpp.myserver.info' from='root@xmpp.myserver.info' xml:lang='zh' xmlns='jabber:client'>
   <query xmlns='http://jabber.org/protocol/disco#items' node='http://jabber.org/protocol/commands'/>
 </iq>
 ```

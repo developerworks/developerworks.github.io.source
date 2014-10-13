@@ -2,7 +2,7 @@ title: XMPP Ejabberd 架构
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
 toc: false
 date: 2014-09-25 10:54:40

@@ -55,8 +55,8 @@ date: 2014-09-24 01:28:37
 首先 hezhiqiang 发送了一个 `iq`节给 test1 告知 hezhiqiang 支持的两种流方法(`socks5 bytestream`, `in-bind bytestreams`)
 
 ```
-<iq from='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2'
-    to='test1@xmpp.hezhiqiang.info/hezhiqiang-macbookpro' type='set' id='purple69ca5fc7'>
+<iq from='hezhiqiang@xmpp.myserver.info/hezhiqiang-2'
+    to='test1@xmpp.myserver.info/hezhiqiang-macbookpro' type='set' id='purple69ca5fc7'>
   <si xmlns='http://jabber.org/protocol/si' id='purple69ca5fc8'
       profile='http://jabber.org/protocol/si/profile/file-transfer'>
     <file xmlns='http://jabber.org/protocol/si/profile/file-transfer' name='sery-lvs-cluster.pdf' size='532473'/>
@@ -80,7 +80,7 @@ test1 收到消息后返回要使用的流方法
 
 ```
 <iq xmlns="jabber:client" type="result"
-    to="hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2" id="purple69ca5fc7">
+    to="hezhiqiang@xmpp.myserver.info/hezhiqiang-2" id="purple69ca5fc7">
   <si xmlns="http://jabber.org/protocol/si">
     <feature xmlns="http://jabber.org/protocol/feature-neg">
       <x xmlns="jabber:x:data" type="submit">
@@ -97,14 +97,14 @@ test1 收到消息后返回要使用的流方法
 
 ```
 <!--发送者-->
-<iq from='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2'
-    to='test1@xmpp.hezhiqiang.info/hezhiqiang-macbookpro' type='set' id='purple69ca5fc9'>
+<iq from='hezhiqiang@xmpp.myserver.info/hezhiqiang-2'
+    to='test1@xmpp.myserver.info/hezhiqiang-macbookpro' type='set' id='purple69ca5fc9'>
   <query xmlns='http://jabber.org/protocol/bytestreams' sid='purple69ca5fc8'>
-    <streamhost jid='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' host='192.168.8.104' port='57526'/>
-    <streamhost jid='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' host='172.16.40.1' port='57526'/>
-    <streamhost jid='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' host='192.168.172.1' port='57526'/>
-    <streamhost jid='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' host='公网地址隐藏' port='57526'/>
-    <streamhost jid='proxy.xmpp.hezhiqiang.info' host='172.17.0.7' port='7777'/>
+    <streamhost jid='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' host='192.168.8.104' port='57526'/>
+    <streamhost jid='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' host='172.16.40.1' port='57526'/>
+    <streamhost jid='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' host='192.168.172.1' port='57526'/>
+    <streamhost jid='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' host='公网地址隐藏' port='57526'/>
+    <streamhost jid='proxy.xmpp.myserver.info' host='172.17.0.7' port='7777'/>
   </query>
 </iq>
 ```
@@ -113,10 +113,10 @@ test1 收到消息后返回要使用的流方法
 
 ```
 <!--接收者, 收到该消息即开始发送文件-->
-<iq from='test1@xmpp.hezhiqiang.info/hezhiqiang-macbookpro'
-    to='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' xml:lang='en' type='result' id='purple69ca5fc9'>
+<iq from='test1@xmpp.myserver.info/hezhiqiang-macbookpro'
+    to='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' xml:lang='en' type='result' id='purple69ca5fc9'>
   <query xmlns='http://jabber.org/protocol/bytestreams'>
-    <streamhost-used jid='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2'/>
+    <streamhost-used jid='hezhiqiang@xmpp.myserver.info/hezhiqiang-2'/>
   </query>
 </iq>
 ```

@@ -2,7 +2,7 @@ title: XMPP XEP-0133 服务管理
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
 toc: true
 date: 2014-09-21 16:00:48
 ---
@@ -49,7 +49,7 @@ date: 2014-09-21 16:00:48
 |------------ | -------------- | -------
 |Ubuntu 14.04 | Ejabberd 14.07 | Strophe.js
 
-使用`node-xmpp-bosh`作为Websocket代理连接到Ejabberd, `node-xmpp-bosh`的安装和配置请看[我写的这篇文章][1], 使用XEP-0133相关功能需要管理员账号, 在`/etc/ejabberd/ejabberd.yml` 的 `acl` 部分添加一个管理员账号 `root@xmpp.hezhiqiang.info`
+使用`node-xmpp-bosh`作为Websocket代理连接到Ejabberd, `node-xmpp-bosh`的安装和配置请看[我写的这篇文章][1], 使用XEP-0133相关功能需要管理员账号, 在`/etc/ejabberd/ejabberd.yml` 的 `acl` 部分添加一个管理员账号 `root@xmpp.myserver.info`
 
 ```
 ...
@@ -63,7 +63,7 @@ acl:
   ##
   admin:
      user:
-       - "root": "xmpp.hezhiqiang.info"
+       - "root": "xmpp.myserver.info"
 ...
 ...
 ...
@@ -73,7 +73,7 @@ acl:
 
 - 请求:
 ```
-<iq to='xmpp.hezhiqiang.info' type='set' xml:lang='en' xmlns='jabber:client'>
+<iq to='xmpp.myserver.info' type='set' xml:lang='en' xmlns='jabber:client'>
   <command xmlns='http://jabber.org/protocol/commands'
            node='http://jabber.org/protocol/admin#get-registered-users-num'
            action='execute'/>
@@ -83,8 +83,8 @@ acl:
 - 响应:
 
 ```
-<iq from="xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/40924564951411172979418239"
+<iq from="xmpp.myserver.info"
+    to="root@xmpp.myserver.info/40924564951411172979418239"
     type="result" xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
@@ -136,7 +136,7 @@ Ejabberd实现和XEP-0133扩展协议有差异, Ejabberd使用非标准的方式
 - 请求
 
 ```
-<iq xmlns='jabber:client' type='get' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
+<iq xmlns='jabber:client' type='get' to='xmpp.myserver.info' from='root@xmpp.myserver.info'>
   <query xmlns='http://jabber.org/protocol/disco#items' node='all users'/>
 </iq>
 ```
@@ -146,25 +146,25 @@ Ejabberd实现和XEP-0133扩展协议有差异, Ejabberd使用非标准的方式
 ```
 # 响应IQ节
 <iq
-    from="xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/231005051114111783732339"
+    from="xmpp.myserver.info"
+    to="root@xmpp.myserver.info/231005051114111783732339"
     type="result" xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
   <query xmlns="http://jabber.org/protocol/disco#items" node="all users">
-    <item jid="hezhiqiang@xmpp.hezhiqiang.info" name="hezhiqiang@xmpp.hezhiqiang.info"/>
-    <item jid="root@xmpp.hezhiqiang.info" name="root@xmpp.hezhiqiang.info"/>
-    <item jid="test1@xmpp.hezhiqiang.info" name="test1@xmpp.hezhiqiang.info"/>
-    <item jid="test10@xmpp.hezhiqiang.info" name="test10@xmpp.hezhiqiang.info"/>
-    <item jid="test2@xmpp.hezhiqiang.info" name="test2@xmpp.hezhiqiang.info"/>
-    <item jid="test3@xmpp.hezhiqiang.info" name="test3@xmpp.hezhiqiang.info"/>
-    <item jid="test4@xmpp.hezhiqiang.info" name="test4@xmpp.hezhiqiang.info"/>
-    <item jid="test5@xmpp.hezhiqiang.info" name="test5@xmpp.hezhiqiang.info"/>
-    <item jid="test6@xmpp.hezhiqiang.info" name="test6@xmpp.hezhiqiang.info"/>
-    <item jid="test7@xmpp.hezhiqiang.info" name="test7@xmpp.hezhiqiang.info"/>
-    <item jid="test8@xmpp.hezhiqiang.info" name="test8@xmpp.hezhiqiang.info"/>
-    <item jid="test9@xmpp.hezhiqiang.info" name="test9@xmpp.hezhiqiang.info"/>
-    <item jid="user2@xmpp.hezhiqiang.info" name="user2@xmpp.hezhiqiang.info"/>
+    <item jid="hezhiqiang@xmpp.myserver.info" name="hezhiqiang@xmpp.myserver.info"/>
+    <item jid="root@xmpp.myserver.info" name="root@xmpp.myserver.info"/>
+    <item jid="test1@xmpp.myserver.info" name="test1@xmpp.myserver.info"/>
+    <item jid="test10@xmpp.myserver.info" name="test10@xmpp.myserver.info"/>
+    <item jid="test2@xmpp.myserver.info" name="test2@xmpp.myserver.info"/>
+    <item jid="test3@xmpp.myserver.info" name="test3@xmpp.myserver.info"/>
+    <item jid="test4@xmpp.myserver.info" name="test4@xmpp.myserver.info"/>
+    <item jid="test5@xmpp.myserver.info" name="test5@xmpp.myserver.info"/>
+    <item jid="test6@xmpp.myserver.info" name="test6@xmpp.myserver.info"/>
+    <item jid="test7@xmpp.myserver.info" name="test7@xmpp.myserver.info"/>
+    <item jid="test8@xmpp.myserver.info" name="test8@xmpp.myserver.info"/>
+    <item jid="test9@xmpp.myserver.info" name="test9@xmpp.myserver.info"/>
+    <item jid="user2@xmpp.myserver.info" name="user2@xmpp.myserver.info"/>
   </query>
 </iq>
 ```
@@ -265,7 +265,7 @@ function ServiceAdministration(host) {
 };
 var client_session = {
   user: 'root',
-  domain: 'xmpp.hezhiqiang.info'
+  domain: 'xmpp.myserver.info'
 };
 var serviceadmin = new ServiceAdministration(client_session.domain);
 serviceadmin.getRegisterUserList2();
@@ -281,7 +281,7 @@ serviceadmin.getRegisterUserList2();
 - 请求
 
 ```
-<iq xmlns='jabber:client' type='get' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
+<iq xmlns='jabber:client' type='get' to='xmpp.myserver.info' from='root@xmpp.myserver.info'>
   <query xmlns='http://jabber.org/protocol/disco#items' node='online users'/>
 </iq>
 ```
@@ -289,15 +289,15 @@ serviceadmin.getRegisterUserList2();
 - 响应
 
 ```
-<iq from="xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info/23683713071411180214453150"
+<iq from="xmpp.myserver.info"
+    to="root@xmpp.myserver.info/23683713071411180214453150"
     type="result"
     xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams"
     version="1.0">
   <query xmlns="http://jabber.org/protocol/disco#items" node="online users">
-    <item jid="hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2" name="hezhiqiang@xmpp.hezhiqiang.info"/>
-    <item jid="root@xmpp.hezhiqiang.info/23683713071411180214453150" name="root@xmpp.hezhiqiang.info"/>
+    <item jid="hezhiqiang@xmpp.myserver.info/hezhiqiang-2" name="hezhiqiang@xmpp.myserver.info"/>
+    <item jid="root@xmpp.myserver.info/23683713071411180214453150" name="root@xmpp.myserver.info"/>
   </query>
 </iq>
 ```
@@ -333,7 +333,7 @@ this.getOnlineUserList2 = function(){
 - 请求
 
 ```
-<message to='xmpp.hezhiqiang.info/announce/all' xmlns='jabber:client'>
+<message to='xmpp.myserver.info/announce/all' xmlns='jabber:client'>
   <subject>Server Notification</subject>
   <body>Server will be upgrade in 2014-09-21 00:00:00, sorry for inconveniences</body>
   <nick xmlns='http://jabber.org/protocol/nick'>系统</nick>
@@ -344,8 +344,8 @@ this.getOnlineUserList2 = function(){
 
 ```
 <message
-    from="xmpp.hezhiqiang.info"
-    to="root@xmpp.hezhiqiang.info"
+    from="xmpp.myserver.info"
+    to="root@xmpp.myserver.info"
     xmlns="jabber:client" xmlns:stream="http://etherx.jabber.org/streams" version="1.0">
   <subject>Server Notification</subject>
   <body>Server will be upgrade in 2014-09-21 00:00:00, sorry for inconveniences</body>
@@ -373,7 +373,7 @@ this.getOnlineUserList2 = function(){
 - 请求
 
 ```
-<iq xmlns='jabber:client' type='set' to='xmpp.hezhiqiang.info' from='root@xmpp.hezhiqiang.info'>
+<iq xmlns='jabber:client' type='set' to='xmpp.myserver.info' from='root@xmpp.myserver.info'>
   <command xmlns='http://jabber.org/protocol/commands' node='http://jabber.org/protocol/admin#announce'>
     <x xmlns='jabber:x:data' type='submit'>
       <field type='hidden' var='FROM_TYPE'>
@@ -393,7 +393,7 @@ this.getOnlineUserList2 = function(){
 - Ejabberd 错误响应
 
 ```
-<iq from="xmpp.hezhiqiang.info" to="root@xmpp.hezhiqiang.info/13819390371411184835813106"
+<iq from="xmpp.myserver.info" to="root@xmpp.myserver.info/13819390371411184835813106"
     type="error"
     xmlns="jabber:client"
     xmlns:stream="http://etherx.jabber.org/streams" version="1.0">

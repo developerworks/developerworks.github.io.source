@@ -2,7 +2,7 @@ title: Ejabberd 调试
 categories:
   - Communication
 tags:
-  - xmpp
+  - XMPP
   - ejabberd
   - debugging
 toc: false
@@ -38,32 +38,32 @@ tail -f /var/log/ejabberd/ejabberd.log
 2014-09-21 04:49:25.713 [debug] <0.2365.0>@shaper:update:117 State: {maxrate,1000,3.0968123357848385,1411274905955950}, Size=69 M=34.55350285694598, I=59757.352
 # 客户端请求路由/处理
 2014-09-21 04:49:25.713 [debug] <0.2366.0>@ejabberd_router:do_route:322 route
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
 	packet {xmlel,<<"iq">>,[{<<"type">>,<<"get">>},{<<"id">>,<<"purple3c1c1c76">>}],[{xmlel,<<"ping">>,[{<<"xmlns">>,<<"urn:xmpp:ping">>}],[]}]}
 2014-09-21 04:49:25.713 [debug] <0.2366.0>@ejabberd_local:do_route:296 local route
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
 	packet {xmlel,<<"iq">>,[{<<"type">>,<<"get">>},{<<"id">>,<<...>>}],[{xmlel,<<...>>,...}]}
 2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_sm:do_route:514 session manager
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
 	packet {xmlel,<<"iq">>,[{<<"type">>,<<"get">>},{<<"id">>,<<...>>}],[{xmlel,<<...>>,...}]}
 # 服务器响应路由处理
 2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_router:do_route:322 route
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
 	packet {xmlel,<<"iq">>,[{<<"id">>,<<"purple3c1c1c76">>},{<<"type">>,<<"result">>}],[]}
 2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_local:do_route:296 local route
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
 	packet {xmlel,<<"iq">>,[{<<"id">>,<<"purp"...>>},{<<"type">>,<<...>>}],[]}
 2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_sm:do_route:514 session manager
-	from {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<>>}
-	to {jid,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.hezhiqiang.info">>,<<"hezhiqiang-2">>}
+	from {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<>>}
+	to {jid,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>,<<"hezhiqiang">>,<<"xmpp.myserver.info">>,<<"hezhiqiang-2">>}
 	packet {xmlel,<<"iq">>,[{<<"id">>,<<"purp"...>>},{<<"type">>,<<...>>}],[]}
 2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_sm:do_route:612 sending to process <0.2366.0>
-2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_c2s:send_text:1865 Send XML on stream = <<"<iq from='hezhiqiang@xmpp.hezhiqiang.info' to='hezhiqiang@xmpp.hezhiqiang.info/hezhiqiang-2' id='purple3c1c1c76' type='result'/>">>
+2014-09-21 04:49:25.714 [debug] <0.2366.0>@ejabberd_c2s:send_text:1865 Send XML on stream = <<"<iq from='hezhiqiang@xmpp.myserver.info' to='hezhiqiang@xmpp.myserver.info/hezhiqiang-2' id='purple3c1c1c76' type='result'/>">>
 ```
 
 - 第2行:
@@ -73,7 +73,7 @@ tail -f /var/log/ejabberd/ejabberd.log
 - 第6~17行:
     客户的请求包路由处理
 - 第8行:
-    路由判断`xmpp.hezhiqiang.info`是本地域, 所以包被转交给`ejabberd_local`模块处理
+    路由判断`xmpp.myserver.info`是本地域, 所以包被转交给`ejabberd_local`模块处理
 ...
 ...
 ...

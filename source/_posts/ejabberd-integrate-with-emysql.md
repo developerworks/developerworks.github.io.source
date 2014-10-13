@@ -7,7 +7,7 @@ tags:
 toc: false
 date: 2014-10-08 11:53:17
 ---
-
+![][1]
 开发模块需要使用到MySQL数据库,本文描述如何把`Emysql`集成到Ejabberd中.
 
 ## 修改Ejabberd
@@ -161,10 +161,11 @@ process_local_iq(_From, _To, #iq{type = Type, sub_el = SubEl} = IQ) ->
 
 查询结果日志输出
 
-![查询结果日志输出][1]
+![查询结果日志输出][2]
 
 ## 参考资料
 
 1. http://dev.mysql.com/doc/employee/en/employees-installation.html
 
-  [1]: /assets/images/0D78C5EA-8892-437F-B6FE-1F3E19404AE6.png
+  [1]: /assets/images/754522BD-38E0-40B9-9C1D-07E7988BDEC0.png
+  [2]: /assets/images/0D78C5EA-8892-437F-B6FE-1F3E19404AE6.png
