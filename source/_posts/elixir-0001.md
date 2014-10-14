@@ -1,4 +1,4 @@
-title: Elixir-0001 第一印象
+title: Elixir-0001-第一印象
 categories:
   - Elixir
 tags:
