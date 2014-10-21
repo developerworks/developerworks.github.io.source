@@ -124,6 +124,15 @@ Shall I install hex? [Yn] Y
 mix docs
 ```
 
+## ExDoc中文模板
+
+下载地址:
+https://github.com/developerworks/ex_doc
+
+![ExDoc中文模板][2]
+
+
   [1]: /assets/images/820FF121-4358-4564-BBB9-1C5C5F7AF8BF.png
+  [2]: /assets/images/61802553-AA1E-430F-9BED-2B25BC2BAF58.png
 
 

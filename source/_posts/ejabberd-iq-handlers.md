@@ -3,7 +3,6 @@ categories:
   - Communication
 tags:
   - ejabberd
-  - stanza
   - iq
 toc: false
 date: 2014-09-28 23:28:55

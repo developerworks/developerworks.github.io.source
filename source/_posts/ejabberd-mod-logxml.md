@@ -1,8 +1,8 @@
 title: Ejabberd XML格式的XMPP消息日志模块
 categories:
-  - Ejabberd
+  - Communication
 tags:
-  - log
+  - ejabberd
 toc: false
 date: 2014-10-15 16:33:20
 ---

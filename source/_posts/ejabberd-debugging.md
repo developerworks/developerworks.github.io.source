@@ -86,6 +86,6 @@ TODO
 第一个阶段是收到的请求的路由,第二个阶段是响应的路由, 上述代码涉及到Ejabberd的三个内部模块
 
 - `ejabberd_router` 路由处理程序
-- `ejabberd_local`  本地路由处理程序
-- `ejabberd_sm`     会话管理器
+- `ejabberd_local`  本地路由处理程序,处理服务器相关的节
+- `ejabberd_sm`     会话管理器,处理纯Jid相关的XML节
 
