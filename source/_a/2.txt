@@ -1,0 +1,34 @@
+08:48:12.054 [debug] Received XML on stream = <<"</stream:stream>">>
+08:48:12.055 [debug] State: {maxrate,1000,999.1757934187552,1414140471719895}, Size=16
+M=15.986823554812924, I=20334.92
+08:48:12.055 [debug] Send XML on stream = <<"</stream:stream>">>
+08:48:12.055 [debug] Error in gen_tcp:send: {error,closed}
+08:48:12.055 [info] ({socket_state,gen_tcp,#Port<0.5912>,<0.501.0>}) Close session for zsb@xmpp.hezhiqiang.info/zhangshuibodeMacBook-Pro
+08:48:12.055 [info] mod_gbox_messager: client disconnected.
+08:48:12.055 [info] mod_gbox_messager: sid: {{1414,140467,215760},<0.502.0>}
+08:48:12.055 [info] mod_gbox_messager: jid: <<"zsb@xmpp.hezhiqiang.info/zhangshuibodeMacBook-Pro">>
+08:48:12.055 [info] mod_gbox_messager: session info: [{ip,{{192,168,8,103},52104}},{conn,c2s},{auth_module,ejabberd_auth_internal}]
+08:48:12.055 [info] mod_gbox_messager: client ip: "192.168.8.103"
+08:48:12.055 [info] mod_gbox_messager: client port: 52104
+08:48:12.055 [debug] node_action <<"pubsub.xmpp.hezhiqiang.info">> <<"flat">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.055 [debug] node_call <<"flat">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.056 [debug] node_action <<"pubsub.xmpp.hezhiqiang.info">> <<"hometree">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.056 [debug] node_call <<"hometree">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.056 [debug] node_action <<"pubsub.xmpp.hezhiqiang.info">> <<"pep">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.056 [debug] node_call <<"pep">> get_entity_affiliations [<<"pubsub.xmpp.hezhiqiang.info">>,{<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}]
+08:48:12.056 [debug] tree_call <<"pubsub.xmpp.hezhiqiang.info">> get_node [<<"pubsub.xmpp.hezhiqiang.info">>,<<"http://jabber.org/protocol/tune">>]
+08:48:12.056 [debug] disabling for <<"zsb">>
+08:48:12.056 [info] MOD_GBOX_MESSAGER: unset_presence_hook: <<"zsb">><<"xmpp.hezhiqiang.info">><<"zhangshuibodeMacBook-Pro">><<>>
+08:48:12.056 [debug] unset_presence for <<"zsb">> @ <<"xmpp.hezhiqiang.info">> / <<"zhangshuibodeMacBook-Pro">> -> <<>> (0 resources)
+08:48:12.057 [debug] route
+        from {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}
+        to {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unavailable">>}],[]}
+08:48:12.057 [debug] local route
+        from {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}
+        to {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+08:48:12.057 [debug] session manager
+        from {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<"zhangshuibodeMacBook-Pro">>}
+        to {jid,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>,<<"zsb">>,<<"xmpp.hezhiqiang.info">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}

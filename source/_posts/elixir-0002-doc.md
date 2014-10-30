@@ -1,4 +1,4 @@
-title: Elixir-0002
+title: Elixir-0002 文档
 categories:
   - Elixir
 tags:
@@ -7,15 +7,15 @@ toc: false
 date: 2014-10-14 10:21:11
 ---
 
-## 文档是一等公民
+## 内置文档生成
 
 在Elixir中,文档是一等公民, Elixir对其有内置的支持, 不需要第三方文档生成工具. 只需要使用`@doc`标签即可
 
 ### 函数文档
 
-1. 创建一个文件`hello.exs`如下:
+- 创建一个文件`hello.exs`如下:
 
-```
+```elixir
 # Elixir module
 defmodule Test do
     @doc """
@@ -27,13 +27,13 @@ defmodule Test do
 end
 ```
 
-2. 进入交互式shell
+- 进入交互式shell
 
 ```
 root# iex
 ```
 
-3. 编译模块
+- 编译模块
 
 ```
 iex(1)> c("hello.exs")
@@ -41,7 +41,7 @@ iex(1)> c("hello.exs")
 
 模块编译会在当前目录下生成一个`Elixir.Test.beam` BEAM文件.
 
-4. 查看文档
+- 查看文档
 
 ![在Elixir交互式Shell中查看函数文档][1]
 

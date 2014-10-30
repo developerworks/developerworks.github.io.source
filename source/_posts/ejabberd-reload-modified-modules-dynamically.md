@@ -3,7 +3,7 @@ categories:
   - Communication
 tags:
   - ejabberd
-toc: false
+toc: true
 date: 2014-10-21 15:59:04
 ---
 
@@ -130,9 +130,16 @@ POST http://localhost/update-modules
 - 第一个端点用于更新所有已修改的模块
 - 第二个端点用于更新特定的模块列表,POST的数据格式采用JSON
 
-为了能在HTTP模块中解码JSON数据,这里用到了Jiffy模块用于处理JSON数据的encode/decode操作. 关于Jiffy的使用,可参考 [Ejabberd中用Jiffy输出JSON数据][Ejabberd中用Jiffy输出JSON数据]
+为了能在HTTP模块中解码JSON数据,这里用到了Jiffy模块用于处理JSON数据的encode/decode操作. 关于Jiffy的使用,可参考 [Ejabberd中用Jiffy输出JSON数据][Ejabberd中用Jiffy输出JSON数据],有了这样一个功能,我们可以开发Ejabberd的自定义的HTTP模块通过Web动态地更新我们的模块.
 
-有了这样一个功能,我们可以开发Ejabberd的自定义的HTTP模块通过Web动态地更新我们的模块.
+如果更新成功`ejabberd_update:update/0`会返回`{ok,[]}`,可依据此判断更新过程是否成功,并返回JSON消息通知客户端更新结果.
+
+## Bugfix
+
+- 2014-10-23
+
+`ejabberdctl live`启动后是没有加载`ejabberd_update`模块的, 需要执行ejabberdctl加载一次`ejabberd_update`模块, 如果是通过程序调用更新,调用时会自动加载更新模块. 所以要先执行一个`ejabberdctl update_list`手工初始化`ejabberd_update`模块.
+
 
  [Ejabberd中用Jiffy输出JSON数据]:/2014/09/28/ejabberd-jiffy
  [开发一个Ejabberd HTTP模块]:/2014/09/18/ejabberd-http-module
