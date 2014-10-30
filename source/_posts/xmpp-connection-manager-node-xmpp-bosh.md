@@ -3,7 +3,7 @@ categories:
   - Communication
 tags:
   - ejabberd
-  - nodejs
+  - node.js
 toc: false
 date: 2014-09-18 17:43:15
 ---
