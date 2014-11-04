@@ -1,6 +1,7 @@
 title: Ejabberd-IQ节处理程序
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - iq

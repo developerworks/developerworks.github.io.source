@@ -1,6 +1,7 @@
 title: Ejabberd-路由表
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - XMPP

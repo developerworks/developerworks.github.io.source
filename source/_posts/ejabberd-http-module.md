@@ -1,6 +1,7 @@
 title: 开发一个Ejabberd HTTP模块
 categories:
   - Communication
+  - Ejabberd
 tags:
   - XMPP
   - ejabberd

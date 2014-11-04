@@ -1,6 +1,7 @@
 title: Ejabberd模块 - 获取房间成员列表
 categories:
   - Communication
+  - Ejabberd
 tags:
   - XMPP
   - ejabberd

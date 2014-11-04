@@ -1,6 +1,7 @@
 title: Ejabberd 发布订阅实验
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - pubsub

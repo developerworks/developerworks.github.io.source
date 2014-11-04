@@ -1,6 +1,7 @@
 title: Ejabberd模块快速入门
 categories:
-  - Erlang
+  - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - XMPP

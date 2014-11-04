@@ -1,6 +1,7 @@
 title: Ejabberd模块开发, 简介
 categories:
-  - Erlang
+  - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - XMPP

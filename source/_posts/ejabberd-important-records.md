@@ -1,6 +1,7 @@
 title: Ejabberd中几个重要的Record结构
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - record

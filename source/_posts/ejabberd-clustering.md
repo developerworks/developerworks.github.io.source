@@ -1,6 +1,7 @@
 title: Ejabber 集群
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - clustering

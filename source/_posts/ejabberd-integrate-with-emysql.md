@@ -1,6 +1,7 @@
 title: Ejabberd与Emysql集成
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - emysql

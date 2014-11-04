@@ -1,6 +1,7 @@
 title: Ejabberd中用Jiffy输出JSON数据
 categories:
   - Communication
+  - Ejabberd
 tags:
   - ejabberd
   - jiffy

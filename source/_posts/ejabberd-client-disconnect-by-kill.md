@@ -1,5 +1,6 @@
 title: Ejabberd客户连接状态变化的服务器日志分析
 categories:
+  - Communication
   - Ejabberd
 tags:
   - ejabberd

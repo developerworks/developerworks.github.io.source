@@ -1,6 +1,7 @@
 title: Ejabberd 套接字基础架构
 categories:
   - Communication
+  - Ejabberd
 tags:
   - XMPP
   - ejabberd

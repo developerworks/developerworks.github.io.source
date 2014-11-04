@@ -1,6 +1,7 @@
 title: Ejabberd 调试
 categories:
   - Communication
+  - Ejabberd
 tags:
   - XMPP
   - ejabberd

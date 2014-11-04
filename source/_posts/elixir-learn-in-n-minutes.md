@@ -1,4 +1,4 @@
-title: 译文 - N分钟学习Elixir
+title: Elixir N分钟学习Elixir
 categories:
   - Elixir
 tags:
