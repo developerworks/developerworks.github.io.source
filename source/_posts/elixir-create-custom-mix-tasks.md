@@ -1,4 +1,4 @@
-title: Elixir 创建自定义Mix任务
+title: 译文 | Elixir 创建自定义Mix任务
 categories:
   - Elixir
 tags:
@@ -6,22 +6,25 @@ tags:
 toc: true
 date: 2014-11-04 16:34:35
 ---
+
+原文: http://elixir-lang.readthedocs.org/en/latest/mix/3/
+
 在Mix中,一个任务实际上是一个具有名称空间`Mix.Tasks`并实现了`run/1`函数的模块.例如,`compile`任务是一个名称为`Mix.Tasks.Compile`的模块.
 
 创建一个简单的任务:
 
-	defmodule Mix.Tasks.Hello do
-    	use Mix.Task
-        
-        @shortdoc "这是一个短文档, 看"
-        
-        @moduledoc """
-        一个测试任务
-        """
-        def run(_) do
-        	IO.puts "你好,世界!"
-        end
+```elixir
+defmodule Mix.Tasks.Hello do
+    use Mix.Task
+    @shortdoc "这是一个短文档, 看"
+    @moduledoc """
+    一个测试任务
+    """
+    def run(_) do
+        IO.puts "你好,世界!"
     end
+end
+```
     
 保存文`hello.ex`, 并编译:
 
@@ -54,19 +57,36 @@ date: 2014-11-04 16:34:35
 
 示例:
 
-	defmodule Mix.Tasks.MyTasks do
-    	defmodule Build do
-        	def run(_) do
-            	IO.puts "运行子任务Build"
-            end
-        end
-        
-        defmodule Deploy do
-        	def run(_) do
-            	IO.puts "运行子任务Deploy"
-            end
+
+```elixir
+defmodule Mix.Tasks.Mytasks do
+    @shortdoc "任务集合模块"
+    @moduledoc """
+    用于构建和部署的任务集合
+    """
+    defmodule Build do
+        use Mix.Task
+        @shortdoc "构建任务"
+        @moduledoc """
+        构建一个软件组件模块
+        """
+        def run(_) do
+            IO.puts "运行子任务Build"
         end
     end
+    defmodule Deploy do
+        use Mix.Task
+
+        @shortdoc "部署一个软件组件"
+        @moduledoc """
+        把一个软件组件部署到服务器
+        """
+        def run(_) do
+            IO.puts "运行子任务Deploy"
+        end
+    end
+end
+```
 
 任务模块写好了后, 可以像这样调用任务: `mix mytasks.build`, `mix mytasks.deploy`, 这功能很酷对吧?
 
