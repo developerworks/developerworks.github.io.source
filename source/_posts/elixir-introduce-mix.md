@@ -10,7 +10,7 @@ date: 2014-11-05 09:56:51
 
 Elixir自带了几个应用使得编写和部署Elixir项目更加容易,其中Mix是关键.
 
-Mix是一个提供了用于创建,编译,测试（很快就会有发布功能）的编译工具.Mix的灵感来自于Clojure的编译工具[Leiningen](https://github.com/technomancy/leiningen),并且作者本人就是它的其中一个开发者.
+Mix是一个提供了用于创建,编译,测试(很快就会有发布功能)的编译工具.Mix的灵感来自于Clojure的编译工具[Leiningen](https://github.com/technomancy/leiningen),并且作者本人就是它的其中一个开发者.
 
 在这一章,我们将学习如何用mix来创建项目,安装依赖.在之后的部分,我们将雪鞋如何创建OTP应用,和定制mix的任务.
 
@@ -81,7 +81,7 @@ end
 
 ### lib/my_project.ex
 
-这个文件包含了一个简单的模块,它定义了我们代码的基本机构:
+这个文件包含了一个简单的模块,它定义了我们代码的基本结构:
 
 ```
 defmodule MyProject do
@@ -90,7 +90,7 @@ end
 
 ### test/my_project_test.exs
 
-这个文件包含了项目的一个测例:
+这个文件包含了项目的一个测试用例:
 
 ```
 defmodule MyProjectTest do
@@ -104,12 +104,12 @@ end
 
 有几点请注意:
 
-- 注意这个文件是一个Elixir的脚本文件（`.exs`）.作为一个约定,我们不需要在运行之前编译测试.
+- 注意这个文件是一个Elixir的脚本文件(`.exs`).作为一个约定,我们不需要在运行之前编译测试.
 - 我们定义了一个测试模块`MyProjectTest`,用`MyProjectTest`来注入默认的行为,并定义了一个简单测试.你可以在[ExUnit](http://elixir-lang.readthedocs.org/getting_started/ex_unit/1.html)那一章学习到有关测试框架的更多内容.
 
 ### test/test_helper.exs
 
-我们将查看的最后一个文件是``,它的任务是启动测试框架:
+我们将查看的最后一个文件是`test_helper.exs`,它的任务是启动测试框架:
 
 ```
 ExUnit.start
@@ -123,13 +123,13 @@ ExUnit.start
 $ mix help
 ```
 
-它将会打印出所有可得任务,你能得到用`mix help TASK`得到更多的信息.
+它将会打印出所有可用的任务,运行`mix help TASK`可获取更多的信息.
 
 运行其中一些命令试试,比如`mix compile`和`mix test`,在你的项目里运行看看会发生什么.
 
 ## 编译
 
-Mix可以我们编译项目.默认的设置是用``放源代码,``放编译后的beam文件.你无需提供任何的编译相关的设置,但如果你决定这么做,有一些选项可以用.例如,如果你打算把你的编译后的beam文件放在`ebin`之外的文件夹里,只需要在``里设置``:
+Mix可以为我们编译项目.默认的设置是用`lib/`放源代码,`ebin/`放编译后的beam文件.你无需提供任何的编译相关的设置,但如果你决定这么做,有一些选项可以用.例如,如果你打算把你的编译后的beam文件放在`ebin`之外的文件夹里,只需要在`mix.exs`里设置`:compile_path`:
 
 ```
 def project do
@@ -139,9 +139,9 @@ end
 
 总的来说,Mix会尽力表现的聪明一些,只在必须的时候编译.
 
-注意在你第一次编译之后,Mix会在你的`ebin`文件夹里产生了一个``文件.这个文件里定义的Erlang应用是用到了你的项目中的``函数里的内容.
+注意在你第一次编译之后,Mix会在你的`ebin`文件夹里产生了一个`my_project.app`文件.这个文件里定义的Erlang应用是用到了你的项目中的`application`函数里的内容.
 
-这个``文件存储在和应用有关的信息,它的依赖,它所依赖的模块㩐等.每次你用mix运行命令的时候,这个应用会自动被启动,我们将在下一章学习如何配置它.
+这个`.app`文件存储在和应用有关的信息,它的依赖,它所依赖的模块㩐等.每次你用mix运行命令的时候,这个应用会自动被启动,我们将在下一章学习如何配置它.
 
 ## 依赖
 
@@ -195,30 +195,33 @@ end
 
 但它会导致一个依赖永远无法满足,因为被取出的标签总不能和需求的版本匹配.
 
-### 源代码管理（scm）
+### 源代码管理(scm)
 
-Mix的设计就考虑到了支持多种的SCM工具,Hex包是默认,但``和``是可选项.常见的一些选项是:
+Mix的设计就考虑到了支持多种的SCM工具,Hex包是默认,但`:git`和`:path`是可选项.常见的一些选项是:
 
-- `:git` - 依赖是一个git版本库,Mix可以来获取和升级.
-- `:path` - 依赖是文件系统中的一个路径
-- `:compile` - 如何编译依赖
-- `:app` - 依赖所定义的应用的路径
-- `:env` - 依赖所用的环境（详情在后）,默认是``;
+- `:git`        - 依赖是一个git版本库,Mix可以来获取和升级.
+- `:path`       - 依赖是文件系统中的一个路径
+- `:compile`    - 如何编译依赖
+- `:app`        - 依赖所定义的应用的路径
+- `:env`        - 依赖所用的环境(详情在后),默认是`:prod`;
 
 每个SCM可以支持自定义选项,比如`:git`,支持下面的选项:
 
-* `:ref` - 一个可选的引用(一次提交)用来检出git仓库;
-* `:tag` - 一个可选的tag用来检出git仓库
-* `:branch` - 一个可选的分支用来检出git仓库
+* `:ref`        - 用来检出git仓库的一个可选的引用(一次提交);
+* `:tag`        - 用来检出git仓库的一个可选的tag
+* `:branch`     - 用来检出git仓库的一个可选的分支
 * `:submodules` - 当为`true`,在依赖中递归地初始化子模块;
 
 ### 编译依赖
 
 为了编译依赖,Mix会选择最适合的方式.依赖所包含的文件不同,编译的方式也不一样:
 
-- `mix.exs` - 直接用Mix的`compile`任务编译依赖;
-- `rebar.config`或`rebar.config.script` - 用`rebar compile deps_dir=DEPS`编译,`DEPS`是项目依赖的安装目录;
-- `Makefile` - 简单地调用`make`;
+- `mix.exs`
+    - 直接用Mix的`compile`任务编译依赖;
+- `rebar.config`或`rebar.config.script`
+    - 用`rebar compile deps_dir=DEPS`编译,`DEPS`是项目依赖的安装目录;
+- `Makefile`
+    - 简单地调用`make`;
 
 如果编译的代码里没有包含以上的任何,你可以在``选项里直接指定一个命令:
 
@@ -313,7 +316,7 @@ defp deps_path(:prod), do: "prod_deps"
 defp deps_path(_), do: "deps"
 ```
 
-Mix默认为`dev`环境（除了测试）.可以通过修改环境变量`MIX_ENV`来改变环境.
+Mix默认为`dev`环境(除了测试).可以通过修改环境变量`MIX_ENV`来改变环境.
 
 ```
 $ MIX_ENV=prod mix compile
