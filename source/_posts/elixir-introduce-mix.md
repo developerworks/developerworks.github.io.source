@@ -39,7 +39,7 @@ test/my_project_test.exs
 
     `$ bin/elixir bin/mix new ./my_project`
 
-- 注意你也能通过``选项来让Elixir运行任何PATH里的脚本:
+- 注意你也能通过`-S`选项来让Elixir运行任何PATH里的脚本:
 
     `$ bin/elixir -S mix new ./my_project`
 

@@ -135,8 +135,6 @@ Mix允许你安装和卸载本地归档包. 要为当前项目生成一个归档
     
 这种方式可以单独维护需要在多个项目中使用的任务. 
 
-回家吃饭!
-
 
   [1]: /assets/images/BAE289A3-2D50-430A-B85A-1BC3C55896F9.png
   [2]: /assets/images/71D4F33D-A3F1-4A14-A1A1-AFAE607AFFC2.png
