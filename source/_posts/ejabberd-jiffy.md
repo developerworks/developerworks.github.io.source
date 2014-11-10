@@ -30,9 +30,6 @@ https://github.com/processone/ejabberd/issues/309,
 mv /lib/ejabberd/priv/lib/jiffy.so /lib/ejabberd/priv/jiffy.so
 ```
 
-
-
-
 ## 一个例子
 
 ```

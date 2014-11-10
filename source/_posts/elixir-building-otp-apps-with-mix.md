@@ -66,7 +66,7 @@ iex> :gen_server.call(pid, :pop)
 
 非常好，我们的服务器工作正常！然而在幕后其实发生了很多的事情，然我们来一一探究。
 
-首先，我们用OTP中的[`:gen_server`](http://www.erlang.org/doc/man/gen_server.html)模块发动服务器。注意我们使用了`start_link`， 它启动了服务器并且把当前的进程与之相连。在这种情况下，如果服务器死了，它将会向我们的当前进程发送一个退出消息，使它也退出。我们将在后面看到这个行为。函数`start_link`返回的是新创建的进程的识别符（`pid`）。
+首先，我们用OTP中的[`:gen_server`](http://www.erlang.org/doc/man/gen_server.html)模块启动服务器。注意我们使用了`start_link`， 它启动了服务器并且把当前的进程与之相连。在这种情况下，如果服务器死了，它将会向我们的当前进程发送一个退出消息，使它也退出。我们将在后面看到这个行为。函数`start_link`返回的是新创建的进程的识别符（`pid`）。
 
 之后，我们向服务器发送了一个**cast**消息。消息的内容是`{ :push, 13 }`，与我们之前定义在`Stacker.Server`中的回调函数`handle_cast/2`里的一致。无论何时我们发送一个`cast`消息，函数`handle_cast/2`会被调用来处理这个消息。
 

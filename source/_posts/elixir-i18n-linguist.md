@@ -82,5 +82,6 @@ date: 2014-11-05 13:47:41
     iex(1)> I18n.t!("en", "flash.notice.hello", first: "chris", last: "mccord")
     "hello chris mccord"
     iex(2)> I18n.t!("zh", "flash.notice.hello", first: "chris", last: "mccord")
+    "你好 chris mccord"
     ```
 

@@ -1,4 +1,4 @@
-title: 译文 | Elixir 创建自定义Mix任务
+title: "译文 | Elixir 创建自定义Mix任务"
 categories:
   - Elixir
 tags:
@@ -6,7 +6,6 @@ tags:
 toc: true
 date: 2014-11-04 16:34:35
 ---
-
 原文: http://elixir-lang.readthedocs.org/en/latest/mix/3/
 
 在Mix中,一个任务实际上是一个具有名称空间`Mix.Tasks`并实现了`run/1`函数的模块.例如,`compile`任务是一个名称为`Mix.Tasks.Compile`的模块.
@@ -28,9 +27,11 @@ end
     
 保存文`hello.ex`, 并编译:
 
-	$ elixirc hello.ex
-    $ mix hello
-    你好,世界
+```
+$ elixirc hello.ex
+$ mix hello
+你好,世界
+```
     
 上述模块定义了一个名称为`hello`的任务. 函数`run/1`接受一个二进制字符串参数, 该参数是从命令行传递给此任务的.
 
@@ -39,6 +40,12 @@ end
 为什么有一个`@moduledoc`和`@shortdoc`. 这两个文档标记是被`help`任务使用来显示任务的说明文档. `@shortdoc`用在执行`mix help`的时候显示任务的简短描述, `@moduledoc`用于执行`mix help hello`是显示`hello`任务的详细描述.
 
 除了这两个文档标签外, 还有一个`@hidden`标签, 当其设置为`true`时,该任务不显示在`mix help`的输出中, 任何没有`@shortdoc`标签的任务也不会显示.
+
+```
+defmodule ModuleName do
+    @hidden true
+end
+```
 
 ## 常见API
 
