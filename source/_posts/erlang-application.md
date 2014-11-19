@@ -1,4 +1,4 @@
-title: Erlang应用程序简介
+title: Erlang | 应用程序简介
 categories:
   - Erlang
 tags:

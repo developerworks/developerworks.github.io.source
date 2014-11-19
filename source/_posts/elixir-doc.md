@@ -1,4 +1,4 @@
-title: Elixir 文档工具
+title: Elixir | 文档工具
 categories:
   - Elixir
 tags:

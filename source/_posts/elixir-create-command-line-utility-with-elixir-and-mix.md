@@ -1,4 +1,4 @@
-title: Elixir 使用Mix创建命令行工具
+title: Elixir | 使用Mix创建命令行工具
 categories:
   - Elixir
 tags:

@@ -1,4 +1,4 @@
-title: Elixir 匿名函数
+title: Elixir | 匿名函数
 categories:
   - Elixir
 tags:

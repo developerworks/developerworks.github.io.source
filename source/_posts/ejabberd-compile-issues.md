@@ -13,6 +13,8 @@ date: 2014-09-25 01:45:29
 
 办法: 安装需要的库
 
+Ejabberd 从 13.10 开始配置文件的格式从Erlang Term转换到使用YAML格式, 需要用到libyaml来解析yaml文件.
+
 浏览器打开: http://pyyaml.org/download/libyaml/, 找到最新版本的`libyaml`
 
 ```

@@ -89,7 +89,14 @@ mod_gbox_messager
 (ejabberd@localhost)4> ejabberd_update:update_info().
 08:25:24.357 [debug] beam files: [mod_gbox_messager]
 08:25:24.358 [debug] script: [{load_module,mod_gbox_messager}]
-08:25:24.358 [debug] low level script: [{load_object_code,{ejabberd,[],[mod_gbox_messager]}},point_of_no_return,{load,{mod_gbox_messager,brutal_purge,brutal_purge}}]
+08:25:24.358 [debug] low level script: [
+    {
+        load_object_code,
+        {ejabberd,[],[mod_gbox_messager]}
+    },
+    point_of_no_return,
+    {load,{mod_gbox_messager,brutal_purge,brutal_purge}}
+]
 08:25:24.358 [debug] check: {ok,[]}
 {
     ok,

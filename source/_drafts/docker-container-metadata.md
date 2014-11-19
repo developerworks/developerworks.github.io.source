@@ -33,16 +33,16 @@ date: 2014-09-05 03:16:25
         },
         "Hostname": "b8e4f1e181f8", # 主机名
         "Image": "ssh",             # 容器对应的镜像名称
-        "Memory": 0,
-        "MemorySwap": 0,
-        "NetworkDisabled": false,
+        "Memory": 0,                # 内存大小
+        "MemorySwap": 0,            # 交换区大小
+        "NetworkDisabled": false,   # 是否禁用网络
         "OnBuild": null,
         "OpenStdin": false,
         "PortSpecs": null,
         "StdinOnce": false,
         "Tty": false,
-        "User": "",
-        "Volumes": null,
+        "User": "",                 # 用户?
+        "Volumes": null,            # 映射卷
         "WorkingDir": ""            # 工作目录
     },
     # 创建时间
@@ -73,7 +73,7 @@ date: 2014-09-05 03:16:25
     "HostnamePath": "/var/lib/docker/containers/b8e4f1e181f8e5cbb55ec2d78dde5cda12327fe742569c4a98ccfcab796975cf/hostname",
     "HostsPath": "/var/lib/docker/containers/b8e4f1e181f8e5cbb55ec2d78dde5cda12327fe742569c4a98ccfcab796975cf/hosts",
     "Id": "b8e4f1e181f8e5cbb55ec2d78dde5cda12327fe742569c4a98ccfcab796975cf",
-    "Image": "748b01b9abffb4a31c841618b8fb382db1b7603da8d4eaeaa114084b730ed47f",
+    "Image": "748b01b9abffb4a31c841618b8fb382db1b7603da8d4eaeaa114084b730ed47f",    # 镜像ID
     "MountLabel": "",               # 挂载标签
     "Name": "/duanzhongwei",        # 镜像名称
     "NetworkSettings": {            # 网络设置

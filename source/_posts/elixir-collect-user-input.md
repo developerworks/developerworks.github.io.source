@@ -1,4 +1,4 @@
-title: Elixir 收集用户输入
+title: Elixir | 收集用户输入
 categories:
   - Elixir
 tags:

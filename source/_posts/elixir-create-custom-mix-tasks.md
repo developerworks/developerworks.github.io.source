@@ -1,4 +1,4 @@
-title: "译文 | Elixir 创建自定义Mix任务"
+title: 译文 | Elixir 创建自定义Mix任务
 categories:
   - Elixir
 tags:
