@@ -1,4 +1,4 @@
-title: Elixir 用Phoenix,Postgresql和Ecto创建一个书单应用
+title: Elixir | 用Phoenix,Postgresql和Ecto创建一个书单应用
 categories:
   - Elixir
 tags:
@@ -33,7 +33,7 @@ mix phoenix.new book_store ../book_store
 
 编辑`mix.exs`文件, 修改后如下:
 
-```elixir
+```
 defmodule BookStore.Mixfile do
   use Mix.Project
   def project do

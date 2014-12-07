@@ -1,0 +1,413 @@
+(ejabberd@localhost)1> 13:40:21.755 [info] (#Port<0.6949>) Accepted connection 58.17.246.25:49786 -> 192.168.8.200:5222
+13:40:21.773 [debug] Received XML on stream = <<"<stream:stream xmlns='jabber:client' to='xmpp.mecil9.com' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'>">>
+13:40:21.773 [debug] Send XML on stream = <<"<?xml version='1.0'?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' id='756835578' from='xmpp.mecil9.com' version='1.0' xml:lang='en'>">>
+13:40:21.774 [debug] Send XML on stream = <<"<stream:features><compression xmlns='http://jabber.org/features/compress'><method>zlib</method></compression><mechanisms xmlns='urn:ietf:params:xml:ns:xmpp-sasl'><mechanism>PLAIN</mechanism><mechanism>DIGEST-MD5</mechanism><mechanism>SCRAM-SHA-1</mechanism></mechanisms><c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://www.process-one.net/en/ejabberd/' ver='aIT+/ulfcbHXDKPkCA+iw9x5mU8='/><register xmlns='http://jabber.org/features/iq-register'/></stream:features>">>
+13:40:21.798 [debug] Received XML on stream = <<"<auth xmlns='urn:ietf:params:xml:ns:xmpp-sasl' mechanism='DIGEST-MD5'>=</auth>">>
+13:40:21.798 [debug] State: {maxrate,1000,0.0,1416462021773776}, Size=78
+M=39.0, I=24.766
+13:40:21.798 [debug] Send XML on stream = <<"<challenge xmlns='urn:ietf:params:xml:ns:xmpp-sasl'>bm9uY2U9IjM5OTQwODY2MDQiLHFvcD0iYXV0aCIsY2hhcnNldD11dGYtOCxhbGdvcml0aG09bWQ1LXNlc3M=</challenge>">>
+13:40:21.814 [debug] Received XML on stream = <<"<response xmlns='urn:ietf:params:xml:ns:xmpp-sasl'>dXNlcm5hbWU9IjEyMzQ1NiIscmVhbG09InhtcHAubWVjaWw5LmNvbSIsbm9uY2U9IjM5OTQwODY2MDQiLGNub25jZT0iWUZSTGwwZnBpb2ZUY2FFMWpySmI3czlvaDZSQlM2OUIiLG5jPTAwMDAwMDAxLHFvcD1hdXRoLGRpZ2VzdC11cmk9InhtcHAveG1wcC5tZWNpbDkuY29tIixyZXNwb25zZT1mMTdiNTlhMWM2M2QxMjgzNDJhNmQxMzlhZWNhM2ZmZixjaGFyc2V0PXV0Zi04</response>">>
+13:40:21.814 [debug] State: {maxrate,1000,979.5795343229598,1416462021813589}, Size=346
+M=339.0759119775513, I=0.506
+13:40:21.814 [debug] Send XML on stream = <<"<challenge xmlns='urn:ietf:params:xml:ns:xmpp-sasl'>cnNwYXV0aD1jY2YxMTE1Yzg5MDc1ZjEzZWQ3MWIxZmZiNGUzYjkzNA==</challenge>">>
+13:40:22.154 [debug] Received XML on stream = <<"<response xmlns='urn:ietf:params:xml:ns:xmpp-sasl'></response>">>
+13:40:22.154 [debug] State: {maxrate,1000,999.0536600571014,1416462022153295}, Size=62
+M=61.941382395720574, I=0.763
+13:40:22.154 [info] ({socket_state,gen_tcp,#Port<0.6949>,<0.738.0>}) Accepted authentication for 123456 by ejabberd_auth_internal from 58.17.246.25
+13:40:22.154 [debug] Send XML on stream = <<"<success xmlns='urn:ietf:params:xml:ns:xmpp-sasl'/>">>
+13:40:22.217 [debug] Received XML on stream = <<"<stream:stream xmlns='jabber:client' to='xmpp.mecil9.com' xmlns:stream='http://etherx.jabber.org/streams' version='1.0'>">>
+13:40:22.217 [debug] State: {maxrate,1000,993.0709544653532,1416462022216106}, Size=120
+M=119.17423629018853, I=0.963
+13:40:22.217 [debug] Send XML on stream = <<"<?xml version='1.0'?><stream:stream xmlns='jabber:client' xmlns:stream='http://etherx.jabber.org/streams' id='1005669863' from='xmpp.mecil9.com' version='1.0' xml:lang='en'>">>
+13:40:22.217 [debug] Send XML on stream = <<"<stream:features><bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'/><session xmlns='urn:ietf:params:xml:ns:xmpp-session'/><sm xmlns='urn:xmpp:sm:2'/><sm xmlns='urn:xmpp:sm:3'/><csi xmlns='urn:xmpp:csi:0'/><c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='http://www.process-one.net/en/ejabberd/' ver='aIT+/ulfcbHXDKPkCA+iw9x5mU8='/><register xmlns='http://jabber.org/features/iq-register'/></stream:features>">>
+13:40:22.337 [debug] Received XML on stream = <<"<iq id='yOoOY-1672' type='set'><bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'><resource>gbox</resource></bind></iq>">>
+13:40:22.337 [debug] State: {maxrate,1000,0.0,1416462022217279}, Size=115
+M=57.5, I=119.79
+13:40:22.337 [debug] Send XML on stream = <<"<iq id='yOoOY-1672' type='result'><bind xmlns='urn:ietf:params:xml:ns:xmpp-bind'><jid>123456@xmpp.mecil9.com/gbox</jid></bind></iq>">>
+13:40:22.381 [debug] Received XML on stream = <<"<iq id='yOoOY-1674' type='set'><session xmlns='urn:ietf:params:xml:ns:xmpp-session'/></iq>">>
+13:40:22.381 [debug] State: {maxrate,1000,479.8464491362764,1416462022337109}, Size=90
+M=59.20454545454546, I=44.05
+13:40:22.381 [info] ({socket_state,gen_tcp,#Port<0.6949>,<0.738.0>}) Opened session for 123456@xmpp.mecil9.com/gbox
+13:40:22.381 [debug] Send XML on stream = <<"<iq type='result' id='yOoOY-1674'/>">>
+13:40:22.429 [debug] Received XML on stream = <<"<iq id='yOoOY-1676' type='get'><query xmlns='jabber:iq:roster'></query></iq><presence id='yOoOY-1677'></presence>">>
+13:40:22.429 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoOY-1676">>},{<<"type">>,<<"get">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"jabber:iq:roster">>}],[]}]}
+13:40:22.429 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoO"...>>},{<<"type">>,<<...>>}],[{xmlel,<<...>>,...}]}
+13:40:22.429 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoO"...>>},{<<"type">>,<<...>>}],[{xmlel,<<...>>,...}]}
+13:40:22.429 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoOY-1676">>},{<<"type">>,<<"result">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"jabber:iq:roster">>}],[]}]}
+13:40:22.429 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoO"...>>},{<<"type">>,<<...>>}],[{xmlel,<<...>>,...}]}
+13:40:22.429 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"id">>,<<"yOoO"...>>},{<<"type">>,<<...>>}],[{xmlel,<<...>>,...}]}
+13:40:22.429 [debug] sending to process <0.739.0>
+13:40:22.430 [debug] presence_update({jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>},
+        {xmlel,<<"presence">>,[{<<"id">>,<<"yOoOY-1677">>}],[]},
+        {state,{socket_state,gen_tcp,#Port<0.6949>,<0.738.0>},ejabberd_socket,#Ref<0.0.0.31644>,false,<<"1005669863">>,undefined,c2s,c2s_shaper,true,false,false,false,[verify_none,compression_none],true,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>},<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,{{1416,462021,755766},<0.739.0>},{1,{{<<"123456">>,<<"xmpp.mecil9.com">>,<<>>},nil,nil}},{1,{{<<"123456">>,<<"xmpp.mecil9.com">>,<<>>},nil,nil}},{0,nil},undefined,undefined,undefined,{userlist,none,[],false},c2s,ejabberd_auth_internal,{{58,17,246,25},49786},[],active,[],inactive,undefined,undefined,500,undefined,300,false,0,0,<<>>})
+13:40:22.430 [debug] from unavail = true
+13:40:22.430 [debug] user_available for <<"123456">> @ <<"xmpp.mecil9.com">> (6 resources)
+13:40:22.431 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"probe">>}],[]}
+13:40:22.431 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.431 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.431 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.431 [debug] sending to process <0.596.0>
+13:40:22.431 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.432 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[],[{xmlel,<<"x">>,[{<<"xmlns">>,<<"vcard-temp:x:update">>}],[{xmlel,<<"photo">>,[],[{xmlcdata,<<"fa2623fc1b957fbc93ee010acd808cae61d92214">>}]}]},{xmlel,<<"c">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/caps">>},{<<"hash">>,<<"sha-1">>},{<<"node">>,<<"https://github.com/robbiehanson/XMPPFramework">>},{<<"ver">>,<<"VyOFcFX6+YNmKssVXSBKGFP0BS4=">>}],[]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/iphone">>},{<<"stamp">>,<<"2014-11-20T05:30:19Z">>}],[{xmlcdata,<<>>}]},{xmlel,<<"x">>,[{<<"xmlns">>,<<"jabber:x:delay">>},{<<"stamp">>,<<"20141120T05:30:19">>}],[]}]}
+13:40:22.432 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.432 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.432 [debug] sending to process <0.739.0>
+13:40:22.432 [debug] sending to process <0.490.0>
+13:40:22.432 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>}],[{xmlel,<<"show">>,[],[]},{xmlel,<<"status">>,[],[]},{xmlel,<<"priority">>,[],[]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/gbox_win">>},{<<"stamp">>,<<"2014-11-20T05:25:00Z">>}],[{xmlcdata,<<>>}]},{xmlel,<<"x">>,[{<<"xmlns">>,<<"jabber:x:delay">>},{<<"stamp">>,<<"20141120T05:25:00">>}],[]}]}
+13:40:22.432 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>}],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.433 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>}],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.433 [debug] sending to process <0.739.0>
+13:40:22.433 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.433 [debug] sending to process <0.739.0>
+13:40:22.433 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.433 [debug] sending to process <0.519.0>
+13:40:22.434 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"prob"...>>}],[]}
+13:40:22.434 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"en">>}],[{xmlcdata,<<"\n">>},{xmlel,<<"priority">>,[],[{xmlcdata,<<"5">>}]},{xmlcdata,<<"\n">>},{xmlel,<<"c">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/caps">>},{<<"node">>,<<"http://psi-im.org/caps">>},{<<"ver">>,<<"caps-b75d8d2b25">>},{<<"ext">>,<<"ca cs ep-notify-2 html">>}],[]},{xmlcdata,<<"\n">>},{xmlel,<<"x">>,[{<<"xmlns">>,<<"vcard-temp:x:update">>}],[{xmlcdata,<<"\n">>},{xmlel,<<"photo">>,[],[{xmlcdata,<<"fa2623fc1b957fbc93ee010acd808cae61d92214">>}]},{xmlcdata,<<"\n">>}]},{xmlcdata,<<"\n">>},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/bogon">>},{<<"stamp">>,<<"2014-11-20T05:24:29Z">>}],[{xmlcdata,<<>>}]},{xmlel,<<"x">>,[{<<"xmlns">>,<<"jabber:x:delay">>},{<<"stamp">>,<<"20141120T05:24:29">>}],[]}]}
+13:40:22.434 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"en">>}],[{xmlcdata,<<...>>},{xmlel,...},{...}|...]}
+13:40:22.434 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"en">>}],[{xmlcdata,<<...>>},{xmlel,...},{...}|...]}
+13:40:22.434 [debug] sending to process <0.739.0>
+13:40:22.434 [debug] sending to process <0.480.0>
+13:40:22.435 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>},{<<"id">>,<<"534">>}],[{xmlel,<<"priority">>,[],[{xmlcdata,<<"50">>}]},{xmlel,<<"x">>,[{<<"xmlns">>,<<"vcard-temp:x:update">>}],[{xmlel,<<"photo">>,[],[{xmlcdata,<<"fa2623fc1b957fbc93ee010acd808cae61d92214">>}]}]},{xmlel,<<"c">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/caps">>},{<<"node">>,<<"http://gajim.org">>},{<<"ver">>,<<"OHkcneXc9eqyD5VIJDibu4fR0QY=">>},{<<"hash">>,<<"sha-1">>}],[]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/Gajim">>},{<<"stamp">>,<<"2014-11-20T05:17:25Z">>}],[{xmlcdata,<<>>}]},{xmlel,<<"x">>,[{<<"xmlns">>,<<"jabber:x:delay">>},{<<"stamp">>,<<"20141120T05:17:25">>}],[]}]}
+13:40:22.435 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>},{<<"id">>,<<...>>}],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.435 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"xml:lang">>,<<"zh">>},{<<"id">>,<<...>>}],[{xmlel,<<...>>,...},{xmlel,...},{...}|...]}
+13:40:22.435 [debug] sending to process <0.739.0>
+13:40:22.440 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoOY-1677">>}],[]}
+13:40:22.440 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.441 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.441 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.441 [debug] sending to process <0.596.0>
+13:40:22.441 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/iphone' id='yOoOY-1677'/>">>
+13:40:22.442 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.442 [debug] sending to process <0.490.0>
+13:40:22.442 [debug] Send XML on stream = [<<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/gbox_win' id='yOoOY-1677'/>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.442 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.442 [debug] sending to process <0.739.0>
+13:40:22.442 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.443 [debug] sending to process <0.519.0>
+13:40:22.443 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/bogon' id='yOoOY-1677'/>">>
+13:40:22.443 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"presence">>,[{<<"id">>,<<"yOoO"...>>}],[]}
+13:40:22.443 [debug] sending to process <0.480.0>
+13:40:22.443 [debug] Send XML on stream = [<<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/Gajim' id='yOoOY-1677'/>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.444 [debug] Send XML on stream = <<"<iq from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/gbox' id='yOoOY-1676' type='result'><query xmlns='jabber:iq:roster'/></iq>">>
+13:40:22.444 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/iphone' to='123456@xmpp.mecil9.com/gbox'><x xmlns='vcard-temp:x:update'><photo>fa2623fc1b957fbc93ee010acd808cae61d92214</photo></x><c xmlns='http://jabber.org/protocol/caps' hash='sha-1' node='https://github.com/robbiehanson/XMPPFramework' ver='VyOFcFX6+YNmKssVXSBKGFP0BS4='/><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/iphone' stamp='2014-11-20T05:30:19Z'></delay><x xmlns='jabber:x:delay' stamp='20141120T05:30:19'/></presence>">>
+13:40:22.444 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox_win' to='123456@xmpp.mecil9.com/gbox' xml:lang='zh'><show/><status/><priority/><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/gbox_win' stamp='2014-11-20T05:25:00Z'></delay><x xmlns='jabber:x:delay' stamp='20141120T05:25:00'/></presence>">>
+13:40:22.445 [debug] node_action <<"pubsub.xmpp.mecil9.com">> <<"flat">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.445 [debug] node_call <<"flat">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.445 [debug] node_action <<"pubsub.xmpp.mecil9.com">> <<"hometree">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.445 [debug] node_call <<"hometree">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.445 [debug] node_action <<"pubsub.xmpp.mecil9.com">> <<"pep">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.445 [debug] node_call <<"pep">> get_entity_subscriptions [<<"pubsub.xmpp.mecil9.com">>,{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.446 [debug] tree_action <<"pubsub.xmpp.mecil9.com">> get_nodes [{<<"123456">>,<<"xmpp.mecil9.com">>,<<>>},{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.446 [debug] tree_call <<"pubsub.xmpp.mecil9.com">> get_nodes [{<<"123456">>,<<"xmpp.mecil9.com">>,<<>>},{jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.446 [debug] node_action {<<"123456">>,<<"xmpp.mecil9.com">>,<<>>} <<"pep">> get_items [18,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.446 [debug] node_call <<"pep">> get_items [18,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.447 [debug] node_action {<<"123456">>,<<"xmpp.mecil9.com">>,<<>>} <<"pep">> get_items [17,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.447 [debug] node_call <<"pep">> get_items [17,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.447 [debug] node_action {<<"123456">>,<<"xmpp.mecil9.com">>,<<>>} <<"pep">> get_items [19,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.447 [debug] node_call <<"pep">> get_items [19,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.448 [debug] node_action {<<"123456">>,<<"xmpp.mecil9.com">>,<<>>} <<"pep">> get_items [15,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.448 [debug] node_call <<"pep">> get_items [15,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.448 [debug] node_action {<<"123456">>,<<"xmpp.mecil9.com">>,<<>>} <<"pep">> get_items [16,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.448 [debug] node_call <<"pep">> get_items [16,{<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}]
+13:40:22.449 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/bogon' to='123456@xmpp.mecil9.com/gbox' xml:lang='en'>\n<priority>5</priority>\n<c xmlns='http://jabber.org/protocol/caps' node='http://psi-im.org/caps' ver='caps-b75d8d2b25' ext='ca cs ep-notify-2 html'/>\n<x xmlns='vcard-temp:x:update'>\n<photo>fa2623fc1b957fbc93ee010acd808cae61d92214</photo>\n</x>\n<delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/bogon' stamp='2014-11-20T05:24:29Z'></delay><x xmlns='jabber:x:delay' stamp='20141120T05:24:29'/></presence>">>
+13:40:22.450 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/Gajim' to='123456@xmpp.mecil9.com/gbox' xml:lang='zh' id='534'><priority>50</priority><x xmlns='vcard-temp:x:update'><photo>fa2623fc1b957fbc93ee010acd808cae61d92214</photo></x><c xmlns='http://jabber.org/protocol/caps' node='http://gajim.org' ver='OHkcneXc9eqyD5VIJDibu4fR0QY=' hash='sha-1'/><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/Gajim' stamp='2014-11-20T05:17:25Z'></delay><x xmlns='jabber:x:delay' stamp='20141120T05:17:25'/></presence>">>
+13:40:22.450 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/gbox' id='yOoOY-1677'/>">>
+13:40:22.452 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"http://jabber.org/protocol/activity">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"0">>}],[{xmlel,<<"activity">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/activity">>}],[]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/Gajim">>},{<<"stamp">>,<<"2014-11-20T03:09:40Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.452 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.452 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.452 [debug] sending to process <0.480.0>
+13:40:22.452 [debug] Send XML on stream = [<<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/Gajim'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='http://jabber.org/protocol/activity'><item id='0'><activity xmlns='http://jabber.org/protocol/activity'/></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/Gajim' stamp='2014-11-20T03:09:40Z'></delay></message>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.453 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"http://jabber.org/protocol/tune">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"588701918AB89">>}],[{xmlel,<<"tune">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/tune">>}],[]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/PC-201310113421">>},{<<"stamp">>,<<"2014-11-20T04:52:33Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.453 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] sending to process <0.480.0>
+13:40:22.453 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"http://jabber.org/protocol/tune">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"588701918AB89">>}],[{xmlel,<<"tune">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/tune">>}],[]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/PC-201310113421">>},{<<"stamp">>,<<"2014-11-20T04:52:33Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.453 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] sending to process <0.519.0>
+13:40:22.453 [debug] Send XML on stream = [<<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/Gajim'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='http://jabber.org/protocol/tune'><item id='588701918AB89'><tune xmlns='http://jabber.org/protocol/tune'/></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/PC-201310113421' stamp='2014-11-20T04:52:33Z'></delay></message>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.453 [debug] Send XML on stream = <<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/bogon'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='http://jabber.org/protocol/tune'><item id='588701918AB89'><tune xmlns='http://jabber.org/protocol/tune'/></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/PC-201310113421' stamp='2014-11-20T04:52:33Z'></delay></message>">>
+13:40:22.453 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"http://jabber.org/protocol/mood">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"0">>}],[{xmlel,<<"mood">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/mood">>}],[]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/Gajim">>},{<<"stamp">>,<<"2014-11-20T03:09:41Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.453 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.453 [debug] sending to process <0.480.0>
+13:40:22.454 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"http://jabber.org/protocol/mood">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"0">>}],[{xmlel,<<"mood">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/mood">>}],[]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/Gajim">>},{<<"stamp">>,<<"2014-11-20T03:09:41Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.454 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.454 [debug] Send XML on stream = [<<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/Gajim'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='http://jabber.org/protocol/mood'><item id='0'><mood xmlns='http://jabber.org/protocol/mood'/></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/Gajim' stamp='2014-11-20T03:09:41Z'></delay></message>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.454 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.454 [debug] sending to process <0.519.0>
+13:40:22.454 [debug] Send XML on stream = <<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/bogon'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='http://jabber.org/protocol/mood'><item id='0'><mood xmlns='http://jabber.org/protocol/mood'/></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/Gajim' stamp='2014-11-20T03:09:41Z'></delay></message>">>
+13:40:22.454 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<"event">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/pubsub#event">>}],[{xmlel,<<"items">>,[{<<"node">>,<<"urn:xmpp:avatar:metadata">>}],[{xmlel,<<"item">>,[{<<"id">>,<<"fa2623fc1b957fbc93ee010acd808cae61d92214">>}],[{xmlel,<<"metadata">>,[{<<"xmlns">>,<<"urn:xmpp:avatar:metadata">>}],[{xmlel,<<"info">>,[{<<"id">>,<<"fa2623fc1b957fbc93ee010acd808cae61d92214">>},{<<"type">>,<<"image/png">>},{<<"bytes">>,<<"24349">>},{<<"width">>,<<"96">>},{<<"height">>,<<"96">>}],[]}]}]}]}]},{xmlel,<<"delay">>,[{<<"xmlns">>,<<"urn:xmpp:delay">>},{<<"from">>,<<"123456@xmpp.mecil9.com/PC-201310113421">>},{<<"stamp">>,<<"2014-11-19T09:09:42Z">>}],[{xmlcdata,<<>>}]}]}
+13:40:22.454 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.454 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"message">>,[],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.454 [debug] sending to process <0.519.0>
+13:40:22.454 [debug] Send XML on stream = <<"<message from='123456@xmpp.mecil9.com' to='123456@xmpp.mecil9.com/bogon'><event xmlns='http://jabber.org/protocol/pubsub#event'><items node='urn:xmpp:avatar:metadata'><item id='fa2623fc1b957fbc93ee010acd808cae61d92214'><metadata xmlns='urn:xmpp:avatar:metadata'><info id='fa2623fc1b957fbc93ee010acd808cae61d92214' type='image/png' bytes='24349' width='96' height='96'/></metadata></item></items></event><delay xmlns='urn:xmpp:delay' from='123456@xmpp.mecil9.com/PC-201310113421' stamp='2014-11-19T09:09:42Z'></delay></message>">>
+13:40:22.506 [info] ({socket_state,gen_tcp,#Port<0.6949>,<0.738.0>}) Close session for 123456@xmpp.mecil9.com/gbox
+13:40:22.506 [debug] disabling for <<"123456">>
+13:40:22.506 [debug] unset_presence for <<"123456">> @ <<"xmpp.mecil9.com">> / <<"gbox">> -> <<>> (5 resources)
+13:40:22.506 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unavailable">>}],[]}
+13:40:22.506 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>,<<"123456">>,<<"xmpp.mecil9.com">>,<<>>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"iphone">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] sending to process <0.596.0>
+13:40:22.506 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] sending to process <0.490.0>
+13:40:22.506 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/iphone' type='unavailable'/>">>
+13:40:22.506 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"bogon">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] Send XML on stream = [<<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/gbox_win' type='unavailable'/>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.506 [debug] sending to process <0.519.0>
+13:40:22.506 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"presence">>,[{<<"type">>,<<"unav"...>>}],[]}
+13:40:22.506 [debug] sending to process <0.480.0>
+13:40:22.506 [debug] Send XML on stream = [<<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/Gajim' type='unavailable'/>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.506 [debug] Send XML on stream = <<"<presence from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/bogon' type='unavailable'/>">>
+13:40:22.585 [debug] Received XML on stream = <<"<iq xmlns=\"jabber:client\" to=\"123456@xmpp.mecil9.com/gbox\" type=\"get\" id=\"593\"><query xmlns=\"http://jabber.org/protocol/disco#info\" /></iq>">>
+13:40:22.585 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<"123456@xmpp.mecil9.com/gbox">>},{<<"type">>,<<"get">>},{<<"id">>,<<"593">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/disco#info">>}],[]}]}
+13:40:22.585 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...}]}
+13:40:22.585 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...}]}
+13:40:22.585 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"error">>},{<<"from">>,<<"123456@xmpp.mecil9.com/gbox">>},{<<"xml:lang">>,<<"zh">>},{<<"id">>,<<"593">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/disco#info">>}],[]},{xmlel,<<"error">>,[{<<"code">>,<<"503">>},{<<"type">>,<<"cancel">>}],[{xmlel,<<"service-unavailable">>,[{<<"xmlns">>,<<"urn:ietf:params:xml:ns:xmpp-stanzas">>}],[]}]}]}
+13:40:22.585 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"erro"...>>},{<<"from">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.585 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"Gajim">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"erro"...>>},{<<"from">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.585 [debug] sending to process <0.480.0>
+13:40:22.585 [debug] Send XML on stream = [<<"<iq from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/Gajim' type='error' xml:lang='zh' id='593'><query xmlns='http://jabber.org/protocol/disco#info'/><error code='503' type='cancel'><service-unavailable xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/></error></iq>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.626 [debug] Received XML on stream = <<"<r xmlns=\"urn:xmpp:sm:2\" />">>
+13:40:22.627 [debug] Send XML on stream = <<"<a xmlns='urn:xmpp:sm:2' h='114'/>">>
+13:40:22.687 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"419\" />">>
+13:40:22.687 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 419 of 424 stanzas
+13:40:22.735 [debug] Received XML on stream = <<"<iq xmlns=\"jabber:client\" to=\"123456@xmpp.mecil9.com/gbox\" type=\"get\" id=\"629\"><query xmlns=\"http://jabber.org/protocol/disco#info\" /></iq>">>
+13:40:22.736 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<"123456@xmpp.mecil9.com/gbox">>},{<<"type">>,<<"get">>},{<<"id">>,<<"629">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/disco#info">>}],[]}]}
+13:40:22.736 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...}]}
+13:40:22.736 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        packet {xmlel,<<"iq">>,[{<<"xml:lang">>,<<"zh">>},{<<"to">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...}]}
+13:40:22.736 [debug] route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"error">>},{<<"from">>,<<"123456@xmpp.mecil9.com/gbox">>},{<<"xml:lang">>,<<"zh">>},{<<"id">>,<<"629">>}],[{xmlel,<<"query">>,[{<<"xmlns">>,<<"http://jabber.org/protocol/disco#info">>}],[]},{xmlel,<<"error">>,[{<<"code">>,<<"503">>},{<<"type">>,<<"cancel">>}],[{xmlel,<<"service-unavailable">>,[{<<"xmlns">>,<<"urn:ietf:params:xml:ns:xmpp-stanzas">>}],[]}]}]}
+13:40:22.736 [debug] local route
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"erro"...>>},{<<"from">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.736 [debug] session manager
+        from {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox">>}
+        to {jid,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>,<<"123456">>,<<"xmpp.mecil9.com">>,<<"gbox_win">>}
+        packet {xmlel,<<"iq">>,[{<<"type">>,<<"erro"...>>},{<<"from">>,<<...>>},{<<...>>,...},{...}],[{xmlel,<<...>>,...},{xmlel,...}]}
+13:40:22.736 [debug] sending to process <0.490.0>
+13:40:22.736 [debug] Send XML on stream = [<<"<iq from='123456@xmpp.mecil9.com/gbox' to='123456@xmpp.mecil9.com/gbox_win' type='error' xml:lang='zh' id='629'><query xmlns='http://jabber.org/protocol/disco#info'/><error code='503' type='cancel'><service-unavailable xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/></error></iq>">>,<<"<r xmlns='urn:xmpp:sm:2'/>">>]
+13:40:22.781 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"420\" />">>
+13:40:22.781 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 420 of 424 stanzas
+13:40:22.848 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"259\" />">>
+13:40:22.848 [debug] 123456@xmpp.mecil9.com/gbox_win acknowledged 259 of 261 stanzas
+13:40:22.882 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"421\" />">>
+13:40:22.882 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 421 of 424 stanzas
+13:40:22.954 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"260\" />">>
+13:40:22.954 [debug] 123456@xmpp.mecil9.com/gbox_win acknowledged 260 of 261 stanzas
+13:40:22.981 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"422\" />">>
+13:40:22.981 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 422 of 424 stanzas
+13:40:23.063 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"261\" />">>
+13:40:23.063 [debug] 123456@xmpp.mecil9.com/gbox_win acknowledged 261 of 261 stanzas
+13:40:23.082 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"423\" />">>
+13:40:23.082 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 423 of 424 stanzas
+13:40:23.181 [debug] Received XML on stream = <<"<a xmlns=\"urn:xmpp:sm:2\" h=\"424\" />">>
+13:40:23.181 [debug] 123456@xmpp.mecil9.com/Gajim acknowledged 424 of 424 stanzas

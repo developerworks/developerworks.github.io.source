@@ -21,7 +21,7 @@ date: 2014-10-31 01:16:12
 
 ETS允许我们在内存表中存储任何Erlang/Elixir项式. 通过erlang的`:ets`模块处理ETS表:
 
-```elixir
+```
 iex> table = :ets.new(:buckets_registry, [:set, :protected])
 8207
 iex> :ets.insert(table, {"foo", self})

@@ -39,7 +39,7 @@ iex(1)>
 
 # Hell World
 
-```elixir
+```
 IO.puts "Hello World!
 ```
 

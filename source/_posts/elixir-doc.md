@@ -15,7 +15,7 @@ date: 2014-10-14 10:21:11
 
 - 创建一个文件`hello.exs`如下:
 
-```elixir
+```
 # Elixir module
 defmodule Test do
     @doc """

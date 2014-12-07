@@ -1,4 +1,4 @@
-title: Erlang 资源池
+title: Erlang | 资源池
 categories:
   - Erlang
 tags:

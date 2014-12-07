@@ -12,7 +12,7 @@ date: 2014-11-04 16:34:35
 
 创建一个简单的任务:
 
-```elixir
+```
 defmodule Mix.Tasks.Hello do
     use Mix.Task
     @shortdoc "这是一个短文档, 看"
@@ -65,7 +65,7 @@ end
 示例:
 
 
-```elixir
+```
 defmodule Mix.Tasks.Mytasks do
     @shortdoc "任务集合模块"
     @moduledoc """

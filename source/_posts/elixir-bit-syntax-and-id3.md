@@ -23,7 +23,7 @@ ID3是一种在MP3中使用的描述MP3音频文件的元数据结构, 如下图
 
 ## 读取Mp3文件
 
-```elixir
+```
 defmodule Mp3 do
   def get(filename) do
     case File.read(filename) do
@@ -52,7 +52,7 @@ mp3_byte_size = (byte_size(binary) - 128)
 
 ## 完整代码
 
-```elixir
+```
 defmodule Mp3 do
   def parse(filename) do
     case File.read(filename) do
