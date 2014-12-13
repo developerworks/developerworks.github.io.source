@@ -1,11 +1,10 @@
 title: RESTFUL API文档生成工具及规范
 date: 2014-05-11
 categories:
-- API
+  - API
 tags:
-- API
-- RESTFUL
-- swagger
+  - RESTFUL
+  - swagger
 ---
 
 本文收集关于在`Node.js`项目中通过模型定义自动生成API接口文档的工具和方法
