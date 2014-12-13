@@ -71,6 +71,12 @@ export HTTPS_PROXY=192.168.8.188:8580
 ```
 ![获取图书信息](/assets/images/F228B9AD-80CE-4875-AFCB-49BF5446A67D.png)
 
+
+## 示例代码
+
+https://github.com/developerworks/douban_book_api_v2
+
+
 ## 参考资料
 
 1. https://github.com/myfreeweb/httpotion
