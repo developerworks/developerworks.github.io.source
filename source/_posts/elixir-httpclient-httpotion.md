@@ -138,7 +138,6 @@ iex(33)> :ej.get {"tags", 3, "title"}, json
 "魔幻"
 iex(34)> :ej.get {"tags", 3, "count"}, json
 8892
-
 ```
 
   [1]: https://github.com/davisp/jiffy

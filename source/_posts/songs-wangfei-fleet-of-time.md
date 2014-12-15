@@ -1,6 +1,6 @@
 title: Fleet of time <<匆匆那年> 王菲
 categories:
-  - Songs
+  - 杂类
 tags:
   - 匆匆那年
 toc: false
