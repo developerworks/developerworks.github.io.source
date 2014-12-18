@@ -4,19 +4,29 @@ categories:
 tags:
   - Ecto
   - Phoenix
-toc: false
+toc: true
 date: 2014-11-13 01:19:52
 ---
 
-本文通过一个书单应用简要介绍使用Phoenix框架创建一个Web应用程序的基本步骤.
+本文通过一个书单应用简要介绍使用Phoenix框架创建一个Web应用程序的基本步骤. 从这些基本步骤我们来逐步学习如何使用phoenix框架开发一个Web应用程序的基本过程.
+
+## 修订
+
+
+- 2014-12-17
+    - Phoenix 从0.8.0开始 phoenix任务`phoenix.start`重命名为`phoenix.server`
+    - 修改项目文件`mix.exs`的依赖版本号,更新依赖库
+        - ecto          0.2.0 -> 0.2.8
+        - postgrex      0.5.0 -> 0.6.0
+        - phoenix       0.5.0 -> master
+    - 增加命令注释说明
 
 ## 安装Phoenix
 
 ```
-    git clone https://github.com/phoenixframework/phoenix.git
-    cd phoenix
-    git checkout v0.5.0
-    mix do deps.get, compile
+git clone https://github.com/phoenixframework/phoenix.git
+cd phoenix
+mix do deps.get, compile
 ```
 
 ## 创建书单项目
@@ -25,6 +35,9 @@ date: 2014-11-13 01:19:52
 
 ```
 mix phoenix.new book_store ../book_store
+=== =========== ========== =============
+|         |            |              |
+命令     任务        项目名称    新创建的项目保存位置
 ```
 
 目录`../book_store`不必事先存在, `phoenix`会自动创建.
@@ -55,10 +68,10 @@ defmodule BookStore.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "0.5.0"},
-     {:cowboy, "~> 1.0"},
-     {:postgrex, "~> 0.5"},
-     {:ecto, "~> 0.2.0"}]
+    [ {:phoenix, github: "phoenixframework/phoenix"},
+      {:cowboy, "~> 1.0"},
+      {:postgrex, "~> 0.6.0"},
+      {:ecto, "~> 0.2.8"} ]
   end
 end
 ```
@@ -66,7 +79,7 @@ end
 和修改之前的`mix.exs`文件相比有两个变更处:
 
 - 在`application`函数中增加了两个依赖的应用程序 `:postgres` 和 `:ecto` (16行)
-- 在`deps`函数增加两个依赖库`{:postgrex, "~> 0.5"}`和`{:ecto, "~> 0.2.0"}`(24,25行)
+- 在`deps`函数增加两个依赖库`{:postgrex, "~> 0.6.0"}`和`{:ecto, "~> 0.2.8"}`(24,25行)
 
 运行
 

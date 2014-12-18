@@ -1,4 +1,4 @@
-title: Elixir 元编程Quote和Unquote
+title: Elixir | 元编程Quote和Unquote
 categories:
   - Elixir
 tags:
@@ -6,6 +6,19 @@ tags:
 toc: false
 date: 2014-11-10 22:39:17
 ---
+
+## 概念介绍
+
+- Elixir中的AST是什么?
+    - 是一个Elixir Term
+    - 是深度嵌套的一种表示Elixir代码结构的方法
+- 如何理解?
+    ```
+    iex(1)> quoted = quote do 1 + 2 end
+    {:+, [context: Elixir, import: Kernel], [1, 2]}
+    ```
+    quote用于把一个Elixir表达式转换为Elixir的AST片段
+- 抽象语法树片段(AST Fragment)
 
 才接触Quote和Unquote的时候会让人迷惑. 当你很好的理解了它后, 却是非常好用的.
 
@@ -27,15 +40,13 @@ iex> quote do: 1 + 2
 
 表达式`1 + 2`在Elixir编译器中被表示为一个有三个元素的元组:
 
-
 - 操作符 (`:+`)
 - 关键字列表元数据(`[context: Elixir, import: Kernel]`)
 - 参数列表 (`[1, 2]`)
 
-如果不考虑关键字列表元数据, 其可以标识为一棵抽象语法树, 以操作符为根节点, 2个参数为树叶
+如果不考虑关键字列表元数据, 其可以表示为一棵抽象语法树, 以操作符为根节点, 2个参数为树叶
 
 ![表达式1 + 2的抽象语法树](/assets/images/ast1.png)
-
 
 再如, 一个稍微复杂一点的表达式`1 + 2 * 3`, 将生成一个更加复杂的抽象语法树
 
