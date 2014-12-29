@@ -1,4 +1,4 @@
-title: Elixir | 理解宏(Macro)第一部分
+title: (译)理解Elixir宏第1部分
 categories:
   - Elixir
 tags:

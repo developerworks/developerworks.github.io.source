@@ -57,8 +57,8 @@ end
 注意很多依赖模块托管在Amazon S3上,可能被墙, 可使用如下命令穿墙:
 
 ```
-export HTTP_PROXY=192.168.8.188:8580
-export HTTPS_PROXY=192.168.8.188:8580
+export HTTP_PROXY=http://192.168.8.188:8580
+export HTTPS_PROXY=https://192.168.8.188:8580
 ```
 
 然后编译:

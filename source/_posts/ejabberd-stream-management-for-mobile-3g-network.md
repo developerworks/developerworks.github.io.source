@@ -1,5 +1,6 @@
 title: Ejabberd | 移动3G网络下的流管理
 categories:
+  - Communication
   - Ejabberd
 tags:
   - Stream Management
@@ -8,7 +9,9 @@ toc: false
 date: 2014-12-18 19:45:31
 ---
 
-这篇文章的起因是因为朋友开发的移动社交APP使用Ejabberd的时候遇到了3G网络频繁断开连接的问题. 由于3G网络的特性,在3G网络内的客户端IP是频繁变化的,你手持移动设备在不停的移动,遇到建筑物, 进入电梯等都可能导致3G网络突然中断.等你再次连接上服务器的时候,之前的状态就已经丢失了.
+这篇文章的起因是因为朋友开发的移动社交APP使用Ejabberd的时候遇到了3G网络频繁断开连接的问题.
+由于3G网络的特性,在3G网络内的客户端IP可能是频繁变化的,你手持移动设备在不停的移动,遇到建筑物,
+进入电梯等都可能导致3G网络突然中断.等你再次连接上服务器的时候,之前的状态就已经丢失了.
 
 为了解决这类问题, XMPP基金会发布了一个XMPP扩展协议[XEP-198 Stream Management](http://demo.netfoucs.com/yuedong56/article/details/38120101) 类支持XMPP会话的恢复.
 
@@ -101,7 +104,7 @@ listen:
 <enable xmlns='urn:xmpp:sm:3' resume='true'/>
 ```
 
-同时服务响应一个`<enabled>`标签,标识服务器的流管理已经打开.
+同时服务响应一个`<enabled>`标签,表示服务器的流管理已经打开.
 
 ```
 <enabled xmlns="urn:xmpp:sm:3"

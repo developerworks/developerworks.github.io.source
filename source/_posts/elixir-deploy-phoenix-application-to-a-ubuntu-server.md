@@ -3,7 +3,7 @@ categories:
   - Elixir
 tags:
   - Phoenix
-  - Ubunt
+  - Ubuntu
 toc: false
 date: 2014-11-13 02:43:21
 ---

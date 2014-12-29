@@ -1,8 +1,6 @@
-title: Elixir | 理解宏(Macro)第三部分 - 进入AST
+title: (译)理解Elixir宏第3部分
 categories:
   - Elixir
-tags:
-  - Macro
 toc: false
 date: 2014-12-18 15:47:48
 ---

@@ -1,6 +1,6 @@
 title: Nodejs | 在新版本的npm恢复老版本的下载状态风格
 categories:
-  - Nodejs
+  - Node.js
 toc: false
 date: 2014-12-15 16:51:37
 ---
