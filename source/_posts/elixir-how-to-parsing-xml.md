@@ -33,7 +33,7 @@ date: 2015-01-01 03:04:01
     Run `mix help` for more commands.
 
 
-把我拉出来的时下面这篇[Wiki](http://erlangcentral.org/wiki/index.php?title=Elixir_and_XML), 视频中的代码有几个问题:
+把我拉出来的是下面这篇[Wiki](http://erlangcentral.org/wiki/index.php?title=Elixir_and_XML), 视频中的代码有几个问题:
 
 1. `defrecord`关键字废弃了,必须用`Record.defrecord`
 
