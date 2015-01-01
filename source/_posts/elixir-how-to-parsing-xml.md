@@ -88,6 +88,10 @@ end
 
 https://gist.github.com/94ce9976fc52e04e572a
 
+## 完整的项目代码
+
+https://github.com/developerworks/xml_parsing
+
 ## 参考资料
 
 1. ELIXIR AND XML
