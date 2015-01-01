@@ -7,7 +7,31 @@ toc: false
 date: 2015-01-01 03:04:01
 ---
 
+
 在Elixir 1.0.2中解析XML文档的时候,最开始是参考的[这个视频](http://elixirsips.com/episodes/028_parsing_xml.html), 总之在Google的搜索结果中掉进了无数多个坑后,终于爬出来了.
+
+创建一个项目, 本文所述所有内容都是在文件`test/xml_parsing_test.exs`文件中完成, 并通过`mix test`执行测试用例:
+
+    root@c87c9967219c:~# mix new xml_parsing
+    * creating README.md
+    * creating .gitignore
+    * creating mix.exs
+    * creating config
+    * creating config/config.exs
+    * creating lib
+    * creating lib/xml_parsing.ex
+    * creating test
+    * creating test/test_helper.exs
+    * creating test/xml_parsing_test.exs
+
+    Your mix project was created successfully.
+    You can use mix to compile it, test it, and more:
+
+        cd xml_parsing
+        mix test
+
+    Run `mix help` for more commands.
+
 
 把我拉出来的时下面这篇[Wiki](http://erlangcentral.org/wiki/index.php?title=Elixir_and_XML), 视频中的代码有几个问题:
 
