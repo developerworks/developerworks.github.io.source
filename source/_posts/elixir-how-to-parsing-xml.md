@@ -35,10 +35,8 @@ date: 2015-01-01 03:04:01
 
 把我拉出来的是下面这篇[Wiki](http://erlangcentral.org/wiki/index.php?title=Elixir_and_XML), 视频中的代码有几个问题:
 
-1. `defrecord`关键字废弃了,必须用`Record.defrecord`
-
-2. `Record.defrecord`不能定义在模块的外面了,必须定义在模块内部, 比如:
-
+- `defrecord`关键字废弃了,必须用`Record.defrecord`
+- `Record.defrecord`不能定义在模块的外面了,必须定义在模块内部, 比如:
 ```
 defmodule XmlParsingTest do
     use ExUnit.Case
@@ -48,8 +46,7 @@ defmodule XmlParsingTest do
     ...
 end
 ```
-
-3. 获取节点值的方式变了
+- 获取节点值的方式变了
 
 ```
 test "Test parsing xml document OLD" do
