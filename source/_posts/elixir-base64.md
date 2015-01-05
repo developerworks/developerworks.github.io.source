@@ -2,6 +2,7 @@ title: Elixir | Base64编码
 categories:
   - Elixir
 tags:
+  - Elixir
   - encoding
 toc: false
 date: 2014-10-23 17:30:27

@@ -2,6 +2,7 @@ title: Elixir | 使用Mix创建命令行工具
 categories:
   - Elixir
 tags:
+  - Elixir
   - Mix
 toc: true
 date: 2014-11-02 14:59:55

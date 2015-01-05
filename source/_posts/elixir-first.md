@@ -2,6 +2,7 @@ title: Elixir | 第一印象
 categories:
   - Elixir
 tags:
+  - Elixir
   - shell
 toc: false
 date: 2014-10-14 01:06:12

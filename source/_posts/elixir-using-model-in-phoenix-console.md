@@ -2,6 +2,7 @@ title: Elixir | 在Phoenix控制台中使用模型
 categories:
   - Elixir
 tags:
+  - Elixir
   - Phoenix
 toc: false
 date: 2014-11-13 02:25:18

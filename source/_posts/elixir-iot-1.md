@@ -2,6 +2,7 @@ title: 译文 | Elixir 物联网-1
 categories:
   - Elixir
 tags:
+  - Elixir
   - IoT
 toc: false
 date: 2014-11-05 16:39:53

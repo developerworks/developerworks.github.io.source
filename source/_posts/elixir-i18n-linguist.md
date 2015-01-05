@@ -2,6 +2,7 @@ title: Elixir | 使用linguist处理国际化字符串
 categories:
   - Elixir
 tags:
+  - Elixir
   - I18n
 toc: false
 date: 2014-11-05 13:47:41

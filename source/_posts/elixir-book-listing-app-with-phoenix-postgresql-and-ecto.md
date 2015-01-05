@@ -2,6 +2,7 @@ title: Elixir | 用Phoenix,Postgresql和Ecto创建一个书单应用
 categories:
   - Elixir
 tags:
+  - Elixir
   - Ecto
   - Phoenix
 toc: true

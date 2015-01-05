@@ -1,6 +1,8 @@
 title: Elixir | 构建一个IRC记录程序
 categories:
   - Elixir
+tags:
+  - Elixir
 toc: false
 date: 2014-12-13 15:53:40
 ---

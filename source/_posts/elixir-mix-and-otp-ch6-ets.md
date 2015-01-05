@@ -2,6 +2,7 @@ title: Elixir | Mix 和 OTP - ETS
 categories:
   - Elixir
 tags:
+  - Elixir
   - Mix
   - OTP
   - ETS

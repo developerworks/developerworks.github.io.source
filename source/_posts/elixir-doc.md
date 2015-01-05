@@ -2,6 +2,7 @@ title: Elixir | 文档工具
 categories:
   - Elixir
 tags:
+  - Elixir
   - doc
 toc: false
 date: 2014-10-14 10:21:11

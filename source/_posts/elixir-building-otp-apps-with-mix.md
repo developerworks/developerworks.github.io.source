@@ -1,7 +1,8 @@
-title: 译文 | Elixir 使用Mix构建OTP应用
+title: Elixir 使用Mix构建OTP应用(译)
 categories:
   - Elixir
 tags:
+  - Elixir
   - OTP
 toc: true
 date: 2014-11-04 20:17:48

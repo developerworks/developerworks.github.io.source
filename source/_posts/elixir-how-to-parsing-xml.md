@@ -2,6 +2,7 @@ title: Elixir 解析XML的几个坑
 categories:
   - Elixir
 tags:
+  - Elixir
   - XML
 toc: false
 date: 2015-01-01 03:04:01

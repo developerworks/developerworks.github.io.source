@@ -1,7 +1,8 @@
-title: 译文 | Elixir 创建自定义Mix任务
+title: Elixir | 创建自定义Mix任务(译)
 categories:
   - Elixir
 tags:
+  - Elixir
   - Mix
 toc: true
 date: 2014-11-04 16:34:35

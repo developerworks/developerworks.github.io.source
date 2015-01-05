@@ -2,6 +2,7 @@ title: Elixir | 伞形项目
 categories:
   - Elixir
 tags:
+  - Elixir
   - Umbrella
 toc: false
 date: 2014-11-04 20:23:30

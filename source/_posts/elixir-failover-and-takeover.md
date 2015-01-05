@@ -2,8 +2,7 @@ title: Elixir | 故障转移和接管
 categories:
   - Elixir
 tags:
-  - Failover
-  - Takeover
+  - Elixir
 toc: false
 date: 2014-11-20 02:10:29
 ---
@@ -47,7 +46,7 @@ $ mkdir lib/distro
 $ touch lib/distro/distro_cal.ex
 ```
 
-`DistroCal`是一个`GenServer`: 它使用全局名称注册, 假设其运行在集群中的一个节点上, 全局注册让我们不用考虑其实际的运行位置, 只需要提供注册名称就可以反问.
+`DistroCal`是一个`GenServer`: 它使用全局名称注册, 假设其运行在集群中的一个节点上, 全局注册让我们不用考虑其实际的运行位置, 只需要提供注册名称就可以访问.
 
 ```
 defmodule Distro.DistroCal do

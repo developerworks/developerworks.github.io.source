@@ -4,6 +4,12 @@ toc: false
 ---
 
 ## 2015-01-02
+
+- Erlang/Elixir Syntax: A Crash Course
+介绍了Erlang和Elixir的语法差异, 互操作, 集成
+http://elixir-lang.org/crash-course.html
+
+
 - 通用事件服务器(用于处理客户端事件)
 http://elixir.bagwanpankaj.com/2014/03/03/event-server-in-elixir/
 

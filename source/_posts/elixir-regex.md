@@ -2,6 +2,7 @@ title: Elixir 正则表达式
 categories:
   - Elixir
 tags:
+  - Elixir
   - Regex
 toc: true
 date: 2015-01-02 17:29:03
@@ -41,6 +42,8 @@ iex(7)> cond do
 Cellphone number 13912345678 is a valid cell phone number
 :ok
 ```
+
+在关键业务中, 还需要通过短信验证手机号的有效性, 上述验证并不能保证该号码是一个`可用`的手机号码.
 
 ## 验证电子邮件地址
 

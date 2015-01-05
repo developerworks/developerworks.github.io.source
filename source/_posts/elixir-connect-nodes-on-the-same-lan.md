@@ -2,6 +2,7 @@ title: Elixir | 连接同一个局域网的Elixir节点
 categories:
   - Elixir
 tags:
+  - Elixir
   - Distributed Application
 toc: true
 date: 2014-11-20 01:28:22

@@ -2,6 +2,7 @@ title: Elixir | 任务
 categories:
   - Elixir
 tags:
+  - Elixir
   - Task
 toc: false
 date: 2014-11-21 11:41:09
@@ -29,6 +30,8 @@ iex(foo@44adb2a6d305)3> Task.await(task)
 ```
 
 首先来说明异步, `Task.async/1`创建一个任务,并执行传递给它的函数, 如上述代码第2行所示, `Task.async/1`调用返回一个对任务的引用.
+
+这行输出很好地阐述了文章开头这么一句话`任务是进程`.该输出实际上是一个`%Task` Map, 包含两个元素 进程的Pid, 以及一个引用对象.
 
 随后可以通过调用`Task.await/1`获取其计算结果. 调用`Task.async/1`会创建一个新的进程,该进程连接到调用者进程. 任务结果以消息的形式返回给调用者进程.
 `Task.await/2`用于读取由任务发送的消息.

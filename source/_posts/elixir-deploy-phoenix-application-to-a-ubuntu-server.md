@@ -2,6 +2,7 @@ title: Elixir | 部署Phoenix应用程序到Ubuntu服务器
 categories:
   - Elixir
 tags:
+  - Elixir
   - Phoenix
   - Ubuntu
 toc: false

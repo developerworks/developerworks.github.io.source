@@ -2,6 +2,7 @@ title: Elixir | 收集用户输入
 categories:
   - Elixir
 tags:
+  - Elixir
   - IO
 toc: false
 date: 2014-10-25 15:59:06
