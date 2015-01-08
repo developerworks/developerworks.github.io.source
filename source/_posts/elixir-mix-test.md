@@ -51,3 +51,8 @@ mix test --trace --exclude ignore:true
 ![运行结果](/assets/elixir/36FC718B-1167-4E3B-BCB2-9B8F06AE698C.jpg)
 
 关于测试的详细配置和说明,请参考`mix help test`
+
+
+## 参考资料
+
+1. http://stackoverflow.com/questions/26150146/how-can-i-make-mix-run-only-specific-tests-from-my-suite-of-tests

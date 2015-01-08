@@ -1,4 +1,4 @@
-title: Erlang 用erlang.mk和relx发布Erlang应用程序
+title: Erlang 用erlang.mk和relx发布Erlang应用程序(译)
 categories:
   - Erlang
 tags:
