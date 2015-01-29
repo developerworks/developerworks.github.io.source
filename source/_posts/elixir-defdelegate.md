@@ -1,4 +1,4 @@
-title: Elixir | 函数委派
+title: 函数委派
 categories:
   - Elixir
 tags:

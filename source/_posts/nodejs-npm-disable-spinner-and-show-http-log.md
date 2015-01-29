@@ -1,4 +1,4 @@
-title: Nodejs | 在新版本的npm恢复老版本的下载状态风格
+title: 在新版本的npm恢复老版本的下载状态风格
 categories:
   - Node.js
 toc: false

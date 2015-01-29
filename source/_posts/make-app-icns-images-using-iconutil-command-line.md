@@ -28,3 +28,7 @@ https://github.com/andrevvm/appicns
 ## 生成的图标集效果
 
 ![图标集](/assets/images/9CA1D34F-1A00-47B3-A65A-EBB0636CF617.png)
+
+## 参考资料
+
+1. http://stackoverflow.com/questions/12306223/how-to-manually-create-icns-files-using-iconutil

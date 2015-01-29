@@ -1,4 +1,4 @@
-title: Elixir | Mix 和 OTP 任务以及gen_tcp
+title: Mix 和 OTP 任务以及gen_tcp
 categories:
   - Elixir
 tags:

@@ -1,4 +1,4 @@
-title: Erlang | 自定义行为
+title: 自定义行为
 categories:
   - Erlang
 tags:

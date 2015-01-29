@@ -147,7 +147,7 @@ end
 
 对此两种情况, 求值的表达式必须在当前上下文中是有效的, 并注入该结果到你构建的表达式中.(要么是符串, 或者是一个AST片段)
 
-重要的时理解其含义, unquote并不是quote的反向过程. 如果需要把一个quoted expression装换为字符串, 可以使用`Macro.to_string/1`
+重要的时理解其含义, unquote并不是quote的反向过程. 如果需要把一个quoted expression转换为字符串, 可以使用`Macro.to_string/1`
 
 ## 例子: 追踪表达式
 
@@ -161,3 +161,27 @@ Result of 1 + 2: 3
 `Tracer.trace`以一个给定的表达式并打印其结果到屏幕上.
 
 ## 展开AST
+
+在Shell观察其是如何连接起来是很容易的. 启动`iex` Shell, 复制粘贴上面定义的`Tracer`模块:
+
+```
+iex(1)> defmodule Tracer do
+          ...
+        end
+```
+
+然后, 必须`require Tracer`
+
+```
+iex(2)> require Tracer
+```
+
+接下来, 对`trace`的宏调用进行quote操作
+
+```
+iex(3)> quoted = quote do Tracer.trace(1+2) end
+{{:., [], [{:__aliases__, [alias: false], [:Tracer]}, :trace]}, [],
+ [{:+, [context: Elixir, import: Kernel], [1, 2]}]}
+```
+
+现在, 输出看起来有点可怕, 通常你不必需要理解它. 但是如果你仔细看, 在这个结构中你可以看到`Tracer`和`trace`, 这证明了AST片段是何源代码相对应的, 但还未展开.

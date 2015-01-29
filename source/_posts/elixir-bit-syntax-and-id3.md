@@ -1,4 +1,4 @@
-title: Elixir | 从ID3中解析Mp3元数据
+title: 从ID3中解析Mp3元数据
 categories:
   - Elixir
 tags:

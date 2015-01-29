@@ -1,4 +1,4 @@
-title: Elixir | 第一印象
+title: 第一印象
 categories:
   - Elixir
 tags:

@@ -1,4 +1,4 @@
-title: Elixir | 使用linguist处理国际化字符串
+title: 使用linguist处理国际化字符串
 categories:
   - Elixir
 tags:

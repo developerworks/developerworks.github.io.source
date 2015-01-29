@@ -1,4 +1,4 @@
-title: Elixir | 在Phoenix控制台中使用模型
+title: 在Phoenix控制台中使用模型
 categories:
   - Elixir
 tags:

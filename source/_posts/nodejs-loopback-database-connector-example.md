@@ -1,4 +1,4 @@
-title: Nodejs | Loopback 数据库连接器示例
+title: Loopback 数据库连接器示例
 categories:
   - Node.js
 tags:

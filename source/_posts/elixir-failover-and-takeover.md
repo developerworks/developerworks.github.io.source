@@ -1,4 +1,4 @@
-title: Elixir | 故障转移和接管
+title: 故障转移和接管
 categories:
   - Elixir
 tags:

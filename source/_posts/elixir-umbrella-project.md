@@ -1,4 +1,4 @@
-title: Elixir | 伞形项目
+title: 伞形项目
 categories:
   - Elixir
 tags:

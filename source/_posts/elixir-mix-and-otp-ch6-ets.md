@@ -1,4 +1,4 @@
-title: Elixir | Mix 和 OTP - ETS
+title: Mix 和 OTP - ETS
 categories:
   - Elixir
 tags:

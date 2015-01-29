@@ -1,4 +1,4 @@
-title: Elixir | 创建自定义Mix任务(译)
+title: 创建自定义Mix任务(译)
 categories:
   - Elixir
 tags:

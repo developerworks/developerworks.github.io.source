@@ -1,4 +1,4 @@
-title: Nodejs | Loopback框架入门
+title: Loopback框架入门
 categories:
   - Node.js
 tags:

@@ -1,4 +1,4 @@
-title: Elixir | 任务
+title: 任务
 categories:
   - Elixir
 tags:

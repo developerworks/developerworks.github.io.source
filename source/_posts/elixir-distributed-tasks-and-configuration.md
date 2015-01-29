@@ -1,4 +1,4 @@
-title: Elixir | 分布式任务和配置
+title: 分布式任务和配置
 categories:
   - Elixir
 tags:

@@ -1,4 +1,4 @@
-title: Elixir | 连接同一个局域网的Elixir节点
+title: 连接同一个局域网的Elixir节点
 categories:
   - Elixir
 tags:

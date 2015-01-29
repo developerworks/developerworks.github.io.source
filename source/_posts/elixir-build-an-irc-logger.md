@@ -1,4 +1,4 @@
-title: Elixir | 构建一个IRC记录程序
+title: 构建一个IRC记录程序
 categories:
   - Elixir
 tags:

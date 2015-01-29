@@ -1,4 +1,4 @@
-title: Elixir | 部署Phoenix应用程序到Ubuntu服务器
+title: 部署Phoenix应用程序到Ubuntu服务器
 categories:
   - Elixir
 tags:

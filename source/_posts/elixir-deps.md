@@ -1,4 +1,4 @@
-title: Elixir | 依赖管理
+title: 依赖管理
 categories:
   - Elixir
 tags:

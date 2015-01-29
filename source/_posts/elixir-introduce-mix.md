@@ -1,4 +1,4 @@
-title: Elixir | 简介
+title: 简介
 categories:
   - Elixir
 tags:

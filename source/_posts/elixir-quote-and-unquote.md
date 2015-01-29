@@ -1,4 +1,4 @@
-title: Elixir | 元编程Quote和Unquote
+title: 元编程Quote和Unquote
 categories:
   - Elixir
 tags:

@@ -1,4 +1,4 @@
-title: Nodejs | Loopback 模型关系
+title: Loopback 模型关系
 categories:
   - Node.js
 tags:

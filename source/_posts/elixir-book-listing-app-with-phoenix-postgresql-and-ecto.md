@@ -1,4 +1,4 @@
-title: Elixir | 用Phoenix,Postgresql和Ecto创建一个书单应用
+title: 用Phoenix,Postgresql和Ecto创建一个书单应用
 categories:
   - Elixir
 tags:

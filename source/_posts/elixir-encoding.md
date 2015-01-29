@@ -1,4 +1,4 @@
-title: Elixir | 编码问题
+title: 编码问题
 categories:
   - Elixir
 tags:
