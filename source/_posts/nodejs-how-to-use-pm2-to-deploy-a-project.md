@@ -14,6 +14,7 @@ date: 2015-02-07 23:05:51
 第一步我们需要创建一个项目
 
 ```
+mkdir pm2_test && cd pm2_test
 npm init
 ```
 
