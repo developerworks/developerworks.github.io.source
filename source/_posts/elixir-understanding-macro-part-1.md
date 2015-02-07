@@ -16,8 +16,8 @@ date: 2014-12-18 00:02:39
 
 通过上图的Elixir编译器的编译过程我们看到:
 
-1. Elixir源码通过第一步的解析过程生成了一个AST 1的中间表述形式(以Elixir嵌套Term的形式表示)
-2. AST 1通过`expansion`转换为Expanded AST
+1. Elixir源码通过第一步解析过程生成了一个AST 1的中间形式(以Elixir嵌套Term的形式来表示抽象语法树)
+2. AST 1通过(展开`expansion`)转换为Expanded AST(已展开的抽象语法树)
 3. 展开的AST被转换成字节码
 
 这只是一个近似的过程, 实际上Elixir编译器会生成Erlang AST, 并依赖于底层的Erlang函数把它转换成字节码.
@@ -141,7 +141,9 @@ end
 
 ```
 quote do
+    ...
     unquote(some_expression)
+    ...
 end
 ```
 
@@ -158,7 +160,17 @@ iex(1)> Tracer.trace(1 + 2)
 Result of 1 + 2: 3
 ```
 
-`Tracer.trace`以一个给定的表达式并打印其结果到屏幕上.
+`Tracer.trace`以一个给定的表达式并打印其结果到屏幕上. 然后返回表达式结果.
+
+重要的是,意识到这是一个宏, 其输入表达式`(1 + 2)`会被转换为一个更加复杂的形式 - 一段打印结果并返回该结果的代码.该转换发生在宏展开的时候, 产生的字节码为输入代码经过修饰的版本.
+
+在查看实现之前, 想象一下最终结果. 当我们调用`Tracer.trace(1+2)`时, 对应产生的字节码类似于这样:
+
+```
+mangled_result = 1 + 2
+Tracer.print("1+2", mangled_result)
+mangled_result
+```
 
 ## 展开AST
 
@@ -185,3 +197,14 @@ iex(3)> quoted = quote do Tracer.trace(1+2) end
 ```
 
 现在, 输出看起来有点可怕, 通常你不必需要理解它. 但是如果你仔细看, 在这个结构中你可以看到`Tracer`和`trace`, 这证明了AST片段是何源代码相对应的, 但还未展开.
+
+## 参考资料
+
+
+## 概念补充
+
+- Hygiene
+
+    用不冲突的名称替换引入的变量名，这种方法称为健康的(`hygiene`);产生的宏称为健康的宏(`hygienic macros`).健康的宏可以安全地在任何地方使用，不必担心与现有的变量名冲突。对于许多元编程任务，这个特性使宏更可预测并容易使用。
+
+    Hygiene 宏的引入是为了解决`宏定义上下文`和`宏调用上下文`变量名称冲突的问题.

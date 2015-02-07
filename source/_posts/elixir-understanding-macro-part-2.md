@@ -3,6 +3,7 @@ categories:
   - Elixir
 tags:
   - Elixir
+  - Macro
 toc: false
 date: 2014-12-18 15:45:38
 ---
@@ -29,6 +30,45 @@ end
 ```
 
 ## Hygiene
+
+上一章提到过, 宏默认是`hygienic`的. 其含义是: 宏引入的变量有其自己的私有作用域, 不会影响代码的其他部分. 这就是为什么我们能安全地在`trace`宏中引入`result`变量.
+
+```
+quote do
+    result = unquote(expression_ast) # result 变量是宏的私有变量
+    ...
+end
+```
+
+该变量不会干扰调用这个宏的代码. 在调用宏的地方, 可以随意的声明你自己的`result`变量, 它不会被`tracer`宏中的`result`变量隐藏.
+
+大多数时候`hygiene`是我们想要的效果, 但是也有例外. 有时候, 可能需要创建在调用者作用域内可用的变量. 下面我们通过Plug库的一个用例来演示, 我们如何使用Plug来制定路由:
+
+```
+get "/resource1" do
+    send_resp(conn, 200, ...)
+end
+post "/resource2" do
+    send_resp(conn, 200, ...)
+end
+```
+
+注意,上面这两个宏如何使用并不存在的`conn`变量. 这是因为, `get`宏在生成的代码中绑定了该变量. 可以想象一下, 产生的代码如下:
+
+```
+defp do_match("GET", "/resource1", conn) do
+    ...
+end
+defp do_match("POST", "/resource2", conn) do
+    ...
+end
+```
+
+注意: Plug产生的真实代码是不同的, 这里为了演示对其进行了简化.
+
+这是一个例子, 宏引入了一个变量, 必须不是`hygienic`. 变量`conn`由`get`宏引入, 必须对调用者可见.
+
+
 
 ## 宏参数
 

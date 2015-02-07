@@ -3,6 +3,7 @@ categories:
   - Elixir
 tags:
   - Elixir
+  - Macro
 toc: false
 date: 2014-12-18 15:47:48
 ---
