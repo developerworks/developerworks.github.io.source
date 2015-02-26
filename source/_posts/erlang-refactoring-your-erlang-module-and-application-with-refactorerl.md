@@ -144,8 +144,8 @@ ri:add("/root/sources/ejabberd/src").
 ```
 ri:start_web2([
     {yaws_path,"/usr/local/lib/yaws/ebin"},
-    {yaws_listen,"192.168.8.132"},
-    {yaws_name , "192.168.8.132"},
+    {yaws_listen,"192.168.8.102"},
+    {yaws_name , "192.168.8.102"},
     {yaws_port , "8001"},
     {browser_root , "/tmp/erlang"},
     {images_dir , "/tmp/graph_images"},
