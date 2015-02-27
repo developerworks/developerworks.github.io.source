@@ -1,5 +1,6 @@
 title: (译) Ejabberd加入了Elixir的变革
 categories:
+  - Conmmunication
   - Ejabberd
 tags:
   - Erlang
