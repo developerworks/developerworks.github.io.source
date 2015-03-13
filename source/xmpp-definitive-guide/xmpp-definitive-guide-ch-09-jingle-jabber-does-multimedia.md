@@ -1,9 +1,8 @@
 title: XMPP权威指南第09章-Jingle多媒体会话
 categories:
-  - Communication
-tags:
   - XMPP
-  - XMPP-definitive-guide
+tags:
+  - Jingle
 toc: false
 date: 2014-09-28 01:18:53
 ---

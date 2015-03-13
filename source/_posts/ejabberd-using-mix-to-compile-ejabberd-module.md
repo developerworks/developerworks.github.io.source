@@ -1,6 +1,5 @@
 title: 使用Elixir Mix编译Ejabberd模块
 categories:
-  - Communication
   - Ejabberd
 tags:
   - Elixir

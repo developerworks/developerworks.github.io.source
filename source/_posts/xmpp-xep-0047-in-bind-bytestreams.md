@@ -1,6 +1,5 @@
 title: XMPP XEP-0047 带内字节流
 categories:
-  - Communication
 tags:
   - XMPP
   - XEP

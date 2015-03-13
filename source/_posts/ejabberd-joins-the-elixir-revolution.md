@@ -1,6 +1,5 @@
 title: (译) Ejabberd加入了Elixir的变革
 categories:
-  - Conmmunication
   - Ejabberd
 tags:
   - Erlang
@@ -73,7 +72,7 @@ modules:
   ModPresenceDemo: {}
 ```
 
-你可以直接使用模块的名称, Ejabberd会检测到这是一个Elixirmo模块,并能够正确的使用它.
+你可以直接使用模块的名称, Ejabberd会检测到这是一个Elixir模块,并能够正确的使用它.
 
 下面来扩展一下这个模块的功能:
 

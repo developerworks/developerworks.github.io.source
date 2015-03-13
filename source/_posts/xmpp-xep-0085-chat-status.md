@@ -1,6 +1,6 @@
 title: XMPP XEP-0085 聊天状态通知
 categories:
-  - Communication
+  - XEP
 tags:
   - XMPP
   - XEP

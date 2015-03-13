@@ -1,6 +1,5 @@
 title: XMPP 同步HTTP双向流
 categories:
-  - Communication
 tags:
   - XMPP
   - bosh

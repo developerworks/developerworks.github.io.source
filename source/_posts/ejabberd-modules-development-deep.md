@@ -1,6 +1,5 @@
 title: Ejabberd模块开发, 简介
 categories:
-  - Communication
   - Ejabberd
 tags:
   - ejabberd

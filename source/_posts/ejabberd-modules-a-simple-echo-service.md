@@ -1,6 +1,5 @@
 title: Ejabberd 编写一个简单的Echo服务模块
 categories:
-  - Communication
   - Ejabberd
 tags:
   - XMPP

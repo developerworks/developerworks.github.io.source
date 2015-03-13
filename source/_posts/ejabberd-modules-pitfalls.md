@@ -1,6 +1,5 @@
 title: Ejabberd 14.x版本系列模块开发过程中遇到的坑
 categories:
-  - Communication
   - Ejabberd
 tags:
   - ejabberd

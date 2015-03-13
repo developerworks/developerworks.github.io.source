@@ -88,3 +88,50 @@ If you need to scan IP aliases on nodes given by the batch scheduler, use scan_i
 ```
 <client type="batch" batch="torque" scan_intf='eth0' maxusers="30000">
 ```
+
+## 6.3 监控
+
+Tsung能够使用多个与远程代理通信的后端监控远程服务器. 这是配置在`<monitoring>`节中的. 可用的统计有: CPU活动, 平均负载和内存用量.
+
+你可以从一个作业调度器获取要监控的节点, 比如:
+
+    <monitor batch="true" host="torque" type="erlang"></monitor>
+
+支持多种远程代理(默认为erlang):
+
+### 6.3.1 Erlang
+
+远程代理由Tsung启动. 其使用erlang通信机制来获取服务器上的统计信息. 例如, 下面是一个基于Erlang代理的用于监控包含6个计算机的集群:
+
+    <monitoring>
+      <monitor host="geronimo" type="erlang"></monitor>
+      <monitor host="bigfoot-1" type="erlang"></monitor>
+      <monitor host="bigfoot-2" type="erlang"></monitor>
+      <monitor host="f14-1" type="erlang"></monitor>
+      <monitor host="f14-2" type="erlang"></monitor>
+      <monitor host="db" type="erlang"></monitor>
+    </monitoring>
+
+> 注意: 被监控的计算机需要能够通过网络访问, 并且必须允许erlang通信(没防火墙更好). 需要配置SSH(或 rsh)允许无密码访问. 必须在所有节点上使用相同版本的Erlang/OTP, 否则可能不能正常工作!
+
+如果不能在远程服务器上安装Erlang, 可以使用其他可用的代理.
+
+*1.5.1中新增*
+
+erlang 监控包含一个选项, 用mysqladmin来监控mysql数据库. 像这样使用:
+
+    <monitor host="db" type="erlang"></monitor>
+     <mysqladmin port="3306" username="root" password="sesame" />
+    </monitor>
+
+可用的统计:
+
+- mysql线程数
+- 查询数
+
+
+### SNMP
+
+### Munin
+
+*1.3.1新增.*

@@ -1,8 +1,8 @@
 title: XMPP XEP-0133 服务管理
 categories:
-  - Communication
-tags:
   - XMPP
+tags:
+  - XEP
 toc: true
 date: 2014-09-21 16:00:48
 ---

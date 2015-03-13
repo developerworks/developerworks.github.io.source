@@ -1,6 +1,5 @@
 title: Escalus 一个Ejabberd服务器测试工具
 categories:
-  - Communication
   - Ejabberd
 tags:
   - Escalus

@@ -1,6 +1,5 @@
 title: Ejabberd模块快速入门
 categories:
-  - Communication
   - Ejabberd
 tags:
   - ejabberd

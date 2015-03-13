@@ -1,6 +1,5 @@
 title: XMPP Strophe.js插件 - 带内注册
 categories:
-  - Communication
 tags:
   - javascript
   - strophejs

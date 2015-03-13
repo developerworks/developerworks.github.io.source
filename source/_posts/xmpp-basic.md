@@ -1,6 +1,5 @@
 title: XMPP Stanza (节)
 categories:
-  - Communication
 tags:
   - XMPP
   - stanza

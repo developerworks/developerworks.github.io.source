@@ -1,6 +1,6 @@
 title: XMPP XEP-0065 SOCKS5 字节流
 categories:
-  - Communication
+  - XEP
 tags:
   - XMPP
   - XEP

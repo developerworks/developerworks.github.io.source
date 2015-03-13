@@ -1,6 +1,5 @@
 title: 移动3G网络下的流管理
 categories:
-  - Communication
   - Ejabberd
 tags:
   - Stream Management

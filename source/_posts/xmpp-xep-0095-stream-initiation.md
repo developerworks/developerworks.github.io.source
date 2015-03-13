@@ -1,9 +1,8 @@
 title: XMPP XEP-0095 流初始化协商过程
 categories:
-  - Communication
+  - XEP
 tags:
   - XMPP
-  - XEP
 toc: true
 date: 2014-09-24 01:28:37
 ---

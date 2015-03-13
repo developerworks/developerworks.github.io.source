@@ -1,10 +1,8 @@
 title: Ejabberd 集群
 categories:
-  - Communication
   - Ejabberd
 tags:
-  - ejabberd
-  - clustering
+  - Clustering
 toc: false
 date: 2014-09-23 10:36:08
 ---

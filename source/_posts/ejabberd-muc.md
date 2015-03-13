@@ -1,6 +1,5 @@
 title: Ejabberd 多人聊天协议分析-配置房间
 categories:
-  - Communication
   - Ejabberd
 tags:
   - MUC

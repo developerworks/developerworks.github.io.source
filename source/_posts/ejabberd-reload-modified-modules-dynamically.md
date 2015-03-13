@@ -1,6 +1,5 @@
 title: Ejabberd动态的重新加载(更新)修改的模块
 categories:
-  - Communication
   - Ejabberd
 tags:
   - ejabberd

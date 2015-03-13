@@ -1,6 +1,5 @@
 title: Ejabberd XML格式的XMPP消息日志模块
 categories:
-  - Communication
   - Ejabberd
 tags:
   - ejabberd

@@ -1,10 +1,8 @@
 title: Ejabberd代码分析之-翻译辅助工具
 categories:
-  - Communication
   - Ejabberd
 tags:
-  - ejabberd
-  - analysis
+  - Analysis
 toc: false
 date: 2014-10-06 19:20:27
 ---
